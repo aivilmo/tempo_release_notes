@@ -41,25 +41,28 @@
     "text_nl": "Verwijderde verouderde `/v0` API-endpoints; werk eventuele integraties of scripts bij om `/v1` of latere endpoints te gebruiken."
   },
   "2.1.0:0c7767228": {
-    "cache_key": "61a66415fbb21a4d98c24da82fa62f589515390fe91823d23e5125038adaa46a",
+    "cache_key": "e143097faea4cecca7eebe56e09b7b37b30781e9a9dcd09af2c49fdd8421439c",
     "decision": {
       "breaking": false,
-      "publish": true,
+      "publish": false,
       "section": "changed",
-      "skip_reason": null,
+      "skip_reason": "retracted",
       "text_en": "Added Linear integration to sync projects into Tempo workspaces."
     },
-    "evidence": [],
+    "evidence": [
+      "576ca8a2d (after the window) reverts 0c7767228: \"Pulled from the release. Rate limits on Linear's side make the initial sync unusable for workspaces with more than ~200 projects. Back in 2.2.\""
+    ],
     "first_run": 1,
     "generated_by_prompt": "v1",
-    "invalidators": [],
-    "last_changed_run": 1,
-    "nl_of": "c460671b0e2d69f92d2c63668c18be73cd9c78f974c4d5e28e7c750ac966b6a9",
+    "invalidators": [
+      "576ca8a2d"
+    ],
+    "last_changed_run": 2,
     "source_shas": [
       "0c7767228",
       "aba57007d"
     ],
-    "status": "candidate",
+    "status": "retracted",
     "text_nl": "Lineaire integratie toegevoegd om projecten te synchroniseren naar Tempo-werkruimtes."
   },
   "2.1.0:175896599": {
@@ -526,19 +529,19 @@
       "publish": true,
       "section": "changed",
       "skip_reason": null,
-      "text_en": "Added optional weekly email digest that summarizes logged hours (opt-in, disabled by default)."
+      "text_en": "Added optional weekly email digest that summarizes logged hours for users who opt in."
     },
     "evidence": [],
     "first_run": 1,
     "generated_by_prompt": "v1",
     "invalidators": [],
     "last_changed_run": 1,
-    "nl_of": "1f1051d218a7bbda5562950ba97154ad4b4236fc1fa25dfd89ed0cbd86a08b61",
+    "nl_of": "208d07e2c11f6e9c48c9b5f7c9b3c0c5c88525393d7c6615fbd93c8d75b365b5",
     "source_shas": [
       "aa501e99d"
     ],
     "status": "candidate",
-    "text_nl": "Optionele wekelijkse e-mailsamenvatting toegevoegd die geregistreerde uren samenvat (opt-in, standaard uitgeschakeld)."
+    "text_nl": "Optionele wekelijkse e-mailsamenvatting toegevoegd die geregistreerde uren samenvat voor gebruikers die hiervoor kiezen."
   },
   "2.1.0:b43f10cdb": {
     "cache_key": "deffdbb3a3e6aed413e7fcdf34726f638e82e45aaebf14a8e71690c20a659e14",
@@ -591,19 +594,19 @@
       "publish": true,
       "section": "changed",
       "skip_reason": null,
-      "text_en": "The `db_url` environment variable has been renamed to `TEMPO_DATABASE__URL`. Update your environment configuration before upgrading or the application will fail to start."
+      "text_en": "The `db_url` environment variable has been renamed to `TEMPO_DATABASE__URL`—update your deployment configuration before upgrading or the application will fail to start."
     },
     "evidence": [],
     "first_run": 1,
     "generated_by_prompt": "v1",
     "invalidators": [],
     "last_changed_run": 1,
-    "nl_of": "92483ccee25f152b47f623220c032280983852e116c492846ec8723dd87f5fac",
+    "nl_of": "db54b4c9b65a9a147c8ad10f22a2101b26b8c4260dd1881d498588c194ece1e0",
     "source_shas": [
       "b6cb7554c"
     ],
     "status": "candidate",
-    "text_nl": "De omgevingsvariabele `db_url` is hernoemd naar `TEMPO_DATABASE__URL`. Werk je omgevingsconfiguratie bij vóór het upgraden, anders zal de applicatie niet starten."
+    "text_nl": "De omgevingsvariabele `db_url` is hernoemd naar `TEMPO_DATABASE__URL`—werk je implementatieconfiguratie bij vóór de upgrade, anders zal de applicatie niet starten."
   },
   "2.1.0:d0d0d94ff": {
     "cache_key": "82d6f3a5dd64696b4a2ecbbc9f8000930ca2499894193a707d7bd40457989e89",
@@ -612,19 +615,19 @@
       "publish": true,
       "section": "changed",
       "skip_reason": null,
-      "text_en": "Added hours overview report grouped by client."
+      "text_en": "Added hours overview report grouped by client"
     },
     "evidence": [],
     "first_run": 1,
     "generated_by_prompt": "v1",
     "invalidators": [],
     "last_changed_run": 1,
-    "nl_of": "436695ef0fee069a7accacc086455aaf4aeb3bb1acedf6d78ab5d14d0b190ece",
+    "nl_of": "9a8942b7a105eeb68be7f30d2f1c40d522f489be6b2d084fc42f2c15b4fd9ba3",
     "source_shas": [
       "d0d0d94ff"
     ],
     "status": "candidate",
-    "text_nl": "Uren overzichtsrapport gegroepeerd per klant toegevoegd."
+    "text_nl": "Urenrapport toegevoegd gegroepeerd per klant"
   },
   "2.1.0:d45628688": {
     "cache_key": "07ac74b709173891ce68ef6556b3ec54dcae99b72053d173bfb9f55c1003d0df",
@@ -645,7 +648,7 @@
       "d45628688"
     ],
     "status": "candidate",
-    "text_nl": "Afrondingsfout in BTW-berekening opgelost voor facturen met bedragen boven 1000 euro waarbij de belasting per regelitem werd afgerond in plaats van op het totaal"
+    "text_nl": "Afrondingsfout in BTW-berekening opgelost voor facturen met bedragen boven 1000 euro waarbij belasting per regelitem werd afgerond in plaats van op het totaal"
   },
   "2.1.0:e7a577438": {
     "cache_key": "08ab3cdcc39ca55e766c860489ae62a93d8d63e5d2b3e36e06781c5c2893b52e",

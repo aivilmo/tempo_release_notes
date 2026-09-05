@@ -2,7 +2,7 @@
 
 > ⚠ **Before you upgrade — action required**
 >
-> - The `db_url` environment variable has been renamed to `TEMPO_DATABASE__URL`. Update your environment configuration before upgrading or the application will fail to start.
+> - The `db_url` environment variable has been renamed to `TEMPO_DATABASE__URL`—update your deployment configuration before upgrading or the application will fail to start.
 > - Removed deprecated `/v0` API endpoints; update any integrations or scripts to use `/v1` or later endpoints instead.
 > - Dropped support for Python 3.9; you must now run Tempo on Python 3.10 or later.
 
@@ -10,10 +10,9 @@
 
 - Added weekly summary report that shows time logged per project and can be exported as CSV.
 - Added `/v1/entries/bulk` endpoint to create up to 200 time entries in a single request.
-- Added Linear integration to sync projects into Tempo workspaces.
 - Hourly rates can now be set per project and will override the user's default rate when calculating billing.
-- Added hours overview report grouped by client.
-- Added optional weekly email digest that summarizes logged hours (opt-in, disabled by default).
+- Added hours overview report grouped by client
+- Added optional weekly email digest that summarizes logged hours for users who opt in.
 
 ## What's improved
 

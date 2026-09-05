@@ -1,0 +1,49 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><title>Tempo 2.1.0 — release notes</title><style>
+/* royal-blue #6d4bee (+accent-light #8b6fff), turquoise #00c2b7,
+   neutral-darkest #0d0a19, pampas paper family, 16px radius, borders at
+   15% ink. Attention items use their beige scheme (pampas fill, royal-blue
+   accent). The alert chip and the "needs your decision" items carry their
+   flamingo-dark #c24838 — the one place the palette signals urgency, which
+   is exactly why it never appears on the customer-facing page: nothing
+   there is meant to alarm anyone. Headings follow the declared serif
+   fallback (Newsreader -> Georgia); body follows the Inter stack. */
+:root { --ink:#0d0a19; --muted:#5f5d5b; --paper:#fcf9f7; --card:#fdfcfc;
+        --fill:#efe9e4; --line:#0d0a1926; --primary:#6d4bee;
+        --primary-fill:#6d4bee14; --attn:#c24838; --attn-fill:#ff641d12;
+        --grad:linear-gradient(90deg,#6d4bee,#8b6fff,#00c2b7);
+        --radius:16px; }
+
+* { box-sizing:border-box }
+body { margin:0; background:var(--paper); color:var(--ink);
+       font:16px/1.65 Inter, -apple-system, "Segoe UI", sans-serif;
+       -webkit-font-smoothing:antialiased; }
+.brandbar { height:4px; background:var(--grad) }
+main { max-width:720px; margin:0 auto; padding:3rem 1.5rem 5rem }
+.sr-radio { position:absolute; opacity:0; width:0; height:0; pointer-events:none }
+.hero { display:flex; align-items:flex-end; justify-content:space-between;
+        gap:1rem; flex-wrap:wrap; border-bottom:1px solid var(--line);
+        padding-bottom:1.4rem; margin-bottom:2rem }
+.eyebrow { margin:0 0 .3rem; font-size:.8rem; font-weight:600; letter-spacing:.06em;
+           text-transform:uppercase; color:var(--primary) }
+h1 { margin:0; font:600 2.3rem/1.15 "Newsreader 16 Pt", Georgia, serif }
+.switch { display:inline-flex; background:var(--fill); border-radius:999px; padding:3px }
+.switch label { padding:.35rem 1.1rem; border-radius:999px; font-size:.85rem;
+               font-weight:600; color:var(--muted); cursor:pointer; user-select:none }
+#lang-en:checked ~ .hero .switch label[for="lang-en"],
+#lang-nl:checked ~ .hero .switch label[for="lang-nl"] { background:var(--primary); color:#fff }
+.lang-en, .lang-nl { display:none }
+#lang-en:checked ~ .lang-en { display:block }
+#lang-nl:checked ~ .lang-nl { display:block }
+.breaking { border:1px solid var(--line); border-left:4px solid var(--primary);
+            background:var(--fill); border-radius:var(--radius);
+            padding:1rem 1.2rem; margin:0 0 2rem }
+.breaking strong { display:block; margin-bottom:.5rem }
+.breaking ul, h2 + ul { margin:.2rem 0; padding-left:1.3rem }
+h2 { font:600 1.25rem/1.3 "Newsreader 16 Pt", Georgia, serif; margin:2.2rem 0 .6rem }
+li { margin:.5rem 0 }
+code { font-family:ui-monospace, Consolas, monospace; font-size:.9em;
+       background:var(--primary-fill); color:var(--primary);
+       padding:.05em .35em; border-radius:5px }
+footer { margin-top:3rem; padding-top:1.4rem; border-top:1px solid var(--line);
+         color:var(--muted); font-size:.85rem }
+</style></head><body><div class='brandbar'></div><main><input class="sr-radio" type="radio" name="lang" id="lang-en" checked><input class="sr-radio" type="radio" name="lang" id="lang-nl"><header class="hero"><div><p class="eyebrow">Release notes</p><h1>Tempo 2.1.0</h1></div><div class="switch"><label for="lang-en">EN</label><label for="lang-nl">NL</label></div></header><div class="lang-en"><div class="breaking"><strong>⚠ Before you upgrade — action required</strong><ul><li>The <code>db_url</code> environment variable has been renamed to <code>TEMPO_DATABASE__URL</code>—update your deployment configuration before upgrading or the application will fail to start.</li><li>Removed deprecated <code>/v0</code> API endpoints; update any integrations or scripts to use <code>/v1</code> or later endpoints instead.</li><li>Dropped support for Python 3.9; you must now run Tempo on Python 3.10 or later.</li></ul></div><h2>What's changed</h2><ul><li>Added weekly summary report that shows time logged per project and can be exported as CSV.</li><li>Added <code>/v1/entries/bulk</code> endpoint to create up to 200 time entries in a single request.</li><li>Hourly rates can now be set per project and will override the user&#x27;s default rate when calculating billing.</li><li>Added hours overview report grouped by client</li><li>Added optional weekly email digest that summarizes logged hours for users who opt in.</li></ul><h2>What's improved</h2><ul><li>Added keyboard shortcuts for timer control: <code>Alt+S</code> to start or stop the timer and <code>Alt+X</code> to switch projects.</li><li>Weekly reports now load significantly faster due to database indexing improvements.</li><li>Project list requests are now cached for 60 seconds per workspace, reducing load times when viewing projects multiple times.</li><li>Timer now detects when you&#x27;ve been idle for 10 minutes and prompts you to discard unattended time.</li></ul><h2>What's fixed</h2><ul><li>Fixed timer drift that caused inaccurate time tracking after approximately 6 hours of continuous running.</li><li>Weekly report totals now correctly include time entries from the last day of the selected date range.</li><li>Fixed VAT calculation rounding error for invoices with amounts above 1000 euros where tax was incorrectly rounded per line item instead of on the total</li><li>Creating a time entry without a <code>project_id</code> now returns a 422 error with a clear message instead of a 500 error.</li><li>Fixed an issue where timers continued running in the background after logging out.</li><li>Session cookies now include <code>SameSite</code> and <code>Secure</code> attributes to improve security against cross-site attacks.</li><li>CSV import no longer silently drops rows with empty descriptions; they are now imported with <code>(no description)</code> as placeholder text.</li><li>Fixed rounding differences between invoice preview and final PDF that could cause totals to differ by small amounts.</li><li>CSV downloads now use the workspace timezone instead of the browser timezone for date formatting.</li><li>Fixed an issue where workspaces spanning multiple regions would receive duplicate weekly digest notifications.</li></ul></div><div class="lang-nl"><div class="breaking"><strong>⚠ Vóór het upgraden — actie vereist</strong><ul><li>De omgevingsvariabele <code>db_url</code> is hernoemd naar <code>TEMPO_DATABASE__URL</code>—werk je implementatieconfiguratie bij vóór de upgrade, anders zal de applicatie niet starten.</li><li>Verwijderde verouderde <code>/v0</code> API-endpoints; werk eventuele integraties of scripts bij om <code>/v1</code> of latere endpoints te gebruiken.</li><li>Ondersteuning voor Python 3.9 is vervallen; u moet Tempo nu draaien op Python 3.10 of later.</li></ul></div><h2>Wat is er veranderd</h2><ul><li>Er is een wekelijks samenvattingsrapport toegevoegd dat de geregistreerde tijd per project toont en kan worden geëxporteerd als CSV.</li><li>Eindpunt <code>/v1/entries/bulk</code> toegevoegd om tot 200 tijdregistraties in één verzoek aan te maken.</li><li>Uurtarieven kunnen nu per project worden ingesteld en zullen het standaardtarief van de gebruiker overschrijven bij het berekenen van facturatie.</li><li>Urenrapport toegevoegd gegroepeerd per klant</li><li>Optionele wekelijkse e-mailsamenvatting toegevoegd die geregistreerde uren samenvat voor gebruikers die hiervoor kiezen.</li></ul><h2>Wat is er verbeterd</h2><ul><li>Sneltoetsen toegevoegd voor timerbediening: <code>Alt+S</code> om de timer te starten of stoppen en <code>Alt+X</code> om van project te wisselen.</li><li>Weekrapporten laden nu aanzienlijk sneller dankzij verbeteringen in database-indexering.</li><li>Verzoeken voor projectlijsten worden nu 60 seconden per workspace gecachet, waardoor laadtijden worden verkort bij het meerdere keren bekijken van projecten.</li><li>Timer detecteert nu wanneer je 10 minuten inactief bent geweest en vraagt je om onbeheerde tijd te verwijderen.</li></ul><h2>Wat is er opgelost</h2><ul><li>Tijdsdrift verholpen die zorgde voor onnauwkeurige tijdregistratie na ongeveer 6 uur continu draaien.</li><li>Weekrapport totalen bevatten nu correct de tijdregistraties van de laatste dag van het geselecteerde datumbereik.</li><li>Afrondingsfout in BTW-berekening opgelost voor facturen met bedragen boven 1000 euro waarbij belasting per regelitem werd afgerond in plaats van op het totaal</li><li>Het aanmaken van een tijdregistratie zonder een <code>project_id</code> geeft nu een 422 foutmelding met een duidelijke boodschap in plaats van een 500 foutmelding.</li><li>Er is een probleem opgelost waarbij timers op de achtergrond bleven doorlopen na het uitloggen.</li><li>Sessiecookies bevatten nu <code>SameSite</code> en <code>Secure</code> attributen om de beveiliging tegen cross-site aanvallen te verbeteren.</li><li>CSV-import laat niet langer stilzwijgend rijen met lege beschrijvingen vallen; ze worden nu geïmporteerd met <code>(no description)</code> als plaatshouder tekst.</li><li>Afrondingsverschillen tussen factuurvoorbeeld en definitieve PDF opgelost die ervoor konden zorgen dat totalen met kleine bedragen verschilden.</li><li>CSV-downloads gebruiken nu de tijdzone van de workspace in plaats van de tijdzone van de browser voor datumopmaak.</li><li>Er is een probleem opgelost waarbij werkruimtes die meerdere regio&#x27;s omvatten dubbele wekelijkse overzichtsmeldingen ontvingen.</li></ul></div><footer><p>Tempo — self-hosted time tracking.</p></footer></main></body></html>
