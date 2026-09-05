@@ -1,0 +1,757 @@
+{
+  "overrides": [],
+  "records": {
+    "2.1.0:02c9b5064": {
+      "cache_key": "f9f85040dffcbf4a22ed61efb20a250857d6bda8d9cf37a0a94354bf42cb3a5a",
+      "decision": {
+        "breaking": false,
+        "publish": false,
+        "section": null,
+        "skip_reason": "Internal code tidy-up with no customer-visible changes",
+        "text_en": null
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "source_shas": [
+        "02c9b5064"
+      ],
+      "status": "candidate",
+      "text_nl": null
+    },
+    "2.1.0:03c2edab2": {
+      "cache_key": "164ea21c5ee88af9f7119902a09d12b0d5ec9d00d5a9fc0275d230957d32e3ec",
+      "decision": {
+        "breaking": true,
+        "publish": true,
+        "section": "changed",
+        "skip_reason": null,
+        "text_en": "Removed deprecated `/v0` API endpoints; update any integrations or scripts to use `/v1` or later endpoints instead."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "5c3d1d3ee5fa06072a55f7ed799f99b6e33dae94a7fc4a6787eeec04f0ae1d59",
+      "source_shas": [
+        "03c2edab2"
+      ],
+      "status": "candidate",
+      "text_nl": "Verwijderde verouderde `/v0` API-endpoints; werk eventuele integraties of scripts bij om `/v1` of latere endpoints te gebruiken."
+    },
+    "2.1.0:0c7767228": {
+      "cache_key": "61a66415fbb21a4d98c24da82fa62f589515390fe91823d23e5125038adaa46a",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "changed",
+        "skip_reason": null,
+        "text_en": "Added Linear integration to sync projects into Tempo workspaces."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "c460671b0e2d69f92d2c63668c18be73cd9c78f974c4d5e28e7c750ac966b6a9",
+      "source_shas": [
+        "0c7767228",
+        "aba57007d"
+      ],
+      "status": "candidate",
+      "text_nl": "Lineaire integratie toegevoegd om projecten te synchroniseren naar Tempo-werkruimtes."
+    },
+    "2.1.0:175896599": {
+      "cache_key": "b4a2b914b0daebd713c1da0630a49773d98e7571287052f6763e90fe782eaa32",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "fixed",
+        "skip_reason": null,
+        "text_en": "CSV import no longer silently drops rows with empty descriptions; they are now imported with `(no description)` as placeholder text."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "0e876823c613b4046be2b3c6f2ed0dcbab97bc029089ed649e585a0526bfea00",
+      "source_shas": [
+        "175896599"
+      ],
+      "status": "candidate",
+      "text_nl": "CSV-import laat niet langer stilzwijgend rijen met lege beschrijvingen vallen; ze worden nu geïmporteerd met `(no description)` als plaatshouder tekst."
+    },
+    "2.1.0:1eadd5db8": {
+      "cache_key": "b8ad721c33c4578ce09ffc2177a0a18bf83d72a57d92c36508ef9aa7464eb309",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "improved",
+        "skip_reason": null,
+        "text_en": "Project list requests are now cached for 60 seconds per workspace, reducing load times when viewing projects multiple times."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "4e83bf0b1886c649ae0a5cc2cb20ef48c06b84eda94e7fc7f03f319b06c418f2",
+      "source_shas": [
+        "1eadd5db8"
+      ],
+      "status": "candidate",
+      "text_nl": "Verzoeken voor projectlijsten worden nu 60 seconden per workspace gecachet, waardoor laadtijden worden verkort bij het meerdere keren bekijken van projecten."
+    },
+    "2.1.0:336d9a8fc": {
+      "cache_key": "ae337f7c8c2899c78adcc37d80771662534e313c4059e8baef8b4e8319ab787b",
+      "decision": {
+        "breaking": false,
+        "publish": false,
+        "section": "changed",
+        "skip_reason": "not_user_facing",
+        "text_en": null
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "source_shas": [
+        "336d9a8fc"
+      ],
+      "status": "not_user_facing",
+      "text_nl": null
+    },
+    "2.1.0:33f3123ba": {
+      "cache_key": "7be58e954dd944ec8f79ac269f9c507f7467b26d09020ef8fac23f99ab1eb6c8",
+      "decision": {
+        "breaking": false,
+        "publish": false,
+        "section": "changed",
+        "skip_reason": "cancelled_in_window",
+        "text_en": null
+      },
+      "evidence": [
+        "edef93438 reverts 33f3123ba inside the window: \"This reverts the dark mode work — unreadable contrast on the reports page. Will revisit after the design refresh.\""
+      ],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "source_shas": [
+        "33f3123ba",
+        "edef93438"
+      ],
+      "status": "cancelled_in_window",
+      "text_nl": null
+    },
+    "2.1.0:3b5ea9737": {
+      "cache_key": "697b84b08d30fab02740f923f8b0f832d2eac4934d93f34909ca8449fd8934c5",
+      "decision": {
+        "breaking": false,
+        "publish": false,
+        "section": "changed",
+        "skip_reason": "not_user_facing",
+        "text_en": null
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "source_shas": [
+        "3b5ea9737"
+      ],
+      "status": "not_user_facing",
+      "text_nl": null
+    },
+    "2.1.0:408b6df26": {
+      "cache_key": "7e55d49fd082e98b71763b8c40933da5e99ff0ac6822bc7e349dc4a38a13fe6b",
+      "decision": {
+        "breaking": false,
+        "publish": false,
+        "section": "changed",
+        "skip_reason": "not_user_facing",
+        "text_en": null
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "source_shas": [
+        "408b6df26"
+      ],
+      "status": "not_user_facing",
+      "text_nl": null
+    },
+    "2.1.0:41b5ddf45": {
+      "cache_key": "e695999a89b8e527181f89083483b4c3b68a2dfa1e190549b1adcaf85007b1ea",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "fixed",
+        "skip_reason": null,
+        "text_en": "CSV downloads now use the workspace timezone instead of the browser timezone for date formatting."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "fce0cb0c6ed5afb914cf1fe32206db24d6b1b7747378e202652c4a2b9e70be12",
+      "source_shas": [
+        "41b5ddf45"
+      ],
+      "status": "candidate",
+      "text_nl": "CSV-downloads gebruiken nu de tijdzone van de workspace in plaats van de tijdzone van de browser voor datumopmaak."
+    },
+    "2.1.0:43db68872": {
+      "cache_key": "91d68aa93bef58119c224b9fd0b1c20f4de20718d73ce867dcc2c71b46ffb448",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "fixed",
+        "skip_reason": null,
+        "text_en": "Fixed timer drift that caused inaccurate time tracking after approximately 6 hours of continuous running."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "3ad763abe8efe17ce64c4ceb1e9565a76a43b87ba052a4f8c0dc5a2303a5a7ba",
+      "source_shas": [
+        "43db68872",
+        "8afa01581"
+      ],
+      "status": "candidate",
+      "text_nl": "Tijdsdrift verholpen die zorgde voor onnauwkeurige tijdregistratie na ongeveer 6 uur continu draaien."
+    },
+    "2.1.0:52b23745c": {
+      "cache_key": "4fafc73dcfe10e83d4b9e9218b7a8d61d2906707c23763bb8f68794125e274e4",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "fixed",
+        "skip_reason": null,
+        "text_en": "Fixed an issue where timers continued running in the background after logging out."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "099abddc9f1150c598b3515df91c0a3ba25073e9e898cd41dbff7711f2b65c0c",
+      "source_shas": [
+        "52b23745c"
+      ],
+      "status": "candidate",
+      "text_nl": "Er is een probleem opgelost waarbij timers op de achtergrond bleven doorlopen na het uitloggen."
+    },
+    "2.1.0:531f4d514": {
+      "cache_key": "ae54962305def570fe8c460723ee4b77a8db3392e734e3749a8d7711f5098377",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "fixed",
+        "skip_reason": null,
+        "text_en": "Session cookies now include `SameSite` and `Secure` attributes to improve security against cross-site attacks."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "ae0719d710a6cca79018b5af6b2364b7997e0074a3473f2629e10e6309a899bf",
+      "source_shas": [
+        "531f4d514"
+      ],
+      "status": "candidate",
+      "text_nl": "Sessiecookies bevatten nu `SameSite` en `Secure` attributen om de beveiliging tegen cross-site aanvallen te verbeteren."
+    },
+    "2.1.0:670632a0a": {
+      "cache_key": "908b2caee2d56a2f006081bb5fcb967b271d2783a8cd91c701ed61cff8eb4643",
+      "decision": {
+        "breaking": false,
+        "publish": false,
+        "section": "changed",
+        "skip_reason": "not_user_facing",
+        "text_en": null
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "source_shas": [
+        "670632a0a"
+      ],
+      "status": "not_user_facing",
+      "text_nl": null
+    },
+    "2.1.0:782011458": {
+      "cache_key": "3483f86e59b4bbcffad4a54b7efbd8cab446da10c78af4a95aaf2f6fe7d04be3",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "fixed",
+        "skip_reason": null,
+        "text_en": "Fixed rounding differences between invoice preview and final PDF that could cause totals to differ by small amounts."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "6f826282b5b1dd1b063772b35f79b48a1dbdddcd2caf31102d76964dd867133f",
+      "source_shas": [
+        "782011458"
+      ],
+      "status": "candidate",
+      "text_nl": "Afrondingsverschillen tussen factuurvoorbeeld en definitieve PDF opgelost die ervoor konden zorgen dat totalen met kleine bedragen verschilden."
+    },
+    "2.1.0:7a55050fb": {
+      "cache_key": "c5458934e95cde4fde3653dcb5b0a1ef08e7017fb0dd57b26bd17a39c6a3687a",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "fixed",
+        "skip_reason": null,
+        "text_en": "Weekly report totals now correctly include time entries from the last day of the selected date range."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "7ebcfa7ed14a7ea2fe4b8d2e0920112b704d6fe71e8cfe33e64dca74785f7c73",
+      "source_shas": [
+        "7a55050fb"
+      ],
+      "status": "candidate",
+      "text_nl": "Weekrapport totalen bevatten nu correct de tijdregistraties van de laatste dag van het geselecteerde datumbereik."
+    },
+    "2.1.0:844251174": {
+      "cache_key": "a55f39644d981e1916adc6aff345738a54c1759800434295323cd2fe1ec138b0",
+      "decision": {
+        "breaking": false,
+        "publish": false,
+        "section": "changed",
+        "skip_reason": "not_user_facing",
+        "text_en": null
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "source_shas": [
+        "844251174"
+      ],
+      "status": "not_user_facing",
+      "text_nl": null
+    },
+    "2.1.0:8bd64ad0f": {
+      "cache_key": "ef40d6858655cfa3e962199b145bb5a5378594e7a95837b8a234e2d99c5feec5",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "changed",
+        "skip_reason": null,
+        "text_en": "Hourly rates can now be set per project and will override the user's default rate when calculating billing."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "48ebf44cd194f65a0c1beec68be653490dd1c1a0be4c26b7e084b7ad3b12dc96",
+      "source_shas": [
+        "8bd64ad0f"
+      ],
+      "status": "candidate",
+      "text_nl": "Uurtarieven kunnen nu per project worden ingesteld en zullen het standaardtarief van de gebruiker overschrijven bij het berekenen van facturatie."
+    },
+    "2.1.0:98cf89408": {
+      "cache_key": "173b97beaf1d9780710be2bc391503c2bd083e11f825cc1ce485dd91363523f1",
+      "decision": {
+        "breaking": false,
+        "publish": false,
+        "section": null,
+        "skip_reason": "Internal code generation change with no customer-visible impact",
+        "text_en": null
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "source_shas": [
+        "98cf89408"
+      ],
+      "status": "candidate",
+      "text_nl": null
+    },
+    "2.1.0:9c8af6a7d": {
+      "cache_key": "199d440c22040ffe8fb004b189b7f6a3e9d1e27aef99359ce87f0cd29ae470fa",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "changed",
+        "skip_reason": null,
+        "text_en": "Added weekly summary report that shows time logged per project and can be exported as CSV."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "cbd2d1a579cb9b94189d7fc6a42ab8e78006881b270a67d9faa95b11e899a7a8",
+      "source_shas": [
+        "9c8af6a7d"
+      ],
+      "status": "candidate",
+      "text_nl": "Er is een wekelijks samenvattingsrapport toegevoegd dat de geregistreerde tijd per project toont en kan worden geëxporteerd als CSV."
+    },
+    "2.1.0:9e41eda4d": {
+      "cache_key": "1459b46ae6d8a2c305520e5f69a8cd2d4e9e40303df0ee1494ebcd54e6efc11e",
+      "decision": {
+        "breaking": false,
+        "publish": false,
+        "section": null,
+        "skip_reason": "Internal CI configuration change with no customer-visible impact",
+        "text_en": null
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "source_shas": [
+        "9e41eda4d"
+      ],
+      "status": "candidate",
+      "text_nl": null
+    },
+    "2.1.0:9f691e81c": {
+      "cache_key": "e7357a648a6f8b5108100ad9b8855ba84e1958f5f004d44854aeef4f4f74bf13",
+      "decision": {
+        "breaking": false,
+        "publish": false,
+        "section": null,
+        "skip_reason": "Feature is not implemented (raises NotImplementedError)",
+        "text_en": null
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "source_shas": [
+        "9f691e81c"
+      ],
+      "status": "candidate",
+      "text_nl": null
+    },
+    "2.1.0:a1197a331": {
+      "cache_key": "2f95b468d4d29398da3091cfcbd98eeaeaf42cbb627ab7369bdf55cc5eb6d4f5",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "improved",
+        "skip_reason": null,
+        "text_en": "Added keyboard shortcuts for timer control: `Alt+S` to start or stop the timer and `Alt+X` to switch projects."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "501b7a3bd7b77487ce8d1973a4b91df6d10b9c8e24633739539a92a9845f44f3",
+      "source_shas": [
+        "a1197a331"
+      ],
+      "status": "candidate",
+      "text_nl": "Sneltoetsen toegevoegd voor timerbediening: `Alt+S` om de timer te starten of stoppen en `Alt+X` om van project te wisselen."
+    },
+    "2.1.0:a3d013496": {
+      "cache_key": "1c052858ad68bda02a2ecbd2b186a5c7a2e4c426895860105db322f1619a3e7b",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "fixed",
+        "skip_reason": null,
+        "text_en": "Creating a time entry without a `project_id` now returns a 422 error with a clear message instead of a 500 error."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "1858bf948f99ec4c4c5beac75b8bc3537dd32b001eb5c61ca72128443f9cbbfb",
+      "source_shas": [
+        "a3d013496"
+      ],
+      "status": "candidate",
+      "text_nl": "Het aanmaken van een tijdregistratie zonder een `project_id` geeft nu een 422 foutmelding met een duidelijke boodschap in plaats van een 500 foutmelding."
+    },
+    "2.1.0:a91becf0a": {
+      "cache_key": "b3e2041ceb487954fe38d03858be11444ec05b643fc3bd5a3d7cd1b6f405e393",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "fixed",
+        "skip_reason": null,
+        "text_en": "Fixed an issue where workspaces spanning multiple regions would receive duplicate weekly digest notifications."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "c410d72dc2319c597d08c0a1e3bc04cbbb4748ca8327e289cbdfa2846a66f06b",
+      "source_shas": [
+        "a91becf0a"
+      ],
+      "status": "candidate",
+      "text_nl": "Er is een probleem opgelost waarbij werkruimtes die meerdere regio's omvatten dubbele wekelijkse overzichtsmeldingen ontvingen."
+    },
+    "2.1.0:aa501e99d": {
+      "cache_key": "106274ca313a3044f399ea0db8b1c4ecc332ad763a052e49e448efe9bb6e892b",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "changed",
+        "skip_reason": null,
+        "text_en": "Added optional weekly email digest that summarizes logged hours (opt-in, disabled by default)."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "1f1051d218a7bbda5562950ba97154ad4b4236fc1fa25dfd89ed0cbd86a08b61",
+      "source_shas": [
+        "aa501e99d"
+      ],
+      "status": "candidate",
+      "text_nl": "Optionele wekelijkse e-mailsamenvatting toegevoegd die geregistreerde uren samenvat (opt-in, standaard uitgeschakeld)."
+    },
+    "2.1.0:b43f10cdb": {
+      "cache_key": "deffdbb3a3e6aed413e7fcdf34726f638e82e45aaebf14a8e71690c20a659e14",
+      "decision": {
+        "breaking": false,
+        "publish": false,
+        "section": "changed",
+        "skip_reason": "gated_off",
+        "text_en": null
+      },
+      "evidence": [
+        "flag FEATURE_ICAL_EXPORT is False at the end of the window"
+      ],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "source_shas": [
+        "b43f10cdb",
+        "8791b3a55"
+      ],
+      "status": "gated_off",
+      "text_nl": null
+    },
+    "2.1.0:b49313df5": {
+      "cache_key": "63e47c3f360aadeabad3a8bb545abd55d1990bbaac58b9e90ba0f9cdee85d94c",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "improved",
+        "skip_reason": null,
+        "text_en": "Weekly reports now load significantly faster due to database indexing improvements."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "a21774a55a1c8678c9de906873ec7096a97228c2a06f8b8a79b9ee58d2795d4d",
+      "source_shas": [
+        "b49313df5"
+      ],
+      "status": "candidate",
+      "text_nl": "Weekrapporten laden nu aanzienlijk sneller dankzij verbeteringen in database-indexering."
+    },
+    "2.1.0:b6cb7554c": {
+      "cache_key": "81cef5d8c0b9fec91452c1b77d171801982a5e97a64fd592d07398a49306fae1",
+      "decision": {
+        "breaking": true,
+        "publish": true,
+        "section": "changed",
+        "skip_reason": null,
+        "text_en": "The `db_url` environment variable has been renamed to `TEMPO_DATABASE__URL`. Update your environment configuration before upgrading or the application will fail to start."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "92483ccee25f152b47f623220c032280983852e116c492846ec8723dd87f5fac",
+      "source_shas": [
+        "b6cb7554c"
+      ],
+      "status": "candidate",
+      "text_nl": "De omgevingsvariabele `db_url` is hernoemd naar `TEMPO_DATABASE__URL`. Werk je omgevingsconfiguratie bij vóór het upgraden, anders zal de applicatie niet starten."
+    },
+    "2.1.0:d0d0d94ff": {
+      "cache_key": "82d6f3a5dd64696b4a2ecbbc9f8000930ca2499894193a707d7bd40457989e89",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "changed",
+        "skip_reason": null,
+        "text_en": "Added hours overview report grouped by client."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "436695ef0fee069a7accacc086455aaf4aeb3bb1acedf6d78ab5d14d0b190ece",
+      "source_shas": [
+        "d0d0d94ff"
+      ],
+      "status": "candidate",
+      "text_nl": "Uren overzichtsrapport gegroepeerd per klant toegevoegd."
+    },
+    "2.1.0:d45628688": {
+      "cache_key": "07ac74b709173891ce68ef6556b3ec54dcae99b72053d173bfb9f55c1003d0df",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "fixed",
+        "skip_reason": null,
+        "text_en": "Fixed VAT calculation rounding error for invoices with amounts above 1000 euros where tax was incorrectly rounded per line item instead of on the total"
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "c162f4dccc5e76cca0671abfc0ec63113083bd002740a211d71fefb3316429fd",
+      "source_shas": [
+        "d45628688"
+      ],
+      "status": "candidate",
+      "text_nl": "Afrondingsfout in BTW-berekening opgelost voor facturen met bedragen boven 1000 euro waarbij de belasting per regelitem werd afgerond in plaats van op het totaal"
+    },
+    "2.1.0:e7a577438": {
+      "cache_key": "08ab3cdcc39ca55e766c860489ae62a93d8d63e5d2b3e36e06781c5c2893b52e",
+      "decision": {
+        "breaking": false,
+        "publish": false,
+        "section": "changed",
+        "skip_reason": "not_user_facing",
+        "text_en": null
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "source_shas": [
+        "e7a577438"
+      ],
+      "status": "not_user_facing",
+      "text_nl": null
+    },
+    "2.1.0:e9fa4022f": {
+      "cache_key": "e9f25044f4fd2c9b80b4cd688827df6d1470bc607bccb8bffedbaf62295c2e53",
+      "decision": {
+        "breaking": false,
+        "publish": false,
+        "section": null,
+        "skip_reason": "Internal dependency lockfile update with no customer-visible changes",
+        "text_en": null
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "source_shas": [
+        "e9fa4022f"
+      ],
+      "status": "candidate",
+      "text_nl": null
+    },
+    "2.1.0:f050fd729": {
+      "cache_key": "cdfb28925ae1e6a79ce86061b93a38fb57fd625b7135bdaf03c426bb54aac3e2",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "changed",
+        "skip_reason": null,
+        "text_en": "Added `/v1/entries/bulk` endpoint to create up to 200 time entries in a single request."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "80aed6614700fc2cacfb65bd37328236efd63c526e547fb50ec11fe0ec63e11c",
+      "source_shas": [
+        "f050fd729"
+      ],
+      "status": "candidate",
+      "text_nl": "Eindpunt `/v1/entries/bulk` toegevoegd om tot 200 tijdregistraties in één verzoek aan te maken."
+    },
+    "2.1.0:f3b2c322d": {
+      "cache_key": "709c09feecb6b568f5b27a9f9ee608555173bb24f7bbe90d119b0e17d4df76a9",
+      "decision": {
+        "breaking": true,
+        "publish": true,
+        "section": "changed",
+        "skip_reason": null,
+        "text_en": "Dropped support for Python 3.9; you must now run Tempo on Python 3.10 or later."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "b24f5bee1d89b92e5170633e0613d5b1fe3d9e5350ede28e86a2f4e4acb819dc",
+      "source_shas": [
+        "f3b2c322d"
+      ],
+      "status": "candidate",
+      "text_nl": "Ondersteuning voor Python 3.9 is vervallen; u moet Tempo nu draaien op Python 3.10 of later."
+    },
+    "2.1.0:fffe8c59c": {
+      "cache_key": "e9609f292865d1fa3e1274343157f76130cbb86f35ac022265ac695578b11d02",
+      "decision": {
+        "breaking": false,
+        "publish": true,
+        "section": "improved",
+        "skip_reason": null,
+        "text_en": "Timer now detects when you've been idle for 10 minutes and prompts you to discard unattended time."
+      },
+      "evidence": [],
+      "first_run": 1,
+      "generated_by_prompt": "v1",
+      "invalidators": [],
+      "last_changed_run": 1,
+      "nl_of": "fb2396283c62f31a67e737a1e1ba20df1cecca3783161e57b61f127a71c133e6",
+      "source_shas": [
+        "fffe8c59c"
+      ],
+      "status": "candidate",
+      "text_nl": "Timer detecteert nu wanneer je 10 minuten inactief bent geweest en vraagt je om onbeheerde tijd te verwijderen."
+    }
+  },
+  "run": 2
+}

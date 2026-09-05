@@ -1,0 +1,18 @@
+diff --git a/src/tempo/billing/rates.py b/src/tempo/billing/rates.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/billing/rates.py
++++ b/src/tempo/billing/rates.py
+@@ -1,2 +1,4 @@
+-def rate_for(entry) -> Decimal:
+-    return entry.user.default_rate
++def rate_for(entry) -> Decimal:
++    if entry.project.hourly_rate is not None:
++        return entry.project.hourly_rate
++    return entry.user.default_rate
+diff --git a/migrations/0041_project_hourly_rate.sql b/migrations/0041_project_hourly_rate.sql
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/migrations/0041_project_hourly_rate.sql
+@@ -0,0 +1,1 @@
++ALTER TABLE projects ADD COLUMN hourly_rate NUMERIC(10,2) NULL;

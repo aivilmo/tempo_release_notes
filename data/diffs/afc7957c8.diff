@@ -1,0 +1,7 @@
+diff --git a/src/tempo/config/features.py b/src/tempo/config/features.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/config/features.py
++++ b/src/tempo/config/features.py
+@@ -1,1 +1,1 @@
+-FEATURE_ICAL_EXPORT = False
++FEATURE_ICAL_EXPORT = True

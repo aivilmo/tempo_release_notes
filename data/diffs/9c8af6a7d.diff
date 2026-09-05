@@ -1,0 +1,32 @@
+diff --git a/src/tempo/reports/weekly.py b/src/tempo/reports/weekly.py
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/src/tempo/reports/weekly.py
+@@ -0,0 +1,11 @@
++from datetime import date, timedelta
++
++def weekly_summary(workspace_id: int, week_start: date) -> dict:
++    """Aggregate logged time per project for one week."""
++    end = week_start + timedelta(days=7)
++    rows = db.entries.by_range(workspace_id, week_start, end)
++    per_project = {}
++    for r in rows:
++        per_project.setdefault(r.project_id, 0)
++        per_project[r.project_id] += r.duration_minutes
++    return {'week_start': week_start, 'projects': per_project}
+diff --git a/src/tempo/reports/csv_export.py b/src/tempo/reports/csv_export.py
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/src/tempo/reports/csv_export.py
+@@ -0,0 +1,9 @@
++import csv, io
++
++def to_csv(summary: dict) -> str:
++    buf = io.StringIO()
++    w = csv.writer(buf)
++    w.writerow(['project', 'hours'])
++    for pid, minutes in summary['projects'].items():
++        w.writerow([pid, round(minutes / 60, 2)])
++    return buf.getvalue()

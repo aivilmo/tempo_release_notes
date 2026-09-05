@@ -1,0 +1,7 @@
+diff --git a/src/tempo/timer/drift.py b/src/tempo/timer/drift.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/timer/drift.py
++++ b/src/tempo/timer/drift.py
+@@ -1,1 +1,1 @@
+-    elapsed = int((now - started).total_seconds() / 60)
++    elapsed = round((now - started).total_seconds() / 60)

@@ -1,0 +1,8 @@
+diff --git a/web/src/auth/logout.ts b/web/src/auth/logout.ts
+index 3f8a1c2..9b4e7d1 100644
+--- a/web/src/auth/logout.ts
++++ b/web/src/auth/logout.ts
+@@ -1,1 +1,2 @@
+-  clearSession();
++  timer.stopAll();
++  clearSession();

@@ -1,0 +1,7 @@
+diff --git a/src/tempo/integrations/linear.py b/src/tempo/integrations/linear.py
+deleted file mode 100644
+--- a/src/tempo/integrations/linear.py
++++ /dev/null
+@@ -1,9 +0,0 @@
+-class LinearSync:
+-    pass

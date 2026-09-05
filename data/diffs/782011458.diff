@@ -1,0 +1,8 @@
+diff --git a/src/tempo/billing/invoice.py b/src/tempo/billing/invoice.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/billing/invoice.py
++++ b/src/tempo/billing/invoice.py
+@@ -1,1 +1,2 @@
+-    total = sum(l.amount for l in lines)
++    total = Decimal(sum(l.amount for l in lines))
++                .quantize(Decimal('0.01'))

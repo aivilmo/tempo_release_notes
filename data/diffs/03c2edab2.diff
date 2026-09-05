@@ -1,0 +1,80 @@
+diff --git a/src/tempo/api/v0/entries.py b/src/tempo/api/v0/entries.py
+deleted file mode 100644
+--- a/src/tempo/api/v0/entries.py
++++ /dev/null
+@@ -1,3 +0,0 @@
+-@router.get('/v0/entries')
+-def list_entries():
+-    return legacy_entries()
+diff --git a/src/tempo/api/v0/projects.py b/src/tempo/api/v0/projects.py
+deleted file mode 100644
+--- a/src/tempo/api/v0/projects.py
++++ /dev/null
+@@ -1,3 +0,0 @@
+-@router.get('/v0/projects')
+-def list_projects():
+-    return legacy_projects()
+diff --git a/src/tempo/api/v0/users.py b/src/tempo/api/v0/users.py
+deleted file mode 100644
+--- a/src/tempo/api/v0/users.py
++++ /dev/null
+@@ -1,3 +0,0 @@
+-@router.get('/v0/users')
+-def list_users():
+-    return legacy_users()
+diff --git a/src/tempo/api/v0/reports.py b/src/tempo/api/v0/reports.py
+deleted file mode 100644
+--- a/src/tempo/api/v0/reports.py
++++ /dev/null
+@@ -1,3 +0,0 @@
+-@router.get('/v0/reports')
+-def list_reports():
+-    return legacy_reports()
+diff --git a/src/tempo/api/v0/tags.py b/src/tempo/api/v0/tags.py
+deleted file mode 100644
+--- a/src/tempo/api/v0/tags.py
++++ /dev/null
+@@ -1,3 +0,0 @@
+-@router.get('/v0/tags')
+-def list_tags():
+-    return legacy_tags()
+diff --git a/src/tempo/api/v0/clients.py b/src/tempo/api/v0/clients.py
+deleted file mode 100644
+--- a/src/tempo/api/v0/clients.py
++++ /dev/null
+@@ -1,3 +0,0 @@
+-@router.get('/v0/clients')
+-def list_clients():
+-    return legacy_clients()
+diff --git a/src/tempo/api/v0/invoices.py b/src/tempo/api/v0/invoices.py
+deleted file mode 100644
+--- a/src/tempo/api/v0/invoices.py
++++ /dev/null
+@@ -1,3 +0,0 @@
+-@router.get('/v0/invoices')
+-def list_invoices():
+-    return legacy_invoices()
+diff --git a/src/tempo/api/v0/webhooks.py b/src/tempo/api/v0/webhooks.py
+deleted file mode 100644
+--- a/src/tempo/api/v0/webhooks.py
++++ /dev/null
+@@ -1,3 +0,0 @@
+-@router.get('/v0/webhooks')
+-def list_webhooks():
+-    return legacy_webhooks()
+diff --git a/src/tempo/api/v0/teams.py b/src/tempo/api/v0/teams.py
+deleted file mode 100644
+--- a/src/tempo/api/v0/teams.py
++++ /dev/null
+@@ -1,3 +0,0 @@
+-@router.get('/v0/teams')
+-def list_teams():
+-    return legacy_teams()
+diff --git a/src/tempo/api/v0/rates.py b/src/tempo/api/v0/rates.py
+deleted file mode 100644
+--- a/src/tempo/api/v0/rates.py
++++ /dev/null
+@@ -1,3 +0,0 @@
+-@router.get('/v0/rates')
+-def list_rates():
+-    return legacy_rates()

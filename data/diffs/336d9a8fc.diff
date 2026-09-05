@@ -1,0 +1,14 @@
+diff --git a/docs/self-hosting.md b/docs/self-hosting.md
+index 3f8a1c2..9b4e7d1 100644
+--- a/docs/self-hosting.md
++++ b/docs/self-hosting.md
+@@ -1,1 +1,1 @@
+-See [configuration](./config-old.md) for details.
++See [configuration](./configuration.md) for details.
+diff --git a/src/tempo/uploads/limits.py b/src/tempo/uploads/limits.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/uploads/limits.py
++++ b/src/tempo/uploads/limits.py
+@@ -1,1 +1,1 @@
+-MAX_UPLOAD_MB = 10
++MAX_UPLOAD_MB = 100

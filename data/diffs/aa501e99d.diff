@@ -1,0 +1,12 @@
+diff --git a/src/tempo/notifications/digest.py b/src/tempo/notifications/digest.py
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/src/tempo/notifications/digest.py
+@@ -0,0 +1,6 @@
++def send_weekly_digest(workspace_id: int) -> int:
++    users = users_opted_in(workspace_id)
++    for u in users:
++        summary = weekly_summary(workspace_id, last_monday())
++        mailer.send(u.email, render('digest.html', summary=summary))
++    return len(users)

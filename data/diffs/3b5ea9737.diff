@@ -1,0 +1,11 @@
+diff --git a/docs/api/entries-bulk.md b/docs/api/entries-bulk.md
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/docs/api/entries-bulk.md
+@@ -0,0 +1,5 @@
++# Bulk create entries
++
++POST /v1/entries/bulk
++
++Max 200 entries per request.

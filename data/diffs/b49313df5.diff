@@ -1,0 +1,10 @@
+diff --git a/migrations/0042_entries_index.sql b/migrations/0042_entries_index.sql
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/migrations/0042_entries_index.sql
+@@ -0,0 +1,4 @@
++CREATE INDEX CONCURRENTLY idx_entries_user_started
++  ON entries (user_id, started_at);
++-- also drop the column nobody uses any more
++ALTER TABLE entries DROP COLUMN legacy_rounding_mode;

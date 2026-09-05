@@ -1,0 +1,15 @@
+diff --git a/web/src/timer/idle.ts b/web/src/timer/idle.ts
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/web/src/timer/idle.ts
+@@ -0,0 +1,9 @@
++const IDLE_MS = 10 * 60 * 1000;
++export function watchIdle(onIdle: (since: Date) => void) {
++  let last = Date.now();
++  ['mousemove', 'keydown'].forEach(ev =>
++    window.addEventListener(ev, () => { last = Date.now(); }));
++  setInterval(() => {
++    if (Date.now() - last > IDLE_MS) onIdle(new Date(last));
++  }, 30_000);
++}

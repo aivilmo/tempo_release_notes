@@ -1,0 +1,8 @@
+diff --git a/src/tempo/billing/rates.py b/src/tempo/billing/rates.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/billing/rates.py
++++ b/src/tempo/billing/rates.py
+@@ -1,1 +1,2 @@
+-    if entry.project.hourly_rate is not None:
++    if entry.project.hourly_rate is not None and \
++            entry.started_at >= entry.project.rate_effective_from:

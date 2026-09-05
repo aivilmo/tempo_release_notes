@@ -1,0 +1,7 @@
+diff --git a/.github/workflows/deploy.yml b/.github/workflows/deploy.yml
+index 3f8a1c2..9b4e7d1 100644
+--- a/.github/workflows/deploy.yml
++++ b/.github/workflows/deploy.yml
+@@ -1,1 +1,1 @@
+-      STRIPE_KEY: ${{ secrets.STRIPE_KEY_OLD }}
++      STRIPE_KEY: ${{ secrets.STRIPE_KEY }}

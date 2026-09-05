@@ -1,0 +1,8 @@
+diff --git a/src/tempo/api/v1/projects.py b/src/tempo/api/v1/projects.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/api/v1/projects.py
++++ b/src/tempo/api/v1/projects.py
+@@ -1,1 +1,2 @@
+-def list_projects(ws: int):
++@cache(ttl=60, key='projects:{ws}')
++def list_projects(ws: int):

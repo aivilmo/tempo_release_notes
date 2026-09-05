@@ -1,0 +1,9 @@
+diff --git a/docs/upgrading-to-2.1.md b/docs/upgrading-to-2.1.md
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/docs/upgrading-to-2.1.md
+@@ -0,0 +1,3 @@
++# Upgrading to 2.1
++
++Rename `db_url` to `TEMPO_DATABASE__URL` **before** upgrading.

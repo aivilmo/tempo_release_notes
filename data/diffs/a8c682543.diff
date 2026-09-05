@@ -1,0 +1,6 @@
+diff --git a/web/src/print.css b/web/src/print.css
+index 3f8a1c2..9b4e7d1 100644
+--- a/web/src/print.css
++++ b/web/src/print.css
+@@ -1,1 +1,0 @@
+-@import 'theme/dark.css';

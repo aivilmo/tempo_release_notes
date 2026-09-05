@@ -1,0 +1,7 @@
+diff --git a/web/src/reports/download.ts b/web/src/reports/download.ts
+index 3f8a1c2..9b4e7d1 100644
+--- a/web/src/reports/download.ts
++++ b/web/src/reports/download.ts
+@@ -1,1 +1,1 @@
+-  const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
++  const tz = workspace.timezone;

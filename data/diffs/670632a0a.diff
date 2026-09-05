@@ -1,0 +1,7 @@
+diff --git a/.github/workflows/test.yml b/.github/workflows/test.yml
+index 3f8a1c2..9b4e7d1 100644
+--- a/.github/workflows/test.yml
++++ b/.github/workflows/test.yml
+@@ -1,1 +1,1 @@
+-        python: ['3.10', '3.11']
++        python: ['3.10', '3.11', '3.12', '3.13']

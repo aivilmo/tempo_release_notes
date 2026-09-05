@@ -1,0 +1,8 @@
+diff --git a/src/tempo/auth/cookies.py b/src/tempo/auth/cookies.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/auth/cookies.py
++++ b/src/tempo/auth/cookies.py
+@@ -1,1 +1,2 @@
+-    resp.set_cookie('sid', token, httponly=True)
++    resp.set_cookie('sid', token, httponly=True,
++                    samesite='lax', secure=True)

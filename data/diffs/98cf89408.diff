@@ -1,0 +1,4620 @@
+diff --git a/src/tempo/generated/client_0.py b/src/tempo/generated/client_0.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_0.py
++++ b/src/tempo/generated/client_0.py
+@@ -1,3 +1,3 @@
+-def op_0(): ...
+-    # generated from operationId=op_0
+-    return _request('GET', _paths[0])
++def op_0(payload=None, *, timeout=30): ...
++    # generated from operationId=op_0
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_1.py b/src/tempo/generated/client_1.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_1.py
++++ b/src/tempo/generated/client_1.py
+@@ -1,3 +1,3 @@
+-def op_1(): ...
+-    # generated from operationId=op_1
+-    return _request('GET', _paths[0])
++def op_1(payload=None, *, timeout=30): ...
++    # generated from operationId=op_1
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_2.py b/src/tempo/generated/client_2.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_2.py
++++ b/src/tempo/generated/client_2.py
+@@ -1,3 +1,3 @@
+-def op_2(): ...
+-    # generated from operationId=op_2
+-    return _request('GET', _paths[0])
++def op_2(payload=None, *, timeout=30): ...
++    # generated from operationId=op_2
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_3.py b/src/tempo/generated/client_3.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_3.py
++++ b/src/tempo/generated/client_3.py
+@@ -1,3 +1,3 @@
+-def op_3(): ...
+-    # generated from operationId=op_3
+-    return _request('GET', _paths[0])
++def op_3(payload=None, *, timeout=30): ...
++    # generated from operationId=op_3
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_4.py b/src/tempo/generated/client_4.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_4.py
++++ b/src/tempo/generated/client_4.py
+@@ -1,3 +1,3 @@
+-def op_4(): ...
+-    # generated from operationId=op_4
+-    return _request('GET', _paths[0])
++def op_4(payload=None, *, timeout=30): ...
++    # generated from operationId=op_4
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_5.py b/src/tempo/generated/client_5.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_5.py
++++ b/src/tempo/generated/client_5.py
+@@ -1,3 +1,3 @@
+-def op_5(): ...
+-    # generated from operationId=op_5
+-    return _request('GET', _paths[0])
++def op_5(payload=None, *, timeout=30): ...
++    # generated from operationId=op_5
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_6.py b/src/tempo/generated/client_6.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_6.py
++++ b/src/tempo/generated/client_6.py
+@@ -1,3 +1,3 @@
+-def op_6(): ...
+-    # generated from operationId=op_6
+-    return _request('GET', _paths[0])
++def op_6(payload=None, *, timeout=30): ...
++    # generated from operationId=op_6
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_7.py b/src/tempo/generated/client_7.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_7.py
++++ b/src/tempo/generated/client_7.py
+@@ -1,3 +1,3 @@
+-def op_7(): ...
+-    # generated from operationId=op_7
+-    return _request('GET', _paths[0])
++def op_7(payload=None, *, timeout=30): ...
++    # generated from operationId=op_7
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_8.py b/src/tempo/generated/client_8.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_8.py
++++ b/src/tempo/generated/client_8.py
+@@ -1,3 +1,3 @@
+-def op_8(): ...
+-    # generated from operationId=op_8
+-    return _request('GET', _paths[0])
++def op_8(payload=None, *, timeout=30): ...
++    # generated from operationId=op_8
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_9.py b/src/tempo/generated/client_9.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_9.py
++++ b/src/tempo/generated/client_9.py
+@@ -1,3 +1,3 @@
+-def op_9(): ...
+-    # generated from operationId=op_9
+-    return _request('GET', _paths[0])
++def op_9(payload=None, *, timeout=30): ...
++    # generated from operationId=op_9
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_10.py b/src/tempo/generated/client_10.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_10.py
++++ b/src/tempo/generated/client_10.py
+@@ -1,3 +1,3 @@
+-def op_10(): ...
+-    # generated from operationId=op_10
+-    return _request('GET', _paths[0])
++def op_10(payload=None, *, timeout=30): ...
++    # generated from operationId=op_10
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_11.py b/src/tempo/generated/client_11.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_11.py
++++ b/src/tempo/generated/client_11.py
+@@ -1,3 +1,3 @@
+-def op_11(): ...
+-    # generated from operationId=op_11
+-    return _request('GET', _paths[0])
++def op_11(payload=None, *, timeout=30): ...
++    # generated from operationId=op_11
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_12.py b/src/tempo/generated/client_12.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_12.py
++++ b/src/tempo/generated/client_12.py
+@@ -1,3 +1,3 @@
+-def op_12(): ...
+-    # generated from operationId=op_12
+-    return _request('GET', _paths[0])
++def op_12(payload=None, *, timeout=30): ...
++    # generated from operationId=op_12
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_13.py b/src/tempo/generated/client_13.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_13.py
++++ b/src/tempo/generated/client_13.py
+@@ -1,3 +1,3 @@
+-def op_13(): ...
+-    # generated from operationId=op_13
+-    return _request('GET', _paths[0])
++def op_13(payload=None, *, timeout=30): ...
++    # generated from operationId=op_13
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_14.py b/src/tempo/generated/client_14.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_14.py
++++ b/src/tempo/generated/client_14.py
+@@ -1,3 +1,3 @@
+-def op_14(): ...
+-    # generated from operationId=op_14
+-    return _request('GET', _paths[0])
++def op_14(payload=None, *, timeout=30): ...
++    # generated from operationId=op_14
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_15.py b/src/tempo/generated/client_15.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_15.py
++++ b/src/tempo/generated/client_15.py
+@@ -1,3 +1,3 @@
+-def op_15(): ...
+-    # generated from operationId=op_15
+-    return _request('GET', _paths[0])
++def op_15(payload=None, *, timeout=30): ...
++    # generated from operationId=op_15
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_16.py b/src/tempo/generated/client_16.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_16.py
++++ b/src/tempo/generated/client_16.py
+@@ -1,3 +1,3 @@
+-def op_16(): ...
+-    # generated from operationId=op_16
+-    return _request('GET', _paths[0])
++def op_16(payload=None, *, timeout=30): ...
++    # generated from operationId=op_16
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_17.py b/src/tempo/generated/client_17.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_17.py
++++ b/src/tempo/generated/client_17.py
+@@ -1,3 +1,3 @@
+-def op_17(): ...
+-    # generated from operationId=op_17
+-    return _request('GET', _paths[0])
++def op_17(payload=None, *, timeout=30): ...
++    # generated from operationId=op_17
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_18.py b/src/tempo/generated/client_18.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_18.py
++++ b/src/tempo/generated/client_18.py
+@@ -1,3 +1,3 @@
+-def op_18(): ...
+-    # generated from operationId=op_18
+-    return _request('GET', _paths[0])
++def op_18(payload=None, *, timeout=30): ...
++    # generated from operationId=op_18
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_19.py b/src/tempo/generated/client_19.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_19.py
++++ b/src/tempo/generated/client_19.py
+@@ -1,3 +1,3 @@
+-def op_19(): ...
+-    # generated from operationId=op_19
+-    return _request('GET', _paths[0])
++def op_19(payload=None, *, timeout=30): ...
++    # generated from operationId=op_19
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_20.py b/src/tempo/generated/client_20.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_20.py
++++ b/src/tempo/generated/client_20.py
+@@ -1,3 +1,3 @@
+-def op_20(): ...
+-    # generated from operationId=op_20
+-    return _request('GET', _paths[0])
++def op_20(payload=None, *, timeout=30): ...
++    # generated from operationId=op_20
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_21.py b/src/tempo/generated/client_21.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_21.py
++++ b/src/tempo/generated/client_21.py
+@@ -1,3 +1,3 @@
+-def op_21(): ...
+-    # generated from operationId=op_21
+-    return _request('GET', _paths[0])
++def op_21(payload=None, *, timeout=30): ...
++    # generated from operationId=op_21
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_22.py b/src/tempo/generated/client_22.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_22.py
++++ b/src/tempo/generated/client_22.py
+@@ -1,3 +1,3 @@
+-def op_22(): ...
+-    # generated from operationId=op_22
+-    return _request('GET', _paths[0])
++def op_22(payload=None, *, timeout=30): ...
++    # generated from operationId=op_22
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_23.py b/src/tempo/generated/client_23.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_23.py
++++ b/src/tempo/generated/client_23.py
+@@ -1,3 +1,3 @@
+-def op_23(): ...
+-    # generated from operationId=op_23
+-    return _request('GET', _paths[0])
++def op_23(payload=None, *, timeout=30): ...
++    # generated from operationId=op_23
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_24.py b/src/tempo/generated/client_24.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_24.py
++++ b/src/tempo/generated/client_24.py
+@@ -1,3 +1,3 @@
+-def op_24(): ...
+-    # generated from operationId=op_24
+-    return _request('GET', _paths[0])
++def op_24(payload=None, *, timeout=30): ...
++    # generated from operationId=op_24
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_25.py b/src/tempo/generated/client_25.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_25.py
++++ b/src/tempo/generated/client_25.py
+@@ -1,3 +1,3 @@
+-def op_25(): ...
+-    # generated from operationId=op_25
+-    return _request('GET', _paths[0])
++def op_25(payload=None, *, timeout=30): ...
++    # generated from operationId=op_25
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_26.py b/src/tempo/generated/client_26.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_26.py
++++ b/src/tempo/generated/client_26.py
+@@ -1,3 +1,3 @@
+-def op_26(): ...
+-    # generated from operationId=op_26
+-    return _request('GET', _paths[0])
++def op_26(payload=None, *, timeout=30): ...
++    # generated from operationId=op_26
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_27.py b/src/tempo/generated/client_27.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_27.py
++++ b/src/tempo/generated/client_27.py
+@@ -1,3 +1,3 @@
+-def op_27(): ...
+-    # generated from operationId=op_27
+-    return _request('GET', _paths[0])
++def op_27(payload=None, *, timeout=30): ...
++    # generated from operationId=op_27
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_28.py b/src/tempo/generated/client_28.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_28.py
++++ b/src/tempo/generated/client_28.py
+@@ -1,3 +1,3 @@
+-def op_28(): ...
+-    # generated from operationId=op_28
+-    return _request('GET', _paths[0])
++def op_28(payload=None, *, timeout=30): ...
++    # generated from operationId=op_28
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_29.py b/src/tempo/generated/client_29.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_29.py
++++ b/src/tempo/generated/client_29.py
+@@ -1,3 +1,3 @@
+-def op_29(): ...
+-    # generated from operationId=op_29
+-    return _request('GET', _paths[0])
++def op_29(payload=None, *, timeout=30): ...
++    # generated from operationId=op_29
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_30.py b/src/tempo/generated/client_30.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_30.py
++++ b/src/tempo/generated/client_30.py
+@@ -1,3 +1,3 @@
+-def op_30(): ...
+-    # generated from operationId=op_30
+-    return _request('GET', _paths[0])
++def op_30(payload=None, *, timeout=30): ...
++    # generated from operationId=op_30
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_31.py b/src/tempo/generated/client_31.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_31.py
++++ b/src/tempo/generated/client_31.py
+@@ -1,3 +1,3 @@
+-def op_31(): ...
+-    # generated from operationId=op_31
+-    return _request('GET', _paths[0])
++def op_31(payload=None, *, timeout=30): ...
++    # generated from operationId=op_31
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_32.py b/src/tempo/generated/client_32.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_32.py
++++ b/src/tempo/generated/client_32.py
+@@ -1,3 +1,3 @@
+-def op_32(): ...
+-    # generated from operationId=op_32
+-    return _request('GET', _paths[0])
++def op_32(payload=None, *, timeout=30): ...
++    # generated from operationId=op_32
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_33.py b/src/tempo/generated/client_33.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_33.py
++++ b/src/tempo/generated/client_33.py
+@@ -1,3 +1,3 @@
+-def op_33(): ...
+-    # generated from operationId=op_33
+-    return _request('GET', _paths[0])
++def op_33(payload=None, *, timeout=30): ...
++    # generated from operationId=op_33
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_34.py b/src/tempo/generated/client_34.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_34.py
++++ b/src/tempo/generated/client_34.py
+@@ -1,3 +1,3 @@
+-def op_34(): ...
+-    # generated from operationId=op_34
+-    return _request('GET', _paths[0])
++def op_34(payload=None, *, timeout=30): ...
++    # generated from operationId=op_34
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_35.py b/src/tempo/generated/client_35.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_35.py
++++ b/src/tempo/generated/client_35.py
+@@ -1,3 +1,3 @@
+-def op_35(): ...
+-    # generated from operationId=op_35
+-    return _request('GET', _paths[0])
++def op_35(payload=None, *, timeout=30): ...
++    # generated from operationId=op_35
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_36.py b/src/tempo/generated/client_36.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_36.py
++++ b/src/tempo/generated/client_36.py
+@@ -1,3 +1,3 @@
+-def op_36(): ...
+-    # generated from operationId=op_36
+-    return _request('GET', _paths[0])
++def op_36(payload=None, *, timeout=30): ...
++    # generated from operationId=op_36
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_37.py b/src/tempo/generated/client_37.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_37.py
++++ b/src/tempo/generated/client_37.py
+@@ -1,3 +1,3 @@
+-def op_37(): ...
+-    # generated from operationId=op_37
+-    return _request('GET', _paths[0])
++def op_37(payload=None, *, timeout=30): ...
++    # generated from operationId=op_37
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_38.py b/src/tempo/generated/client_38.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_38.py
++++ b/src/tempo/generated/client_38.py
+@@ -1,3 +1,3 @@
+-def op_38(): ...
+-    # generated from operationId=op_38
+-    return _request('GET', _paths[0])
++def op_38(payload=None, *, timeout=30): ...
++    # generated from operationId=op_38
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_39.py b/src/tempo/generated/client_39.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_39.py
++++ b/src/tempo/generated/client_39.py
+@@ -1,3 +1,3 @@
+-def op_39(): ...
+-    # generated from operationId=op_39
+-    return _request('GET', _paths[0])
++def op_39(payload=None, *, timeout=30): ...
++    # generated from operationId=op_39
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_40.py b/src/tempo/generated/client_40.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_40.py
++++ b/src/tempo/generated/client_40.py
+@@ -1,3 +1,3 @@
+-def op_40(): ...
+-    # generated from operationId=op_40
+-    return _request('GET', _paths[0])
++def op_40(payload=None, *, timeout=30): ...
++    # generated from operationId=op_40
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_41.py b/src/tempo/generated/client_41.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_41.py
++++ b/src/tempo/generated/client_41.py
+@@ -1,3 +1,3 @@
+-def op_41(): ...
+-    # generated from operationId=op_41
+-    return _request('GET', _paths[0])
++def op_41(payload=None, *, timeout=30): ...
++    # generated from operationId=op_41
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_42.py b/src/tempo/generated/client_42.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_42.py
++++ b/src/tempo/generated/client_42.py
+@@ -1,3 +1,3 @@
+-def op_42(): ...
+-    # generated from operationId=op_42
+-    return _request('GET', _paths[0])
++def op_42(payload=None, *, timeout=30): ...
++    # generated from operationId=op_42
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_43.py b/src/tempo/generated/client_43.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_43.py
++++ b/src/tempo/generated/client_43.py
+@@ -1,3 +1,3 @@
+-def op_43(): ...
+-    # generated from operationId=op_43
+-    return _request('GET', _paths[0])
++def op_43(payload=None, *, timeout=30): ...
++    # generated from operationId=op_43
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_44.py b/src/tempo/generated/client_44.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_44.py
++++ b/src/tempo/generated/client_44.py
+@@ -1,3 +1,3 @@
+-def op_44(): ...
+-    # generated from operationId=op_44
+-    return _request('GET', _paths[0])
++def op_44(payload=None, *, timeout=30): ...
++    # generated from operationId=op_44
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_45.py b/src/tempo/generated/client_45.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_45.py
++++ b/src/tempo/generated/client_45.py
+@@ -1,3 +1,3 @@
+-def op_45(): ...
+-    # generated from operationId=op_45
+-    return _request('GET', _paths[0])
++def op_45(payload=None, *, timeout=30): ...
++    # generated from operationId=op_45
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_46.py b/src/tempo/generated/client_46.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_46.py
++++ b/src/tempo/generated/client_46.py
+@@ -1,3 +1,3 @@
+-def op_46(): ...
+-    # generated from operationId=op_46
+-    return _request('GET', _paths[0])
++def op_46(payload=None, *, timeout=30): ...
++    # generated from operationId=op_46
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_47.py b/src/tempo/generated/client_47.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_47.py
++++ b/src/tempo/generated/client_47.py
+@@ -1,3 +1,3 @@
+-def op_47(): ...
+-    # generated from operationId=op_47
+-    return _request('GET', _paths[0])
++def op_47(payload=None, *, timeout=30): ...
++    # generated from operationId=op_47
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_48.py b/src/tempo/generated/client_48.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_48.py
++++ b/src/tempo/generated/client_48.py
+@@ -1,3 +1,3 @@
+-def op_48(): ...
+-    # generated from operationId=op_48
+-    return _request('GET', _paths[0])
++def op_48(payload=None, *, timeout=30): ...
++    # generated from operationId=op_48
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_49.py b/src/tempo/generated/client_49.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_49.py
++++ b/src/tempo/generated/client_49.py
+@@ -1,3 +1,3 @@
+-def op_49(): ...
+-    # generated from operationId=op_49
+-    return _request('GET', _paths[0])
++def op_49(payload=None, *, timeout=30): ...
++    # generated from operationId=op_49
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_50.py b/src/tempo/generated/client_50.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_50.py
++++ b/src/tempo/generated/client_50.py
+@@ -1,3 +1,3 @@
+-def op_50(): ...
+-    # generated from operationId=op_50
+-    return _request('GET', _paths[0])
++def op_50(payload=None, *, timeout=30): ...
++    # generated from operationId=op_50
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_51.py b/src/tempo/generated/client_51.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_51.py
++++ b/src/tempo/generated/client_51.py
+@@ -1,3 +1,3 @@
+-def op_51(): ...
+-    # generated from operationId=op_51
+-    return _request('GET', _paths[0])
++def op_51(payload=None, *, timeout=30): ...
++    # generated from operationId=op_51
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_52.py b/src/tempo/generated/client_52.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_52.py
++++ b/src/tempo/generated/client_52.py
+@@ -1,3 +1,3 @@
+-def op_52(): ...
+-    # generated from operationId=op_52
+-    return _request('GET', _paths[0])
++def op_52(payload=None, *, timeout=30): ...
++    # generated from operationId=op_52
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_53.py b/src/tempo/generated/client_53.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_53.py
++++ b/src/tempo/generated/client_53.py
+@@ -1,3 +1,3 @@
+-def op_53(): ...
+-    # generated from operationId=op_53
+-    return _request('GET', _paths[0])
++def op_53(payload=None, *, timeout=30): ...
++    # generated from operationId=op_53
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_54.py b/src/tempo/generated/client_54.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_54.py
++++ b/src/tempo/generated/client_54.py
+@@ -1,3 +1,3 @@
+-def op_54(): ...
+-    # generated from operationId=op_54
+-    return _request('GET', _paths[0])
++def op_54(payload=None, *, timeout=30): ...
++    # generated from operationId=op_54
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_55.py b/src/tempo/generated/client_55.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_55.py
++++ b/src/tempo/generated/client_55.py
+@@ -1,3 +1,3 @@
+-def op_55(): ...
+-    # generated from operationId=op_55
+-    return _request('GET', _paths[0])
++def op_55(payload=None, *, timeout=30): ...
++    # generated from operationId=op_55
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_56.py b/src/tempo/generated/client_56.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_56.py
++++ b/src/tempo/generated/client_56.py
+@@ -1,3 +1,3 @@
+-def op_56(): ...
+-    # generated from operationId=op_56
+-    return _request('GET', _paths[0])
++def op_56(payload=None, *, timeout=30): ...
++    # generated from operationId=op_56
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_57.py b/src/tempo/generated/client_57.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_57.py
++++ b/src/tempo/generated/client_57.py
+@@ -1,3 +1,3 @@
+-def op_57(): ...
+-    # generated from operationId=op_57
+-    return _request('GET', _paths[0])
++def op_57(payload=None, *, timeout=30): ...
++    # generated from operationId=op_57
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_58.py b/src/tempo/generated/client_58.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_58.py
++++ b/src/tempo/generated/client_58.py
+@@ -1,3 +1,3 @@
+-def op_58(): ...
+-    # generated from operationId=op_58
+-    return _request('GET', _paths[0])
++def op_58(payload=None, *, timeout=30): ...
++    # generated from operationId=op_58
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_59.py b/src/tempo/generated/client_59.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_59.py
++++ b/src/tempo/generated/client_59.py
+@@ -1,3 +1,3 @@
+-def op_59(): ...
+-    # generated from operationId=op_59
+-    return _request('GET', _paths[0])
++def op_59(payload=None, *, timeout=30): ...
++    # generated from operationId=op_59
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_60.py b/src/tempo/generated/client_60.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_60.py
++++ b/src/tempo/generated/client_60.py
+@@ -1,3 +1,3 @@
+-def op_60(): ...
+-    # generated from operationId=op_60
+-    return _request('GET', _paths[0])
++def op_60(payload=None, *, timeout=30): ...
++    # generated from operationId=op_60
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_61.py b/src/tempo/generated/client_61.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_61.py
++++ b/src/tempo/generated/client_61.py
+@@ -1,3 +1,3 @@
+-def op_61(): ...
+-    # generated from operationId=op_61
+-    return _request('GET', _paths[0])
++def op_61(payload=None, *, timeout=30): ...
++    # generated from operationId=op_61
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_62.py b/src/tempo/generated/client_62.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_62.py
++++ b/src/tempo/generated/client_62.py
+@@ -1,3 +1,3 @@
+-def op_62(): ...
+-    # generated from operationId=op_62
+-    return _request('GET', _paths[0])
++def op_62(payload=None, *, timeout=30): ...
++    # generated from operationId=op_62
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_63.py b/src/tempo/generated/client_63.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_63.py
++++ b/src/tempo/generated/client_63.py
+@@ -1,3 +1,3 @@
+-def op_63(): ...
+-    # generated from operationId=op_63
+-    return _request('GET', _paths[0])
++def op_63(payload=None, *, timeout=30): ...
++    # generated from operationId=op_63
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_64.py b/src/tempo/generated/client_64.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_64.py
++++ b/src/tempo/generated/client_64.py
+@@ -1,3 +1,3 @@
+-def op_64(): ...
+-    # generated from operationId=op_64
+-    return _request('GET', _paths[0])
++def op_64(payload=None, *, timeout=30): ...
++    # generated from operationId=op_64
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_65.py b/src/tempo/generated/client_65.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_65.py
++++ b/src/tempo/generated/client_65.py
+@@ -1,3 +1,3 @@
+-def op_65(): ...
+-    # generated from operationId=op_65
+-    return _request('GET', _paths[0])
++def op_65(payload=None, *, timeout=30): ...
++    # generated from operationId=op_65
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_66.py b/src/tempo/generated/client_66.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_66.py
++++ b/src/tempo/generated/client_66.py
+@@ -1,3 +1,3 @@
+-def op_66(): ...
+-    # generated from operationId=op_66
+-    return _request('GET', _paths[0])
++def op_66(payload=None, *, timeout=30): ...
++    # generated from operationId=op_66
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_67.py b/src/tempo/generated/client_67.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_67.py
++++ b/src/tempo/generated/client_67.py
+@@ -1,3 +1,3 @@
+-def op_67(): ...
+-    # generated from operationId=op_67
+-    return _request('GET', _paths[0])
++def op_67(payload=None, *, timeout=30): ...
++    # generated from operationId=op_67
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_68.py b/src/tempo/generated/client_68.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_68.py
++++ b/src/tempo/generated/client_68.py
+@@ -1,3 +1,3 @@
+-def op_68(): ...
+-    # generated from operationId=op_68
+-    return _request('GET', _paths[0])
++def op_68(payload=None, *, timeout=30): ...
++    # generated from operationId=op_68
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_69.py b/src/tempo/generated/client_69.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_69.py
++++ b/src/tempo/generated/client_69.py
+@@ -1,3 +1,3 @@
+-def op_69(): ...
+-    # generated from operationId=op_69
+-    return _request('GET', _paths[0])
++def op_69(payload=None, *, timeout=30): ...
++    # generated from operationId=op_69
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_70.py b/src/tempo/generated/client_70.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_70.py
++++ b/src/tempo/generated/client_70.py
+@@ -1,3 +1,3 @@
+-def op_70(): ...
+-    # generated from operationId=op_70
+-    return _request('GET', _paths[0])
++def op_70(payload=None, *, timeout=30): ...
++    # generated from operationId=op_70
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_71.py b/src/tempo/generated/client_71.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_71.py
++++ b/src/tempo/generated/client_71.py
+@@ -1,3 +1,3 @@
+-def op_71(): ...
+-    # generated from operationId=op_71
+-    return _request('GET', _paths[0])
++def op_71(payload=None, *, timeout=30): ...
++    # generated from operationId=op_71
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_72.py b/src/tempo/generated/client_72.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_72.py
++++ b/src/tempo/generated/client_72.py
+@@ -1,3 +1,3 @@
+-def op_72(): ...
+-    # generated from operationId=op_72
+-    return _request('GET', _paths[0])
++def op_72(payload=None, *, timeout=30): ...
++    # generated from operationId=op_72
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_73.py b/src/tempo/generated/client_73.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_73.py
++++ b/src/tempo/generated/client_73.py
+@@ -1,3 +1,3 @@
+-def op_73(): ...
+-    # generated from operationId=op_73
+-    return _request('GET', _paths[0])
++def op_73(payload=None, *, timeout=30): ...
++    # generated from operationId=op_73
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_74.py b/src/tempo/generated/client_74.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_74.py
++++ b/src/tempo/generated/client_74.py
+@@ -1,3 +1,3 @@
+-def op_74(): ...
+-    # generated from operationId=op_74
+-    return _request('GET', _paths[0])
++def op_74(payload=None, *, timeout=30): ...
++    # generated from operationId=op_74
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_75.py b/src/tempo/generated/client_75.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_75.py
++++ b/src/tempo/generated/client_75.py
+@@ -1,3 +1,3 @@
+-def op_75(): ...
+-    # generated from operationId=op_75
+-    return _request('GET', _paths[0])
++def op_75(payload=None, *, timeout=30): ...
++    # generated from operationId=op_75
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_76.py b/src/tempo/generated/client_76.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_76.py
++++ b/src/tempo/generated/client_76.py
+@@ -1,3 +1,3 @@
+-def op_76(): ...
+-    # generated from operationId=op_76
+-    return _request('GET', _paths[0])
++def op_76(payload=None, *, timeout=30): ...
++    # generated from operationId=op_76
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_77.py b/src/tempo/generated/client_77.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_77.py
++++ b/src/tempo/generated/client_77.py
+@@ -1,3 +1,3 @@
+-def op_77(): ...
+-    # generated from operationId=op_77
+-    return _request('GET', _paths[0])
++def op_77(payload=None, *, timeout=30): ...
++    # generated from operationId=op_77
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_78.py b/src/tempo/generated/client_78.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_78.py
++++ b/src/tempo/generated/client_78.py
+@@ -1,3 +1,3 @@
+-def op_78(): ...
+-    # generated from operationId=op_78
+-    return _request('GET', _paths[0])
++def op_78(payload=None, *, timeout=30): ...
++    # generated from operationId=op_78
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_79.py b/src/tempo/generated/client_79.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_79.py
++++ b/src/tempo/generated/client_79.py
+@@ -1,3 +1,3 @@
+-def op_79(): ...
+-    # generated from operationId=op_79
+-    return _request('GET', _paths[0])
++def op_79(payload=None, *, timeout=30): ...
++    # generated from operationId=op_79
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_80.py b/src/tempo/generated/client_80.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_80.py
++++ b/src/tempo/generated/client_80.py
+@@ -1,3 +1,3 @@
+-def op_80(): ...
+-    # generated from operationId=op_80
+-    return _request('GET', _paths[0])
++def op_80(payload=None, *, timeout=30): ...
++    # generated from operationId=op_80
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_81.py b/src/tempo/generated/client_81.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_81.py
++++ b/src/tempo/generated/client_81.py
+@@ -1,3 +1,3 @@
+-def op_81(): ...
+-    # generated from operationId=op_81
+-    return _request('GET', _paths[0])
++def op_81(payload=None, *, timeout=30): ...
++    # generated from operationId=op_81
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_82.py b/src/tempo/generated/client_82.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_82.py
++++ b/src/tempo/generated/client_82.py
+@@ -1,3 +1,3 @@
+-def op_82(): ...
+-    # generated from operationId=op_82
+-    return _request('GET', _paths[0])
++def op_82(payload=None, *, timeout=30): ...
++    # generated from operationId=op_82
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_83.py b/src/tempo/generated/client_83.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_83.py
++++ b/src/tempo/generated/client_83.py
+@@ -1,3 +1,3 @@
+-def op_83(): ...
+-    # generated from operationId=op_83
+-    return _request('GET', _paths[0])
++def op_83(payload=None, *, timeout=30): ...
++    # generated from operationId=op_83
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_84.py b/src/tempo/generated/client_84.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_84.py
++++ b/src/tempo/generated/client_84.py
+@@ -1,3 +1,3 @@
+-def op_84(): ...
+-    # generated from operationId=op_84
+-    return _request('GET', _paths[0])
++def op_84(payload=None, *, timeout=30): ...
++    # generated from operationId=op_84
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_85.py b/src/tempo/generated/client_85.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_85.py
++++ b/src/tempo/generated/client_85.py
+@@ -1,3 +1,3 @@
+-def op_85(): ...
+-    # generated from operationId=op_85
+-    return _request('GET', _paths[0])
++def op_85(payload=None, *, timeout=30): ...
++    # generated from operationId=op_85
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_86.py b/src/tempo/generated/client_86.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_86.py
++++ b/src/tempo/generated/client_86.py
+@@ -1,3 +1,3 @@
+-def op_86(): ...
+-    # generated from operationId=op_86
+-    return _request('GET', _paths[0])
++def op_86(payload=None, *, timeout=30): ...
++    # generated from operationId=op_86
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_87.py b/src/tempo/generated/client_87.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_87.py
++++ b/src/tempo/generated/client_87.py
+@@ -1,3 +1,3 @@
+-def op_87(): ...
+-    # generated from operationId=op_87
+-    return _request('GET', _paths[0])
++def op_87(payload=None, *, timeout=30): ...
++    # generated from operationId=op_87
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_88.py b/src/tempo/generated/client_88.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_88.py
++++ b/src/tempo/generated/client_88.py
+@@ -1,3 +1,3 @@
+-def op_88(): ...
+-    # generated from operationId=op_88
+-    return _request('GET', _paths[0])
++def op_88(payload=None, *, timeout=30): ...
++    # generated from operationId=op_88
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_89.py b/src/tempo/generated/client_89.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_89.py
++++ b/src/tempo/generated/client_89.py
+@@ -1,3 +1,3 @@
+-def op_89(): ...
+-    # generated from operationId=op_89
+-    return _request('GET', _paths[0])
++def op_89(payload=None, *, timeout=30): ...
++    # generated from operationId=op_89
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_90.py b/src/tempo/generated/client_90.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_90.py
++++ b/src/tempo/generated/client_90.py
+@@ -1,3 +1,3 @@
+-def op_90(): ...
+-    # generated from operationId=op_90
+-    return _request('GET', _paths[0])
++def op_90(payload=None, *, timeout=30): ...
++    # generated from operationId=op_90
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_91.py b/src/tempo/generated/client_91.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_91.py
++++ b/src/tempo/generated/client_91.py
+@@ -1,3 +1,3 @@
+-def op_91(): ...
+-    # generated from operationId=op_91
+-    return _request('GET', _paths[0])
++def op_91(payload=None, *, timeout=30): ...
++    # generated from operationId=op_91
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_92.py b/src/tempo/generated/client_92.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_92.py
++++ b/src/tempo/generated/client_92.py
+@@ -1,3 +1,3 @@
+-def op_92(): ...
+-    # generated from operationId=op_92
+-    return _request('GET', _paths[0])
++def op_92(payload=None, *, timeout=30): ...
++    # generated from operationId=op_92
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_93.py b/src/tempo/generated/client_93.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_93.py
++++ b/src/tempo/generated/client_93.py
+@@ -1,3 +1,3 @@
+-def op_93(): ...
+-    # generated from operationId=op_93
+-    return _request('GET', _paths[0])
++def op_93(payload=None, *, timeout=30): ...
++    # generated from operationId=op_93
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_94.py b/src/tempo/generated/client_94.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_94.py
++++ b/src/tempo/generated/client_94.py
+@@ -1,3 +1,3 @@
+-def op_94(): ...
+-    # generated from operationId=op_94
+-    return _request('GET', _paths[0])
++def op_94(payload=None, *, timeout=30): ...
++    # generated from operationId=op_94
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_95.py b/src/tempo/generated/client_95.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_95.py
++++ b/src/tempo/generated/client_95.py
+@@ -1,3 +1,3 @@
+-def op_95(): ...
+-    # generated from operationId=op_95
+-    return _request('GET', _paths[0])
++def op_95(payload=None, *, timeout=30): ...
++    # generated from operationId=op_95
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_96.py b/src/tempo/generated/client_96.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_96.py
++++ b/src/tempo/generated/client_96.py
+@@ -1,3 +1,3 @@
+-def op_96(): ...
+-    # generated from operationId=op_96
+-    return _request('GET', _paths[0])
++def op_96(payload=None, *, timeout=30): ...
++    # generated from operationId=op_96
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_97.py b/src/tempo/generated/client_97.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_97.py
++++ b/src/tempo/generated/client_97.py
+@@ -1,3 +1,3 @@
+-def op_97(): ...
+-    # generated from operationId=op_97
+-    return _request('GET', _paths[0])
++def op_97(payload=None, *, timeout=30): ...
++    # generated from operationId=op_97
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_98.py b/src/tempo/generated/client_98.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_98.py
++++ b/src/tempo/generated/client_98.py
+@@ -1,3 +1,3 @@
+-def op_98(): ...
+-    # generated from operationId=op_98
+-    return _request('GET', _paths[0])
++def op_98(payload=None, *, timeout=30): ...
++    # generated from operationId=op_98
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_99.py b/src/tempo/generated/client_99.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_99.py
++++ b/src/tempo/generated/client_99.py
+@@ -1,3 +1,3 @@
+-def op_99(): ...
+-    # generated from operationId=op_99
+-    return _request('GET', _paths[0])
++def op_99(payload=None, *, timeout=30): ...
++    # generated from operationId=op_99
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_100.py b/src/tempo/generated/client_100.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_100.py
++++ b/src/tempo/generated/client_100.py
+@@ -1,3 +1,3 @@
+-def op_100(): ...
+-    # generated from operationId=op_100
+-    return _request('GET', _paths[0])
++def op_100(payload=None, *, timeout=30): ...
++    # generated from operationId=op_100
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_101.py b/src/tempo/generated/client_101.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_101.py
++++ b/src/tempo/generated/client_101.py
+@@ -1,3 +1,3 @@
+-def op_101(): ...
+-    # generated from operationId=op_101
+-    return _request('GET', _paths[0])
++def op_101(payload=None, *, timeout=30): ...
++    # generated from operationId=op_101
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_102.py b/src/tempo/generated/client_102.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_102.py
++++ b/src/tempo/generated/client_102.py
+@@ -1,3 +1,3 @@
+-def op_102(): ...
+-    # generated from operationId=op_102
+-    return _request('GET', _paths[0])
++def op_102(payload=None, *, timeout=30): ...
++    # generated from operationId=op_102
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_103.py b/src/tempo/generated/client_103.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_103.py
++++ b/src/tempo/generated/client_103.py
+@@ -1,3 +1,3 @@
+-def op_103(): ...
+-    # generated from operationId=op_103
+-    return _request('GET', _paths[0])
++def op_103(payload=None, *, timeout=30): ...
++    # generated from operationId=op_103
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_104.py b/src/tempo/generated/client_104.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_104.py
++++ b/src/tempo/generated/client_104.py
+@@ -1,3 +1,3 @@
+-def op_104(): ...
+-    # generated from operationId=op_104
+-    return _request('GET', _paths[0])
++def op_104(payload=None, *, timeout=30): ...
++    # generated from operationId=op_104
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_105.py b/src/tempo/generated/client_105.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_105.py
++++ b/src/tempo/generated/client_105.py
+@@ -1,3 +1,3 @@
+-def op_105(): ...
+-    # generated from operationId=op_105
+-    return _request('GET', _paths[0])
++def op_105(payload=None, *, timeout=30): ...
++    # generated from operationId=op_105
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_106.py b/src/tempo/generated/client_106.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_106.py
++++ b/src/tempo/generated/client_106.py
+@@ -1,3 +1,3 @@
+-def op_106(): ...
+-    # generated from operationId=op_106
+-    return _request('GET', _paths[0])
++def op_106(payload=None, *, timeout=30): ...
++    # generated from operationId=op_106
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_107.py b/src/tempo/generated/client_107.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_107.py
++++ b/src/tempo/generated/client_107.py
+@@ -1,3 +1,3 @@
+-def op_107(): ...
+-    # generated from operationId=op_107
+-    return _request('GET', _paths[0])
++def op_107(payload=None, *, timeout=30): ...
++    # generated from operationId=op_107
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_108.py b/src/tempo/generated/client_108.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_108.py
++++ b/src/tempo/generated/client_108.py
+@@ -1,3 +1,3 @@
+-def op_108(): ...
+-    # generated from operationId=op_108
+-    return _request('GET', _paths[0])
++def op_108(payload=None, *, timeout=30): ...
++    # generated from operationId=op_108
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_109.py b/src/tempo/generated/client_109.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_109.py
++++ b/src/tempo/generated/client_109.py
+@@ -1,3 +1,3 @@
+-def op_109(): ...
+-    # generated from operationId=op_109
+-    return _request('GET', _paths[0])
++def op_109(payload=None, *, timeout=30): ...
++    # generated from operationId=op_109
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_110.py b/src/tempo/generated/client_110.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_110.py
++++ b/src/tempo/generated/client_110.py
+@@ -1,3 +1,3 @@
+-def op_110(): ...
+-    # generated from operationId=op_110
+-    return _request('GET', _paths[0])
++def op_110(payload=None, *, timeout=30): ...
++    # generated from operationId=op_110
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_111.py b/src/tempo/generated/client_111.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_111.py
++++ b/src/tempo/generated/client_111.py
+@@ -1,3 +1,3 @@
+-def op_111(): ...
+-    # generated from operationId=op_111
+-    return _request('GET', _paths[0])
++def op_111(payload=None, *, timeout=30): ...
++    # generated from operationId=op_111
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_112.py b/src/tempo/generated/client_112.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_112.py
++++ b/src/tempo/generated/client_112.py
+@@ -1,3 +1,3 @@
+-def op_112(): ...
+-    # generated from operationId=op_112
+-    return _request('GET', _paths[0])
++def op_112(payload=None, *, timeout=30): ...
++    # generated from operationId=op_112
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_113.py b/src/tempo/generated/client_113.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_113.py
++++ b/src/tempo/generated/client_113.py
+@@ -1,3 +1,3 @@
+-def op_113(): ...
+-    # generated from operationId=op_113
+-    return _request('GET', _paths[0])
++def op_113(payload=None, *, timeout=30): ...
++    # generated from operationId=op_113
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_114.py b/src/tempo/generated/client_114.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_114.py
++++ b/src/tempo/generated/client_114.py
+@@ -1,3 +1,3 @@
+-def op_114(): ...
+-    # generated from operationId=op_114
+-    return _request('GET', _paths[0])
++def op_114(payload=None, *, timeout=30): ...
++    # generated from operationId=op_114
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_115.py b/src/tempo/generated/client_115.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_115.py
++++ b/src/tempo/generated/client_115.py
+@@ -1,3 +1,3 @@
+-def op_115(): ...
+-    # generated from operationId=op_115
+-    return _request('GET', _paths[0])
++def op_115(payload=None, *, timeout=30): ...
++    # generated from operationId=op_115
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_116.py b/src/tempo/generated/client_116.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_116.py
++++ b/src/tempo/generated/client_116.py
+@@ -1,3 +1,3 @@
+-def op_116(): ...
+-    # generated from operationId=op_116
+-    return _request('GET', _paths[0])
++def op_116(payload=None, *, timeout=30): ...
++    # generated from operationId=op_116
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_117.py b/src/tempo/generated/client_117.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_117.py
++++ b/src/tempo/generated/client_117.py
+@@ -1,3 +1,3 @@
+-def op_117(): ...
+-    # generated from operationId=op_117
+-    return _request('GET', _paths[0])
++def op_117(payload=None, *, timeout=30): ...
++    # generated from operationId=op_117
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_118.py b/src/tempo/generated/client_118.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_118.py
++++ b/src/tempo/generated/client_118.py
+@@ -1,3 +1,3 @@
+-def op_118(): ...
+-    # generated from operationId=op_118
+-    return _request('GET', _paths[0])
++def op_118(payload=None, *, timeout=30): ...
++    # generated from operationId=op_118
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_119.py b/src/tempo/generated/client_119.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_119.py
++++ b/src/tempo/generated/client_119.py
+@@ -1,3 +1,3 @@
+-def op_119(): ...
+-    # generated from operationId=op_119
+-    return _request('GET', _paths[0])
++def op_119(payload=None, *, timeout=30): ...
++    # generated from operationId=op_119
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_120.py b/src/tempo/generated/client_120.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_120.py
++++ b/src/tempo/generated/client_120.py
+@@ -1,3 +1,3 @@
+-def op_120(): ...
+-    # generated from operationId=op_120
+-    return _request('GET', _paths[0])
++def op_120(payload=None, *, timeout=30): ...
++    # generated from operationId=op_120
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_121.py b/src/tempo/generated/client_121.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_121.py
++++ b/src/tempo/generated/client_121.py
+@@ -1,3 +1,3 @@
+-def op_121(): ...
+-    # generated from operationId=op_121
+-    return _request('GET', _paths[0])
++def op_121(payload=None, *, timeout=30): ...
++    # generated from operationId=op_121
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_122.py b/src/tempo/generated/client_122.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_122.py
++++ b/src/tempo/generated/client_122.py
+@@ -1,3 +1,3 @@
+-def op_122(): ...
+-    # generated from operationId=op_122
+-    return _request('GET', _paths[0])
++def op_122(payload=None, *, timeout=30): ...
++    # generated from operationId=op_122
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_123.py b/src/tempo/generated/client_123.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_123.py
++++ b/src/tempo/generated/client_123.py
+@@ -1,3 +1,3 @@
+-def op_123(): ...
+-    # generated from operationId=op_123
+-    return _request('GET', _paths[0])
++def op_123(payload=None, *, timeout=30): ...
++    # generated from operationId=op_123
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_124.py b/src/tempo/generated/client_124.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_124.py
++++ b/src/tempo/generated/client_124.py
+@@ -1,3 +1,3 @@
+-def op_124(): ...
+-    # generated from operationId=op_124
+-    return _request('GET', _paths[0])
++def op_124(payload=None, *, timeout=30): ...
++    # generated from operationId=op_124
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_125.py b/src/tempo/generated/client_125.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_125.py
++++ b/src/tempo/generated/client_125.py
+@@ -1,3 +1,3 @@
+-def op_125(): ...
+-    # generated from operationId=op_125
+-    return _request('GET', _paths[0])
++def op_125(payload=None, *, timeout=30): ...
++    # generated from operationId=op_125
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_126.py b/src/tempo/generated/client_126.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_126.py
++++ b/src/tempo/generated/client_126.py
+@@ -1,3 +1,3 @@
+-def op_126(): ...
+-    # generated from operationId=op_126
+-    return _request('GET', _paths[0])
++def op_126(payload=None, *, timeout=30): ...
++    # generated from operationId=op_126
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_127.py b/src/tempo/generated/client_127.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_127.py
++++ b/src/tempo/generated/client_127.py
+@@ -1,3 +1,3 @@
+-def op_127(): ...
+-    # generated from operationId=op_127
+-    return _request('GET', _paths[0])
++def op_127(payload=None, *, timeout=30): ...
++    # generated from operationId=op_127
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_128.py b/src/tempo/generated/client_128.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_128.py
++++ b/src/tempo/generated/client_128.py
+@@ -1,3 +1,3 @@
+-def op_128(): ...
+-    # generated from operationId=op_128
+-    return _request('GET', _paths[0])
++def op_128(payload=None, *, timeout=30): ...
++    # generated from operationId=op_128
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_129.py b/src/tempo/generated/client_129.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_129.py
++++ b/src/tempo/generated/client_129.py
+@@ -1,3 +1,3 @@
+-def op_129(): ...
+-    # generated from operationId=op_129
+-    return _request('GET', _paths[0])
++def op_129(payload=None, *, timeout=30): ...
++    # generated from operationId=op_129
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_130.py b/src/tempo/generated/client_130.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_130.py
++++ b/src/tempo/generated/client_130.py
+@@ -1,3 +1,3 @@
+-def op_130(): ...
+-    # generated from operationId=op_130
+-    return _request('GET', _paths[0])
++def op_130(payload=None, *, timeout=30): ...
++    # generated from operationId=op_130
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_131.py b/src/tempo/generated/client_131.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_131.py
++++ b/src/tempo/generated/client_131.py
+@@ -1,3 +1,3 @@
+-def op_131(): ...
+-    # generated from operationId=op_131
+-    return _request('GET', _paths[0])
++def op_131(payload=None, *, timeout=30): ...
++    # generated from operationId=op_131
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_132.py b/src/tempo/generated/client_132.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_132.py
++++ b/src/tempo/generated/client_132.py
+@@ -1,3 +1,3 @@
+-def op_132(): ...
+-    # generated from operationId=op_132
+-    return _request('GET', _paths[0])
++def op_132(payload=None, *, timeout=30): ...
++    # generated from operationId=op_132
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_133.py b/src/tempo/generated/client_133.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_133.py
++++ b/src/tempo/generated/client_133.py
+@@ -1,3 +1,3 @@
+-def op_133(): ...
+-    # generated from operationId=op_133
+-    return _request('GET', _paths[0])
++def op_133(payload=None, *, timeout=30): ...
++    # generated from operationId=op_133
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_134.py b/src/tempo/generated/client_134.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_134.py
++++ b/src/tempo/generated/client_134.py
+@@ -1,3 +1,3 @@
+-def op_134(): ...
+-    # generated from operationId=op_134
+-    return _request('GET', _paths[0])
++def op_134(payload=None, *, timeout=30): ...
++    # generated from operationId=op_134
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_135.py b/src/tempo/generated/client_135.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_135.py
++++ b/src/tempo/generated/client_135.py
+@@ -1,3 +1,3 @@
+-def op_135(): ...
+-    # generated from operationId=op_135
+-    return _request('GET', _paths[0])
++def op_135(payload=None, *, timeout=30): ...
++    # generated from operationId=op_135
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_136.py b/src/tempo/generated/client_136.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_136.py
++++ b/src/tempo/generated/client_136.py
+@@ -1,3 +1,3 @@
+-def op_136(): ...
+-    # generated from operationId=op_136
+-    return _request('GET', _paths[0])
++def op_136(payload=None, *, timeout=30): ...
++    # generated from operationId=op_136
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_137.py b/src/tempo/generated/client_137.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_137.py
++++ b/src/tempo/generated/client_137.py
+@@ -1,3 +1,3 @@
+-def op_137(): ...
+-    # generated from operationId=op_137
+-    return _request('GET', _paths[0])
++def op_137(payload=None, *, timeout=30): ...
++    # generated from operationId=op_137
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_138.py b/src/tempo/generated/client_138.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_138.py
++++ b/src/tempo/generated/client_138.py
+@@ -1,3 +1,3 @@
+-def op_138(): ...
+-    # generated from operationId=op_138
+-    return _request('GET', _paths[0])
++def op_138(payload=None, *, timeout=30): ...
++    # generated from operationId=op_138
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_139.py b/src/tempo/generated/client_139.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_139.py
++++ b/src/tempo/generated/client_139.py
+@@ -1,3 +1,3 @@
+-def op_139(): ...
+-    # generated from operationId=op_139
+-    return _request('GET', _paths[0])
++def op_139(payload=None, *, timeout=30): ...
++    # generated from operationId=op_139
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_140.py b/src/tempo/generated/client_140.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_140.py
++++ b/src/tempo/generated/client_140.py
+@@ -1,3 +1,3 @@
+-def op_140(): ...
+-    # generated from operationId=op_140
+-    return _request('GET', _paths[0])
++def op_140(payload=None, *, timeout=30): ...
++    # generated from operationId=op_140
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_141.py b/src/tempo/generated/client_141.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_141.py
++++ b/src/tempo/generated/client_141.py
+@@ -1,3 +1,3 @@
+-def op_141(): ...
+-    # generated from operationId=op_141
+-    return _request('GET', _paths[0])
++def op_141(payload=None, *, timeout=30): ...
++    # generated from operationId=op_141
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_142.py b/src/tempo/generated/client_142.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_142.py
++++ b/src/tempo/generated/client_142.py
+@@ -1,3 +1,3 @@
+-def op_142(): ...
+-    # generated from operationId=op_142
+-    return _request('GET', _paths[0])
++def op_142(payload=None, *, timeout=30): ...
++    # generated from operationId=op_142
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_143.py b/src/tempo/generated/client_143.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_143.py
++++ b/src/tempo/generated/client_143.py
+@@ -1,3 +1,3 @@
+-def op_143(): ...
+-    # generated from operationId=op_143
+-    return _request('GET', _paths[0])
++def op_143(payload=None, *, timeout=30): ...
++    # generated from operationId=op_143
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_144.py b/src/tempo/generated/client_144.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_144.py
++++ b/src/tempo/generated/client_144.py
+@@ -1,3 +1,3 @@
+-def op_144(): ...
+-    # generated from operationId=op_144
+-    return _request('GET', _paths[0])
++def op_144(payload=None, *, timeout=30): ...
++    # generated from operationId=op_144
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_145.py b/src/tempo/generated/client_145.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_145.py
++++ b/src/tempo/generated/client_145.py
+@@ -1,3 +1,3 @@
+-def op_145(): ...
+-    # generated from operationId=op_145
+-    return _request('GET', _paths[0])
++def op_145(payload=None, *, timeout=30): ...
++    # generated from operationId=op_145
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_146.py b/src/tempo/generated/client_146.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_146.py
++++ b/src/tempo/generated/client_146.py
+@@ -1,3 +1,3 @@
+-def op_146(): ...
+-    # generated from operationId=op_146
+-    return _request('GET', _paths[0])
++def op_146(payload=None, *, timeout=30): ...
++    # generated from operationId=op_146
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_147.py b/src/tempo/generated/client_147.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_147.py
++++ b/src/tempo/generated/client_147.py
+@@ -1,3 +1,3 @@
+-def op_147(): ...
+-    # generated from operationId=op_147
+-    return _request('GET', _paths[0])
++def op_147(payload=None, *, timeout=30): ...
++    # generated from operationId=op_147
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_148.py b/src/tempo/generated/client_148.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_148.py
++++ b/src/tempo/generated/client_148.py
+@@ -1,3 +1,3 @@
+-def op_148(): ...
+-    # generated from operationId=op_148
+-    return _request('GET', _paths[0])
++def op_148(payload=None, *, timeout=30): ...
++    # generated from operationId=op_148
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_149.py b/src/tempo/generated/client_149.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_149.py
++++ b/src/tempo/generated/client_149.py
+@@ -1,3 +1,3 @@
+-def op_149(): ...
+-    # generated from operationId=op_149
+-    return _request('GET', _paths[0])
++def op_149(payload=None, *, timeout=30): ...
++    # generated from operationId=op_149
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_150.py b/src/tempo/generated/client_150.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_150.py
++++ b/src/tempo/generated/client_150.py
+@@ -1,3 +1,3 @@
+-def op_150(): ...
+-    # generated from operationId=op_150
+-    return _request('GET', _paths[0])
++def op_150(payload=None, *, timeout=30): ...
++    # generated from operationId=op_150
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_151.py b/src/tempo/generated/client_151.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_151.py
++++ b/src/tempo/generated/client_151.py
+@@ -1,3 +1,3 @@
+-def op_151(): ...
+-    # generated from operationId=op_151
+-    return _request('GET', _paths[0])
++def op_151(payload=None, *, timeout=30): ...
++    # generated from operationId=op_151
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_152.py b/src/tempo/generated/client_152.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_152.py
++++ b/src/tempo/generated/client_152.py
+@@ -1,3 +1,3 @@
+-def op_152(): ...
+-    # generated from operationId=op_152
+-    return _request('GET', _paths[0])
++def op_152(payload=None, *, timeout=30): ...
++    # generated from operationId=op_152
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_153.py b/src/tempo/generated/client_153.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_153.py
++++ b/src/tempo/generated/client_153.py
+@@ -1,3 +1,3 @@
+-def op_153(): ...
+-    # generated from operationId=op_153
+-    return _request('GET', _paths[0])
++def op_153(payload=None, *, timeout=30): ...
++    # generated from operationId=op_153
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_154.py b/src/tempo/generated/client_154.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_154.py
++++ b/src/tempo/generated/client_154.py
+@@ -1,3 +1,3 @@
+-def op_154(): ...
+-    # generated from operationId=op_154
+-    return _request('GET', _paths[0])
++def op_154(payload=None, *, timeout=30): ...
++    # generated from operationId=op_154
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_155.py b/src/tempo/generated/client_155.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_155.py
++++ b/src/tempo/generated/client_155.py
+@@ -1,3 +1,3 @@
+-def op_155(): ...
+-    # generated from operationId=op_155
+-    return _request('GET', _paths[0])
++def op_155(payload=None, *, timeout=30): ...
++    # generated from operationId=op_155
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_156.py b/src/tempo/generated/client_156.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_156.py
++++ b/src/tempo/generated/client_156.py
+@@ -1,3 +1,3 @@
+-def op_156(): ...
+-    # generated from operationId=op_156
+-    return _request('GET', _paths[0])
++def op_156(payload=None, *, timeout=30): ...
++    # generated from operationId=op_156
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_157.py b/src/tempo/generated/client_157.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_157.py
++++ b/src/tempo/generated/client_157.py
+@@ -1,3 +1,3 @@
+-def op_157(): ...
+-    # generated from operationId=op_157
+-    return _request('GET', _paths[0])
++def op_157(payload=None, *, timeout=30): ...
++    # generated from operationId=op_157
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_158.py b/src/tempo/generated/client_158.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_158.py
++++ b/src/tempo/generated/client_158.py
+@@ -1,3 +1,3 @@
+-def op_158(): ...
+-    # generated from operationId=op_158
+-    return _request('GET', _paths[0])
++def op_158(payload=None, *, timeout=30): ...
++    # generated from operationId=op_158
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_159.py b/src/tempo/generated/client_159.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_159.py
++++ b/src/tempo/generated/client_159.py
+@@ -1,3 +1,3 @@
+-def op_159(): ...
+-    # generated from operationId=op_159
+-    return _request('GET', _paths[0])
++def op_159(payload=None, *, timeout=30): ...
++    # generated from operationId=op_159
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_160.py b/src/tempo/generated/client_160.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_160.py
++++ b/src/tempo/generated/client_160.py
+@@ -1,3 +1,3 @@
+-def op_160(): ...
+-    # generated from operationId=op_160
+-    return _request('GET', _paths[0])
++def op_160(payload=None, *, timeout=30): ...
++    # generated from operationId=op_160
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_161.py b/src/tempo/generated/client_161.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_161.py
++++ b/src/tempo/generated/client_161.py
+@@ -1,3 +1,3 @@
+-def op_161(): ...
+-    # generated from operationId=op_161
+-    return _request('GET', _paths[0])
++def op_161(payload=None, *, timeout=30): ...
++    # generated from operationId=op_161
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_162.py b/src/tempo/generated/client_162.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_162.py
++++ b/src/tempo/generated/client_162.py
+@@ -1,3 +1,3 @@
+-def op_162(): ...
+-    # generated from operationId=op_162
+-    return _request('GET', _paths[0])
++def op_162(payload=None, *, timeout=30): ...
++    # generated from operationId=op_162
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_163.py b/src/tempo/generated/client_163.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_163.py
++++ b/src/tempo/generated/client_163.py
+@@ -1,3 +1,3 @@
+-def op_163(): ...
+-    # generated from operationId=op_163
+-    return _request('GET', _paths[0])
++def op_163(payload=None, *, timeout=30): ...
++    # generated from operationId=op_163
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_164.py b/src/tempo/generated/client_164.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_164.py
++++ b/src/tempo/generated/client_164.py
+@@ -1,3 +1,3 @@
+-def op_164(): ...
+-    # generated from operationId=op_164
+-    return _request('GET', _paths[0])
++def op_164(payload=None, *, timeout=30): ...
++    # generated from operationId=op_164
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_165.py b/src/tempo/generated/client_165.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_165.py
++++ b/src/tempo/generated/client_165.py
+@@ -1,3 +1,3 @@
+-def op_165(): ...
+-    # generated from operationId=op_165
+-    return _request('GET', _paths[0])
++def op_165(payload=None, *, timeout=30): ...
++    # generated from operationId=op_165
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_166.py b/src/tempo/generated/client_166.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_166.py
++++ b/src/tempo/generated/client_166.py
+@@ -1,3 +1,3 @@
+-def op_166(): ...
+-    # generated from operationId=op_166
+-    return _request('GET', _paths[0])
++def op_166(payload=None, *, timeout=30): ...
++    # generated from operationId=op_166
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_167.py b/src/tempo/generated/client_167.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_167.py
++++ b/src/tempo/generated/client_167.py
+@@ -1,3 +1,3 @@
+-def op_167(): ...
+-    # generated from operationId=op_167
+-    return _request('GET', _paths[0])
++def op_167(payload=None, *, timeout=30): ...
++    # generated from operationId=op_167
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_168.py b/src/tempo/generated/client_168.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_168.py
++++ b/src/tempo/generated/client_168.py
+@@ -1,3 +1,3 @@
+-def op_168(): ...
+-    # generated from operationId=op_168
+-    return _request('GET', _paths[0])
++def op_168(payload=None, *, timeout=30): ...
++    # generated from operationId=op_168
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_169.py b/src/tempo/generated/client_169.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_169.py
++++ b/src/tempo/generated/client_169.py
+@@ -1,3 +1,3 @@
+-def op_169(): ...
+-    # generated from operationId=op_169
+-    return _request('GET', _paths[0])
++def op_169(payload=None, *, timeout=30): ...
++    # generated from operationId=op_169
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_170.py b/src/tempo/generated/client_170.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_170.py
++++ b/src/tempo/generated/client_170.py
+@@ -1,3 +1,3 @@
+-def op_170(): ...
+-    # generated from operationId=op_170
+-    return _request('GET', _paths[0])
++def op_170(payload=None, *, timeout=30): ...
++    # generated from operationId=op_170
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_171.py b/src/tempo/generated/client_171.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_171.py
++++ b/src/tempo/generated/client_171.py
+@@ -1,3 +1,3 @@
+-def op_171(): ...
+-    # generated from operationId=op_171
+-    return _request('GET', _paths[0])
++def op_171(payload=None, *, timeout=30): ...
++    # generated from operationId=op_171
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_172.py b/src/tempo/generated/client_172.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_172.py
++++ b/src/tempo/generated/client_172.py
+@@ -1,3 +1,3 @@
+-def op_172(): ...
+-    # generated from operationId=op_172
+-    return _request('GET', _paths[0])
++def op_172(payload=None, *, timeout=30): ...
++    # generated from operationId=op_172
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_173.py b/src/tempo/generated/client_173.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_173.py
++++ b/src/tempo/generated/client_173.py
+@@ -1,3 +1,3 @@
+-def op_173(): ...
+-    # generated from operationId=op_173
+-    return _request('GET', _paths[0])
++def op_173(payload=None, *, timeout=30): ...
++    # generated from operationId=op_173
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_174.py b/src/tempo/generated/client_174.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_174.py
++++ b/src/tempo/generated/client_174.py
+@@ -1,3 +1,3 @@
+-def op_174(): ...
+-    # generated from operationId=op_174
+-    return _request('GET', _paths[0])
++def op_174(payload=None, *, timeout=30): ...
++    # generated from operationId=op_174
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_175.py b/src/tempo/generated/client_175.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_175.py
++++ b/src/tempo/generated/client_175.py
+@@ -1,3 +1,3 @@
+-def op_175(): ...
+-    # generated from operationId=op_175
+-    return _request('GET', _paths[0])
++def op_175(payload=None, *, timeout=30): ...
++    # generated from operationId=op_175
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_176.py b/src/tempo/generated/client_176.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_176.py
++++ b/src/tempo/generated/client_176.py
+@@ -1,3 +1,3 @@
+-def op_176(): ...
+-    # generated from operationId=op_176
+-    return _request('GET', _paths[0])
++def op_176(payload=None, *, timeout=30): ...
++    # generated from operationId=op_176
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_177.py b/src/tempo/generated/client_177.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_177.py
++++ b/src/tempo/generated/client_177.py
+@@ -1,3 +1,3 @@
+-def op_177(): ...
+-    # generated from operationId=op_177
+-    return _request('GET', _paths[0])
++def op_177(payload=None, *, timeout=30): ...
++    # generated from operationId=op_177
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_178.py b/src/tempo/generated/client_178.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_178.py
++++ b/src/tempo/generated/client_178.py
+@@ -1,3 +1,3 @@
+-def op_178(): ...
+-    # generated from operationId=op_178
+-    return _request('GET', _paths[0])
++def op_178(payload=None, *, timeout=30): ...
++    # generated from operationId=op_178
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_179.py b/src/tempo/generated/client_179.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_179.py
++++ b/src/tempo/generated/client_179.py
+@@ -1,3 +1,3 @@
+-def op_179(): ...
+-    # generated from operationId=op_179
+-    return _request('GET', _paths[0])
++def op_179(payload=None, *, timeout=30): ...
++    # generated from operationId=op_179
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_180.py b/src/tempo/generated/client_180.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_180.py
++++ b/src/tempo/generated/client_180.py
+@@ -1,3 +1,3 @@
+-def op_180(): ...
+-    # generated from operationId=op_180
+-    return _request('GET', _paths[0])
++def op_180(payload=None, *, timeout=30): ...
++    # generated from operationId=op_180
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_181.py b/src/tempo/generated/client_181.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_181.py
++++ b/src/tempo/generated/client_181.py
+@@ -1,3 +1,3 @@
+-def op_181(): ...
+-    # generated from operationId=op_181
+-    return _request('GET', _paths[0])
++def op_181(payload=None, *, timeout=30): ...
++    # generated from operationId=op_181
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_182.py b/src/tempo/generated/client_182.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_182.py
++++ b/src/tempo/generated/client_182.py
+@@ -1,3 +1,3 @@
+-def op_182(): ...
+-    # generated from operationId=op_182
+-    return _request('GET', _paths[0])
++def op_182(payload=None, *, timeout=30): ...
++    # generated from operationId=op_182
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_183.py b/src/tempo/generated/client_183.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_183.py
++++ b/src/tempo/generated/client_183.py
+@@ -1,3 +1,3 @@
+-def op_183(): ...
+-    # generated from operationId=op_183
+-    return _request('GET', _paths[0])
++def op_183(payload=None, *, timeout=30): ...
++    # generated from operationId=op_183
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_184.py b/src/tempo/generated/client_184.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_184.py
++++ b/src/tempo/generated/client_184.py
+@@ -1,3 +1,3 @@
+-def op_184(): ...
+-    # generated from operationId=op_184
+-    return _request('GET', _paths[0])
++def op_184(payload=None, *, timeout=30): ...
++    # generated from operationId=op_184
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_185.py b/src/tempo/generated/client_185.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_185.py
++++ b/src/tempo/generated/client_185.py
+@@ -1,3 +1,3 @@
+-def op_185(): ...
+-    # generated from operationId=op_185
+-    return _request('GET', _paths[0])
++def op_185(payload=None, *, timeout=30): ...
++    # generated from operationId=op_185
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_186.py b/src/tempo/generated/client_186.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_186.py
++++ b/src/tempo/generated/client_186.py
+@@ -1,3 +1,3 @@
+-def op_186(): ...
+-    # generated from operationId=op_186
+-    return _request('GET', _paths[0])
++def op_186(payload=None, *, timeout=30): ...
++    # generated from operationId=op_186
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_187.py b/src/tempo/generated/client_187.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_187.py
++++ b/src/tempo/generated/client_187.py
+@@ -1,3 +1,3 @@
+-def op_187(): ...
+-    # generated from operationId=op_187
+-    return _request('GET', _paths[0])
++def op_187(payload=None, *, timeout=30): ...
++    # generated from operationId=op_187
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_188.py b/src/tempo/generated/client_188.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_188.py
++++ b/src/tempo/generated/client_188.py
+@@ -1,3 +1,3 @@
+-def op_188(): ...
+-    # generated from operationId=op_188
+-    return _request('GET', _paths[0])
++def op_188(payload=None, *, timeout=30): ...
++    # generated from operationId=op_188
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_189.py b/src/tempo/generated/client_189.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_189.py
++++ b/src/tempo/generated/client_189.py
+@@ -1,3 +1,3 @@
+-def op_189(): ...
+-    # generated from operationId=op_189
+-    return _request('GET', _paths[0])
++def op_189(payload=None, *, timeout=30): ...
++    # generated from operationId=op_189
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_190.py b/src/tempo/generated/client_190.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_190.py
++++ b/src/tempo/generated/client_190.py
+@@ -1,3 +1,3 @@
+-def op_190(): ...
+-    # generated from operationId=op_190
+-    return _request('GET', _paths[0])
++def op_190(payload=None, *, timeout=30): ...
++    # generated from operationId=op_190
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_191.py b/src/tempo/generated/client_191.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_191.py
++++ b/src/tempo/generated/client_191.py
+@@ -1,3 +1,3 @@
+-def op_191(): ...
+-    # generated from operationId=op_191
+-    return _request('GET', _paths[0])
++def op_191(payload=None, *, timeout=30): ...
++    # generated from operationId=op_191
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_192.py b/src/tempo/generated/client_192.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_192.py
++++ b/src/tempo/generated/client_192.py
+@@ -1,3 +1,3 @@
+-def op_192(): ...
+-    # generated from operationId=op_192
+-    return _request('GET', _paths[0])
++def op_192(payload=None, *, timeout=30): ...
++    # generated from operationId=op_192
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_193.py b/src/tempo/generated/client_193.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_193.py
++++ b/src/tempo/generated/client_193.py
+@@ -1,3 +1,3 @@
+-def op_193(): ...
+-    # generated from operationId=op_193
+-    return _request('GET', _paths[0])
++def op_193(payload=None, *, timeout=30): ...
++    # generated from operationId=op_193
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_194.py b/src/tempo/generated/client_194.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_194.py
++++ b/src/tempo/generated/client_194.py
+@@ -1,3 +1,3 @@
+-def op_194(): ...
+-    # generated from operationId=op_194
+-    return _request('GET', _paths[0])
++def op_194(payload=None, *, timeout=30): ...
++    # generated from operationId=op_194
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_195.py b/src/tempo/generated/client_195.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_195.py
++++ b/src/tempo/generated/client_195.py
+@@ -1,3 +1,3 @@
+-def op_195(): ...
+-    # generated from operationId=op_195
+-    return _request('GET', _paths[0])
++def op_195(payload=None, *, timeout=30): ...
++    # generated from operationId=op_195
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_196.py b/src/tempo/generated/client_196.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_196.py
++++ b/src/tempo/generated/client_196.py
+@@ -1,3 +1,3 @@
+-def op_196(): ...
+-    # generated from operationId=op_196
+-    return _request('GET', _paths[0])
++def op_196(payload=None, *, timeout=30): ...
++    # generated from operationId=op_196
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_197.py b/src/tempo/generated/client_197.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_197.py
++++ b/src/tempo/generated/client_197.py
+@@ -1,3 +1,3 @@
+-def op_197(): ...
+-    # generated from operationId=op_197
+-    return _request('GET', _paths[0])
++def op_197(payload=None, *, timeout=30): ...
++    # generated from operationId=op_197
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_198.py b/src/tempo/generated/client_198.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_198.py
++++ b/src/tempo/generated/client_198.py
+@@ -1,3 +1,3 @@
+-def op_198(): ...
+-    # generated from operationId=op_198
+-    return _request('GET', _paths[0])
++def op_198(payload=None, *, timeout=30): ...
++    # generated from operationId=op_198
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_199.py b/src/tempo/generated/client_199.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_199.py
++++ b/src/tempo/generated/client_199.py
+@@ -1,3 +1,3 @@
+-def op_199(): ...
+-    # generated from operationId=op_199
+-    return _request('GET', _paths[0])
++def op_199(payload=None, *, timeout=30): ...
++    # generated from operationId=op_199
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_200.py b/src/tempo/generated/client_200.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_200.py
++++ b/src/tempo/generated/client_200.py
+@@ -1,3 +1,3 @@
+-def op_200(): ...
+-    # generated from operationId=op_200
+-    return _request('GET', _paths[0])
++def op_200(payload=None, *, timeout=30): ...
++    # generated from operationId=op_200
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_201.py b/src/tempo/generated/client_201.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_201.py
++++ b/src/tempo/generated/client_201.py
+@@ -1,3 +1,3 @@
+-def op_201(): ...
+-    # generated from operationId=op_201
+-    return _request('GET', _paths[0])
++def op_201(payload=None, *, timeout=30): ...
++    # generated from operationId=op_201
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_202.py b/src/tempo/generated/client_202.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_202.py
++++ b/src/tempo/generated/client_202.py
+@@ -1,3 +1,3 @@
+-def op_202(): ...
+-    # generated from operationId=op_202
+-    return _request('GET', _paths[0])
++def op_202(payload=None, *, timeout=30): ...
++    # generated from operationId=op_202
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_203.py b/src/tempo/generated/client_203.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_203.py
++++ b/src/tempo/generated/client_203.py
+@@ -1,3 +1,3 @@
+-def op_203(): ...
+-    # generated from operationId=op_203
+-    return _request('GET', _paths[0])
++def op_203(payload=None, *, timeout=30): ...
++    # generated from operationId=op_203
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_204.py b/src/tempo/generated/client_204.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_204.py
++++ b/src/tempo/generated/client_204.py
+@@ -1,3 +1,3 @@
+-def op_204(): ...
+-    # generated from operationId=op_204
+-    return _request('GET', _paths[0])
++def op_204(payload=None, *, timeout=30): ...
++    # generated from operationId=op_204
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_205.py b/src/tempo/generated/client_205.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_205.py
++++ b/src/tempo/generated/client_205.py
+@@ -1,3 +1,3 @@
+-def op_205(): ...
+-    # generated from operationId=op_205
+-    return _request('GET', _paths[0])
++def op_205(payload=None, *, timeout=30): ...
++    # generated from operationId=op_205
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_206.py b/src/tempo/generated/client_206.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_206.py
++++ b/src/tempo/generated/client_206.py
+@@ -1,3 +1,3 @@
+-def op_206(): ...
+-    # generated from operationId=op_206
+-    return _request('GET', _paths[0])
++def op_206(payload=None, *, timeout=30): ...
++    # generated from operationId=op_206
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_207.py b/src/tempo/generated/client_207.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_207.py
++++ b/src/tempo/generated/client_207.py
+@@ -1,3 +1,3 @@
+-def op_207(): ...
+-    # generated from operationId=op_207
+-    return _request('GET', _paths[0])
++def op_207(payload=None, *, timeout=30): ...
++    # generated from operationId=op_207
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_208.py b/src/tempo/generated/client_208.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_208.py
++++ b/src/tempo/generated/client_208.py
+@@ -1,3 +1,3 @@
+-def op_208(): ...
+-    # generated from operationId=op_208
+-    return _request('GET', _paths[0])
++def op_208(payload=None, *, timeout=30): ...
++    # generated from operationId=op_208
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_209.py b/src/tempo/generated/client_209.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_209.py
++++ b/src/tempo/generated/client_209.py
+@@ -1,3 +1,3 @@
+-def op_209(): ...
+-    # generated from operationId=op_209
+-    return _request('GET', _paths[0])
++def op_209(payload=None, *, timeout=30): ...
++    # generated from operationId=op_209
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_210.py b/src/tempo/generated/client_210.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_210.py
++++ b/src/tempo/generated/client_210.py
+@@ -1,3 +1,3 @@
+-def op_210(): ...
+-    # generated from operationId=op_210
+-    return _request('GET', _paths[0])
++def op_210(payload=None, *, timeout=30): ...
++    # generated from operationId=op_210
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_211.py b/src/tempo/generated/client_211.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_211.py
++++ b/src/tempo/generated/client_211.py
+@@ -1,3 +1,3 @@
+-def op_211(): ...
+-    # generated from operationId=op_211
+-    return _request('GET', _paths[0])
++def op_211(payload=None, *, timeout=30): ...
++    # generated from operationId=op_211
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_212.py b/src/tempo/generated/client_212.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_212.py
++++ b/src/tempo/generated/client_212.py
+@@ -1,3 +1,3 @@
+-def op_212(): ...
+-    # generated from operationId=op_212
+-    return _request('GET', _paths[0])
++def op_212(payload=None, *, timeout=30): ...
++    # generated from operationId=op_212
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_213.py b/src/tempo/generated/client_213.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_213.py
++++ b/src/tempo/generated/client_213.py
+@@ -1,3 +1,3 @@
+-def op_213(): ...
+-    # generated from operationId=op_213
+-    return _request('GET', _paths[0])
++def op_213(payload=None, *, timeout=30): ...
++    # generated from operationId=op_213
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_214.py b/src/tempo/generated/client_214.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_214.py
++++ b/src/tempo/generated/client_214.py
+@@ -1,3 +1,3 @@
+-def op_214(): ...
+-    # generated from operationId=op_214
+-    return _request('GET', _paths[0])
++def op_214(payload=None, *, timeout=30): ...
++    # generated from operationId=op_214
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_215.py b/src/tempo/generated/client_215.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_215.py
++++ b/src/tempo/generated/client_215.py
+@@ -1,3 +1,3 @@
+-def op_215(): ...
+-    # generated from operationId=op_215
+-    return _request('GET', _paths[0])
++def op_215(payload=None, *, timeout=30): ...
++    # generated from operationId=op_215
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_216.py b/src/tempo/generated/client_216.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_216.py
++++ b/src/tempo/generated/client_216.py
+@@ -1,3 +1,3 @@
+-def op_216(): ...
+-    # generated from operationId=op_216
+-    return _request('GET', _paths[0])
++def op_216(payload=None, *, timeout=30): ...
++    # generated from operationId=op_216
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_217.py b/src/tempo/generated/client_217.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_217.py
++++ b/src/tempo/generated/client_217.py
+@@ -1,3 +1,3 @@
+-def op_217(): ...
+-    # generated from operationId=op_217
+-    return _request('GET', _paths[0])
++def op_217(payload=None, *, timeout=30): ...
++    # generated from operationId=op_217
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_218.py b/src/tempo/generated/client_218.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_218.py
++++ b/src/tempo/generated/client_218.py
+@@ -1,3 +1,3 @@
+-def op_218(): ...
+-    # generated from operationId=op_218
+-    return _request('GET', _paths[0])
++def op_218(payload=None, *, timeout=30): ...
++    # generated from operationId=op_218
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_219.py b/src/tempo/generated/client_219.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_219.py
++++ b/src/tempo/generated/client_219.py
+@@ -1,3 +1,3 @@
+-def op_219(): ...
+-    # generated from operationId=op_219
+-    return _request('GET', _paths[0])
++def op_219(payload=None, *, timeout=30): ...
++    # generated from operationId=op_219
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_220.py b/src/tempo/generated/client_220.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_220.py
++++ b/src/tempo/generated/client_220.py
+@@ -1,3 +1,3 @@
+-def op_220(): ...
+-    # generated from operationId=op_220
+-    return _request('GET', _paths[0])
++def op_220(payload=None, *, timeout=30): ...
++    # generated from operationId=op_220
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_221.py b/src/tempo/generated/client_221.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_221.py
++++ b/src/tempo/generated/client_221.py
+@@ -1,3 +1,3 @@
+-def op_221(): ...
+-    # generated from operationId=op_221
+-    return _request('GET', _paths[0])
++def op_221(payload=None, *, timeout=30): ...
++    # generated from operationId=op_221
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_222.py b/src/tempo/generated/client_222.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_222.py
++++ b/src/tempo/generated/client_222.py
+@@ -1,3 +1,3 @@
+-def op_222(): ...
+-    # generated from operationId=op_222
+-    return _request('GET', _paths[0])
++def op_222(payload=None, *, timeout=30): ...
++    # generated from operationId=op_222
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_223.py b/src/tempo/generated/client_223.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_223.py
++++ b/src/tempo/generated/client_223.py
+@@ -1,3 +1,3 @@
+-def op_223(): ...
+-    # generated from operationId=op_223
+-    return _request('GET', _paths[0])
++def op_223(payload=None, *, timeout=30): ...
++    # generated from operationId=op_223
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_224.py b/src/tempo/generated/client_224.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_224.py
++++ b/src/tempo/generated/client_224.py
+@@ -1,3 +1,3 @@
+-def op_224(): ...
+-    # generated from operationId=op_224
+-    return _request('GET', _paths[0])
++def op_224(payload=None, *, timeout=30): ...
++    # generated from operationId=op_224
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_225.py b/src/tempo/generated/client_225.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_225.py
++++ b/src/tempo/generated/client_225.py
+@@ -1,3 +1,3 @@
+-def op_225(): ...
+-    # generated from operationId=op_225
+-    return _request('GET', _paths[0])
++def op_225(payload=None, *, timeout=30): ...
++    # generated from operationId=op_225
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_226.py b/src/tempo/generated/client_226.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_226.py
++++ b/src/tempo/generated/client_226.py
+@@ -1,3 +1,3 @@
+-def op_226(): ...
+-    # generated from operationId=op_226
+-    return _request('GET', _paths[0])
++def op_226(payload=None, *, timeout=30): ...
++    # generated from operationId=op_226
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_227.py b/src/tempo/generated/client_227.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_227.py
++++ b/src/tempo/generated/client_227.py
+@@ -1,3 +1,3 @@
+-def op_227(): ...
+-    # generated from operationId=op_227
+-    return _request('GET', _paths[0])
++def op_227(payload=None, *, timeout=30): ...
++    # generated from operationId=op_227
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_228.py b/src/tempo/generated/client_228.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_228.py
++++ b/src/tempo/generated/client_228.py
+@@ -1,3 +1,3 @@
+-def op_228(): ...
+-    # generated from operationId=op_228
+-    return _request('GET', _paths[0])
++def op_228(payload=None, *, timeout=30): ...
++    # generated from operationId=op_228
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_229.py b/src/tempo/generated/client_229.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_229.py
++++ b/src/tempo/generated/client_229.py
+@@ -1,3 +1,3 @@
+-def op_229(): ...
+-    # generated from operationId=op_229
+-    return _request('GET', _paths[0])
++def op_229(payload=None, *, timeout=30): ...
++    # generated from operationId=op_229
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_230.py b/src/tempo/generated/client_230.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_230.py
++++ b/src/tempo/generated/client_230.py
+@@ -1,3 +1,3 @@
+-def op_230(): ...
+-    # generated from operationId=op_230
+-    return _request('GET', _paths[0])
++def op_230(payload=None, *, timeout=30): ...
++    # generated from operationId=op_230
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_231.py b/src/tempo/generated/client_231.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_231.py
++++ b/src/tempo/generated/client_231.py
+@@ -1,3 +1,3 @@
+-def op_231(): ...
+-    # generated from operationId=op_231
+-    return _request('GET', _paths[0])
++def op_231(payload=None, *, timeout=30): ...
++    # generated from operationId=op_231
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_232.py b/src/tempo/generated/client_232.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_232.py
++++ b/src/tempo/generated/client_232.py
+@@ -1,3 +1,3 @@
+-def op_232(): ...
+-    # generated from operationId=op_232
+-    return _request('GET', _paths[0])
++def op_232(payload=None, *, timeout=30): ...
++    # generated from operationId=op_232
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_233.py b/src/tempo/generated/client_233.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_233.py
++++ b/src/tempo/generated/client_233.py
+@@ -1,3 +1,3 @@
+-def op_233(): ...
+-    # generated from operationId=op_233
+-    return _request('GET', _paths[0])
++def op_233(payload=None, *, timeout=30): ...
++    # generated from operationId=op_233
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_234.py b/src/tempo/generated/client_234.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_234.py
++++ b/src/tempo/generated/client_234.py
+@@ -1,3 +1,3 @@
+-def op_234(): ...
+-    # generated from operationId=op_234
+-    return _request('GET', _paths[0])
++def op_234(payload=None, *, timeout=30): ...
++    # generated from operationId=op_234
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_235.py b/src/tempo/generated/client_235.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_235.py
++++ b/src/tempo/generated/client_235.py
+@@ -1,3 +1,3 @@
+-def op_235(): ...
+-    # generated from operationId=op_235
+-    return _request('GET', _paths[0])
++def op_235(payload=None, *, timeout=30): ...
++    # generated from operationId=op_235
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_236.py b/src/tempo/generated/client_236.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_236.py
++++ b/src/tempo/generated/client_236.py
+@@ -1,3 +1,3 @@
+-def op_236(): ...
+-    # generated from operationId=op_236
+-    return _request('GET', _paths[0])
++def op_236(payload=None, *, timeout=30): ...
++    # generated from operationId=op_236
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_237.py b/src/tempo/generated/client_237.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_237.py
++++ b/src/tempo/generated/client_237.py
+@@ -1,3 +1,3 @@
+-def op_237(): ...
+-    # generated from operationId=op_237
+-    return _request('GET', _paths[0])
++def op_237(payload=None, *, timeout=30): ...
++    # generated from operationId=op_237
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_238.py b/src/tempo/generated/client_238.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_238.py
++++ b/src/tempo/generated/client_238.py
+@@ -1,3 +1,3 @@
+-def op_238(): ...
+-    # generated from operationId=op_238
+-    return _request('GET', _paths[0])
++def op_238(payload=None, *, timeout=30): ...
++    # generated from operationId=op_238
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_239.py b/src/tempo/generated/client_239.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_239.py
++++ b/src/tempo/generated/client_239.py
+@@ -1,3 +1,3 @@
+-def op_239(): ...
+-    # generated from operationId=op_239
+-    return _request('GET', _paths[0])
++def op_239(payload=None, *, timeout=30): ...
++    # generated from operationId=op_239
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_240.py b/src/tempo/generated/client_240.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_240.py
++++ b/src/tempo/generated/client_240.py
+@@ -1,3 +1,3 @@
+-def op_240(): ...
+-    # generated from operationId=op_240
+-    return _request('GET', _paths[0])
++def op_240(payload=None, *, timeout=30): ...
++    # generated from operationId=op_240
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_241.py b/src/tempo/generated/client_241.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_241.py
++++ b/src/tempo/generated/client_241.py
+@@ -1,3 +1,3 @@
+-def op_241(): ...
+-    # generated from operationId=op_241
+-    return _request('GET', _paths[0])
++def op_241(payload=None, *, timeout=30): ...
++    # generated from operationId=op_241
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_242.py b/src/tempo/generated/client_242.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_242.py
++++ b/src/tempo/generated/client_242.py
+@@ -1,3 +1,3 @@
+-def op_242(): ...
+-    # generated from operationId=op_242
+-    return _request('GET', _paths[0])
++def op_242(payload=None, *, timeout=30): ...
++    # generated from operationId=op_242
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_243.py b/src/tempo/generated/client_243.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_243.py
++++ b/src/tempo/generated/client_243.py
+@@ -1,3 +1,3 @@
+-def op_243(): ...
+-    # generated from operationId=op_243
+-    return _request('GET', _paths[0])
++def op_243(payload=None, *, timeout=30): ...
++    # generated from operationId=op_243
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_244.py b/src/tempo/generated/client_244.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_244.py
++++ b/src/tempo/generated/client_244.py
+@@ -1,3 +1,3 @@
+-def op_244(): ...
+-    # generated from operationId=op_244
+-    return _request('GET', _paths[0])
++def op_244(payload=None, *, timeout=30): ...
++    # generated from operationId=op_244
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_245.py b/src/tempo/generated/client_245.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_245.py
++++ b/src/tempo/generated/client_245.py
+@@ -1,3 +1,3 @@
+-def op_245(): ...
+-    # generated from operationId=op_245
+-    return _request('GET', _paths[0])
++def op_245(payload=None, *, timeout=30): ...
++    # generated from operationId=op_245
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_246.py b/src/tempo/generated/client_246.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_246.py
++++ b/src/tempo/generated/client_246.py
+@@ -1,3 +1,3 @@
+-def op_246(): ...
+-    # generated from operationId=op_246
+-    return _request('GET', _paths[0])
++def op_246(payload=None, *, timeout=30): ...
++    # generated from operationId=op_246
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_247.py b/src/tempo/generated/client_247.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_247.py
++++ b/src/tempo/generated/client_247.py
+@@ -1,3 +1,3 @@
+-def op_247(): ...
+-    # generated from operationId=op_247
+-    return _request('GET', _paths[0])
++def op_247(payload=None, *, timeout=30): ...
++    # generated from operationId=op_247
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_248.py b/src/tempo/generated/client_248.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_248.py
++++ b/src/tempo/generated/client_248.py
+@@ -1,3 +1,3 @@
+-def op_248(): ...
+-    # generated from operationId=op_248
+-    return _request('GET', _paths[0])
++def op_248(payload=None, *, timeout=30): ...
++    # generated from operationId=op_248
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_249.py b/src/tempo/generated/client_249.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_249.py
++++ b/src/tempo/generated/client_249.py
+@@ -1,3 +1,3 @@
+-def op_249(): ...
+-    # generated from operationId=op_249
+-    return _request('GET', _paths[0])
++def op_249(payload=None, *, timeout=30): ...
++    # generated from operationId=op_249
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_250.py b/src/tempo/generated/client_250.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_250.py
++++ b/src/tempo/generated/client_250.py
+@@ -1,3 +1,3 @@
+-def op_250(): ...
+-    # generated from operationId=op_250
+-    return _request('GET', _paths[0])
++def op_250(payload=None, *, timeout=30): ...
++    # generated from operationId=op_250
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_251.py b/src/tempo/generated/client_251.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_251.py
++++ b/src/tempo/generated/client_251.py
+@@ -1,3 +1,3 @@
+-def op_251(): ...
+-    # generated from operationId=op_251
+-    return _request('GET', _paths[0])
++def op_251(payload=None, *, timeout=30): ...
++    # generated from operationId=op_251
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_252.py b/src/tempo/generated/client_252.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_252.py
++++ b/src/tempo/generated/client_252.py
+@@ -1,3 +1,3 @@
+-def op_252(): ...
+-    # generated from operationId=op_252
+-    return _request('GET', _paths[0])
++def op_252(payload=None, *, timeout=30): ...
++    # generated from operationId=op_252
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_253.py b/src/tempo/generated/client_253.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_253.py
++++ b/src/tempo/generated/client_253.py
+@@ -1,3 +1,3 @@
+-def op_253(): ...
+-    # generated from operationId=op_253
+-    return _request('GET', _paths[0])
++def op_253(payload=None, *, timeout=30): ...
++    # generated from operationId=op_253
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_254.py b/src/tempo/generated/client_254.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_254.py
++++ b/src/tempo/generated/client_254.py
+@@ -1,3 +1,3 @@
+-def op_254(): ...
+-    # generated from operationId=op_254
+-    return _request('GET', _paths[0])
++def op_254(payload=None, *, timeout=30): ...
++    # generated from operationId=op_254
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_255.py b/src/tempo/generated/client_255.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_255.py
++++ b/src/tempo/generated/client_255.py
+@@ -1,3 +1,3 @@
+-def op_255(): ...
+-    # generated from operationId=op_255
+-    return _request('GET', _paths[0])
++def op_255(payload=None, *, timeout=30): ...
++    # generated from operationId=op_255
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_256.py b/src/tempo/generated/client_256.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_256.py
++++ b/src/tempo/generated/client_256.py
+@@ -1,3 +1,3 @@
+-def op_256(): ...
+-    # generated from operationId=op_256
+-    return _request('GET', _paths[0])
++def op_256(payload=None, *, timeout=30): ...
++    # generated from operationId=op_256
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_257.py b/src/tempo/generated/client_257.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_257.py
++++ b/src/tempo/generated/client_257.py
+@@ -1,3 +1,3 @@
+-def op_257(): ...
+-    # generated from operationId=op_257
+-    return _request('GET', _paths[0])
++def op_257(payload=None, *, timeout=30): ...
++    # generated from operationId=op_257
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_258.py b/src/tempo/generated/client_258.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_258.py
++++ b/src/tempo/generated/client_258.py
+@@ -1,3 +1,3 @@
+-def op_258(): ...
+-    # generated from operationId=op_258
+-    return _request('GET', _paths[0])
++def op_258(payload=None, *, timeout=30): ...
++    # generated from operationId=op_258
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_259.py b/src/tempo/generated/client_259.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_259.py
++++ b/src/tempo/generated/client_259.py
+@@ -1,3 +1,3 @@
+-def op_259(): ...
+-    # generated from operationId=op_259
+-    return _request('GET', _paths[0])
++def op_259(payload=None, *, timeout=30): ...
++    # generated from operationId=op_259
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_260.py b/src/tempo/generated/client_260.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_260.py
++++ b/src/tempo/generated/client_260.py
+@@ -1,3 +1,3 @@
+-def op_260(): ...
+-    # generated from operationId=op_260
+-    return _request('GET', _paths[0])
++def op_260(payload=None, *, timeout=30): ...
++    # generated from operationId=op_260
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_261.py b/src/tempo/generated/client_261.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_261.py
++++ b/src/tempo/generated/client_261.py
+@@ -1,3 +1,3 @@
+-def op_261(): ...
+-    # generated from operationId=op_261
+-    return _request('GET', _paths[0])
++def op_261(payload=None, *, timeout=30): ...
++    # generated from operationId=op_261
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_262.py b/src/tempo/generated/client_262.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_262.py
++++ b/src/tempo/generated/client_262.py
+@@ -1,3 +1,3 @@
+-def op_262(): ...
+-    # generated from operationId=op_262
+-    return _request('GET', _paths[0])
++def op_262(payload=None, *, timeout=30): ...
++    # generated from operationId=op_262
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_263.py b/src/tempo/generated/client_263.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_263.py
++++ b/src/tempo/generated/client_263.py
+@@ -1,3 +1,3 @@
+-def op_263(): ...
+-    # generated from operationId=op_263
+-    return _request('GET', _paths[0])
++def op_263(payload=None, *, timeout=30): ...
++    # generated from operationId=op_263
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_264.py b/src/tempo/generated/client_264.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_264.py
++++ b/src/tempo/generated/client_264.py
+@@ -1,3 +1,3 @@
+-def op_264(): ...
+-    # generated from operationId=op_264
+-    return _request('GET', _paths[0])
++def op_264(payload=None, *, timeout=30): ...
++    # generated from operationId=op_264
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_265.py b/src/tempo/generated/client_265.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_265.py
++++ b/src/tempo/generated/client_265.py
+@@ -1,3 +1,3 @@
+-def op_265(): ...
+-    # generated from operationId=op_265
+-    return _request('GET', _paths[0])
++def op_265(payload=None, *, timeout=30): ...
++    # generated from operationId=op_265
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_266.py b/src/tempo/generated/client_266.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_266.py
++++ b/src/tempo/generated/client_266.py
+@@ -1,3 +1,3 @@
+-def op_266(): ...
+-    # generated from operationId=op_266
+-    return _request('GET', _paths[0])
++def op_266(payload=None, *, timeout=30): ...
++    # generated from operationId=op_266
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_267.py b/src/tempo/generated/client_267.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_267.py
++++ b/src/tempo/generated/client_267.py
+@@ -1,3 +1,3 @@
+-def op_267(): ...
+-    # generated from operationId=op_267
+-    return _request('GET', _paths[0])
++def op_267(payload=None, *, timeout=30): ...
++    # generated from operationId=op_267
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_268.py b/src/tempo/generated/client_268.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_268.py
++++ b/src/tempo/generated/client_268.py
+@@ -1,3 +1,3 @@
+-def op_268(): ...
+-    # generated from operationId=op_268
+-    return _request('GET', _paths[0])
++def op_268(payload=None, *, timeout=30): ...
++    # generated from operationId=op_268
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_269.py b/src/tempo/generated/client_269.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_269.py
++++ b/src/tempo/generated/client_269.py
+@@ -1,3 +1,3 @@
+-def op_269(): ...
+-    # generated from operationId=op_269
+-    return _request('GET', _paths[0])
++def op_269(payload=None, *, timeout=30): ...
++    # generated from operationId=op_269
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_270.py b/src/tempo/generated/client_270.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_270.py
++++ b/src/tempo/generated/client_270.py
+@@ -1,3 +1,3 @@
+-def op_270(): ...
+-    # generated from operationId=op_270
+-    return _request('GET', _paths[0])
++def op_270(payload=None, *, timeout=30): ...
++    # generated from operationId=op_270
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_271.py b/src/tempo/generated/client_271.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_271.py
++++ b/src/tempo/generated/client_271.py
+@@ -1,3 +1,3 @@
+-def op_271(): ...
+-    # generated from operationId=op_271
+-    return _request('GET', _paths[0])
++def op_271(payload=None, *, timeout=30): ...
++    # generated from operationId=op_271
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_272.py b/src/tempo/generated/client_272.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_272.py
++++ b/src/tempo/generated/client_272.py
+@@ -1,3 +1,3 @@
+-def op_272(): ...
+-    # generated from operationId=op_272
+-    return _request('GET', _paths[0])
++def op_272(payload=None, *, timeout=30): ...
++    # generated from operationId=op_272
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_273.py b/src/tempo/generated/client_273.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_273.py
++++ b/src/tempo/generated/client_273.py
+@@ -1,3 +1,3 @@
+-def op_273(): ...
+-    # generated from operationId=op_273
+-    return _request('GET', _paths[0])
++def op_273(payload=None, *, timeout=30): ...
++    # generated from operationId=op_273
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_274.py b/src/tempo/generated/client_274.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_274.py
++++ b/src/tempo/generated/client_274.py
+@@ -1,3 +1,3 @@
+-def op_274(): ...
+-    # generated from operationId=op_274
+-    return _request('GET', _paths[0])
++def op_274(payload=None, *, timeout=30): ...
++    # generated from operationId=op_274
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_275.py b/src/tempo/generated/client_275.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_275.py
++++ b/src/tempo/generated/client_275.py
+@@ -1,3 +1,3 @@
+-def op_275(): ...
+-    # generated from operationId=op_275
+-    return _request('GET', _paths[0])
++def op_275(payload=None, *, timeout=30): ...
++    # generated from operationId=op_275
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_276.py b/src/tempo/generated/client_276.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_276.py
++++ b/src/tempo/generated/client_276.py
+@@ -1,3 +1,3 @@
+-def op_276(): ...
+-    # generated from operationId=op_276
+-    return _request('GET', _paths[0])
++def op_276(payload=None, *, timeout=30): ...
++    # generated from operationId=op_276
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_277.py b/src/tempo/generated/client_277.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_277.py
++++ b/src/tempo/generated/client_277.py
+@@ -1,3 +1,3 @@
+-def op_277(): ...
+-    # generated from operationId=op_277
+-    return _request('GET', _paths[0])
++def op_277(payload=None, *, timeout=30): ...
++    # generated from operationId=op_277
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_278.py b/src/tempo/generated/client_278.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_278.py
++++ b/src/tempo/generated/client_278.py
+@@ -1,3 +1,3 @@
+-def op_278(): ...
+-    # generated from operationId=op_278
+-    return _request('GET', _paths[0])
++def op_278(payload=None, *, timeout=30): ...
++    # generated from operationId=op_278
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_279.py b/src/tempo/generated/client_279.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_279.py
++++ b/src/tempo/generated/client_279.py
+@@ -1,3 +1,3 @@
+-def op_279(): ...
+-    # generated from operationId=op_279
+-    return _request('GET', _paths[0])
++def op_279(payload=None, *, timeout=30): ...
++    # generated from operationId=op_279
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_280.py b/src/tempo/generated/client_280.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_280.py
++++ b/src/tempo/generated/client_280.py
+@@ -1,3 +1,3 @@
+-def op_280(): ...
+-    # generated from operationId=op_280
+-    return _request('GET', _paths[0])
++def op_280(payload=None, *, timeout=30): ...
++    # generated from operationId=op_280
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_281.py b/src/tempo/generated/client_281.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_281.py
++++ b/src/tempo/generated/client_281.py
+@@ -1,3 +1,3 @@
+-def op_281(): ...
+-    # generated from operationId=op_281
+-    return _request('GET', _paths[0])
++def op_281(payload=None, *, timeout=30): ...
++    # generated from operationId=op_281
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_282.py b/src/tempo/generated/client_282.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_282.py
++++ b/src/tempo/generated/client_282.py
+@@ -1,3 +1,3 @@
+-def op_282(): ...
+-    # generated from operationId=op_282
+-    return _request('GET', _paths[0])
++def op_282(payload=None, *, timeout=30): ...
++    # generated from operationId=op_282
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_283.py b/src/tempo/generated/client_283.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_283.py
++++ b/src/tempo/generated/client_283.py
+@@ -1,3 +1,3 @@
+-def op_283(): ...
+-    # generated from operationId=op_283
+-    return _request('GET', _paths[0])
++def op_283(payload=None, *, timeout=30): ...
++    # generated from operationId=op_283
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_284.py b/src/tempo/generated/client_284.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_284.py
++++ b/src/tempo/generated/client_284.py
+@@ -1,3 +1,3 @@
+-def op_284(): ...
+-    # generated from operationId=op_284
+-    return _request('GET', _paths[0])
++def op_284(payload=None, *, timeout=30): ...
++    # generated from operationId=op_284
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_285.py b/src/tempo/generated/client_285.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_285.py
++++ b/src/tempo/generated/client_285.py
+@@ -1,3 +1,3 @@
+-def op_285(): ...
+-    # generated from operationId=op_285
+-    return _request('GET', _paths[0])
++def op_285(payload=None, *, timeout=30): ...
++    # generated from operationId=op_285
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_286.py b/src/tempo/generated/client_286.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_286.py
++++ b/src/tempo/generated/client_286.py
+@@ -1,3 +1,3 @@
+-def op_286(): ...
+-    # generated from operationId=op_286
+-    return _request('GET', _paths[0])
++def op_286(payload=None, *, timeout=30): ...
++    # generated from operationId=op_286
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_287.py b/src/tempo/generated/client_287.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_287.py
++++ b/src/tempo/generated/client_287.py
+@@ -1,3 +1,3 @@
+-def op_287(): ...
+-    # generated from operationId=op_287
+-    return _request('GET', _paths[0])
++def op_287(payload=None, *, timeout=30): ...
++    # generated from operationId=op_287
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_288.py b/src/tempo/generated/client_288.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_288.py
++++ b/src/tempo/generated/client_288.py
+@@ -1,3 +1,3 @@
+-def op_288(): ...
+-    # generated from operationId=op_288
+-    return _request('GET', _paths[0])
++def op_288(payload=None, *, timeout=30): ...
++    # generated from operationId=op_288
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_289.py b/src/tempo/generated/client_289.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_289.py
++++ b/src/tempo/generated/client_289.py
+@@ -1,3 +1,3 @@
+-def op_289(): ...
+-    # generated from operationId=op_289
+-    return _request('GET', _paths[0])
++def op_289(payload=None, *, timeout=30): ...
++    # generated from operationId=op_289
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_290.py b/src/tempo/generated/client_290.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_290.py
++++ b/src/tempo/generated/client_290.py
+@@ -1,3 +1,3 @@
+-def op_290(): ...
+-    # generated from operationId=op_290
+-    return _request('GET', _paths[0])
++def op_290(payload=None, *, timeout=30): ...
++    # generated from operationId=op_290
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_291.py b/src/tempo/generated/client_291.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_291.py
++++ b/src/tempo/generated/client_291.py
+@@ -1,3 +1,3 @@
+-def op_291(): ...
+-    # generated from operationId=op_291
+-    return _request('GET', _paths[0])
++def op_291(payload=None, *, timeout=30): ...
++    # generated from operationId=op_291
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_292.py b/src/tempo/generated/client_292.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_292.py
++++ b/src/tempo/generated/client_292.py
+@@ -1,3 +1,3 @@
+-def op_292(): ...
+-    # generated from operationId=op_292
+-    return _request('GET', _paths[0])
++def op_292(payload=None, *, timeout=30): ...
++    # generated from operationId=op_292
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_293.py b/src/tempo/generated/client_293.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_293.py
++++ b/src/tempo/generated/client_293.py
+@@ -1,3 +1,3 @@
+-def op_293(): ...
+-    # generated from operationId=op_293
+-    return _request('GET', _paths[0])
++def op_293(payload=None, *, timeout=30): ...
++    # generated from operationId=op_293
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_294.py b/src/tempo/generated/client_294.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_294.py
++++ b/src/tempo/generated/client_294.py
+@@ -1,3 +1,3 @@
+-def op_294(): ...
+-    # generated from operationId=op_294
+-    return _request('GET', _paths[0])
++def op_294(payload=None, *, timeout=30): ...
++    # generated from operationId=op_294
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_295.py b/src/tempo/generated/client_295.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_295.py
++++ b/src/tempo/generated/client_295.py
+@@ -1,3 +1,3 @@
+-def op_295(): ...
+-    # generated from operationId=op_295
+-    return _request('GET', _paths[0])
++def op_295(payload=None, *, timeout=30): ...
++    # generated from operationId=op_295
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_296.py b/src/tempo/generated/client_296.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_296.py
++++ b/src/tempo/generated/client_296.py
+@@ -1,3 +1,3 @@
+-def op_296(): ...
+-    # generated from operationId=op_296
+-    return _request('GET', _paths[0])
++def op_296(payload=None, *, timeout=30): ...
++    # generated from operationId=op_296
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_297.py b/src/tempo/generated/client_297.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_297.py
++++ b/src/tempo/generated/client_297.py
+@@ -1,3 +1,3 @@
+-def op_297(): ...
+-    # generated from operationId=op_297
+-    return _request('GET', _paths[0])
++def op_297(payload=None, *, timeout=30): ...
++    # generated from operationId=op_297
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_298.py b/src/tempo/generated/client_298.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_298.py
++++ b/src/tempo/generated/client_298.py
+@@ -1,3 +1,3 @@
+-def op_298(): ...
+-    # generated from operationId=op_298
+-    return _request('GET', _paths[0])
++def op_298(payload=None, *, timeout=30): ...
++    # generated from operationId=op_298
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_299.py b/src/tempo/generated/client_299.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_299.py
++++ b/src/tempo/generated/client_299.py
+@@ -1,3 +1,3 @@
+-def op_299(): ...
+-    # generated from operationId=op_299
+-    return _request('GET', _paths[0])
++def op_299(payload=None, *, timeout=30): ...
++    # generated from operationId=op_299
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_300.py b/src/tempo/generated/client_300.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_300.py
++++ b/src/tempo/generated/client_300.py
+@@ -1,3 +1,3 @@
+-def op_300(): ...
+-    # generated from operationId=op_300
+-    return _request('GET', _paths[0])
++def op_300(payload=None, *, timeout=30): ...
++    # generated from operationId=op_300
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_301.py b/src/tempo/generated/client_301.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_301.py
++++ b/src/tempo/generated/client_301.py
+@@ -1,3 +1,3 @@
+-def op_301(): ...
+-    # generated from operationId=op_301
+-    return _request('GET', _paths[0])
++def op_301(payload=None, *, timeout=30): ...
++    # generated from operationId=op_301
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_302.py b/src/tempo/generated/client_302.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_302.py
++++ b/src/tempo/generated/client_302.py
+@@ -1,3 +1,3 @@
+-def op_302(): ...
+-    # generated from operationId=op_302
+-    return _request('GET', _paths[0])
++def op_302(payload=None, *, timeout=30): ...
++    # generated from operationId=op_302
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_303.py b/src/tempo/generated/client_303.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_303.py
++++ b/src/tempo/generated/client_303.py
+@@ -1,3 +1,3 @@
+-def op_303(): ...
+-    # generated from operationId=op_303
+-    return _request('GET', _paths[0])
++def op_303(payload=None, *, timeout=30): ...
++    # generated from operationId=op_303
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_304.py b/src/tempo/generated/client_304.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_304.py
++++ b/src/tempo/generated/client_304.py
+@@ -1,3 +1,3 @@
+-def op_304(): ...
+-    # generated from operationId=op_304
+-    return _request('GET', _paths[0])
++def op_304(payload=None, *, timeout=30): ...
++    # generated from operationId=op_304
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_305.py b/src/tempo/generated/client_305.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_305.py
++++ b/src/tempo/generated/client_305.py
+@@ -1,3 +1,3 @@
+-def op_305(): ...
+-    # generated from operationId=op_305
+-    return _request('GET', _paths[0])
++def op_305(payload=None, *, timeout=30): ...
++    # generated from operationId=op_305
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_306.py b/src/tempo/generated/client_306.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_306.py
++++ b/src/tempo/generated/client_306.py
+@@ -1,3 +1,3 @@
+-def op_306(): ...
+-    # generated from operationId=op_306
+-    return _request('GET', _paths[0])
++def op_306(payload=None, *, timeout=30): ...
++    # generated from operationId=op_306
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_307.py b/src/tempo/generated/client_307.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_307.py
++++ b/src/tempo/generated/client_307.py
+@@ -1,3 +1,3 @@
+-def op_307(): ...
+-    # generated from operationId=op_307
+-    return _request('GET', _paths[0])
++def op_307(payload=None, *, timeout=30): ...
++    # generated from operationId=op_307
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_308.py b/src/tempo/generated/client_308.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_308.py
++++ b/src/tempo/generated/client_308.py
+@@ -1,3 +1,3 @@
+-def op_308(): ...
+-    # generated from operationId=op_308
+-    return _request('GET', _paths[0])
++def op_308(payload=None, *, timeout=30): ...
++    # generated from operationId=op_308
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_309.py b/src/tempo/generated/client_309.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_309.py
++++ b/src/tempo/generated/client_309.py
+@@ -1,3 +1,3 @@
+-def op_309(): ...
+-    # generated from operationId=op_309
+-    return _request('GET', _paths[0])
++def op_309(payload=None, *, timeout=30): ...
++    # generated from operationId=op_309
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_310.py b/src/tempo/generated/client_310.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_310.py
++++ b/src/tempo/generated/client_310.py
+@@ -1,3 +1,3 @@
+-def op_310(): ...
+-    # generated from operationId=op_310
+-    return _request('GET', _paths[0])
++def op_310(payload=None, *, timeout=30): ...
++    # generated from operationId=op_310
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_311.py b/src/tempo/generated/client_311.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_311.py
++++ b/src/tempo/generated/client_311.py
+@@ -1,3 +1,3 @@
+-def op_311(): ...
+-    # generated from operationId=op_311
+-    return _request('GET', _paths[0])
++def op_311(payload=None, *, timeout=30): ...
++    # generated from operationId=op_311
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_312.py b/src/tempo/generated/client_312.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_312.py
++++ b/src/tempo/generated/client_312.py
+@@ -1,3 +1,3 @@
+-def op_312(): ...
+-    # generated from operationId=op_312
+-    return _request('GET', _paths[0])
++def op_312(payload=None, *, timeout=30): ...
++    # generated from operationId=op_312
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_313.py b/src/tempo/generated/client_313.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_313.py
++++ b/src/tempo/generated/client_313.py
+@@ -1,3 +1,3 @@
+-def op_313(): ...
+-    # generated from operationId=op_313
+-    return _request('GET', _paths[0])
++def op_313(payload=None, *, timeout=30): ...
++    # generated from operationId=op_313
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_314.py b/src/tempo/generated/client_314.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_314.py
++++ b/src/tempo/generated/client_314.py
+@@ -1,3 +1,3 @@
+-def op_314(): ...
+-    # generated from operationId=op_314
+-    return _request('GET', _paths[0])
++def op_314(payload=None, *, timeout=30): ...
++    # generated from operationId=op_314
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_315.py b/src/tempo/generated/client_315.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_315.py
++++ b/src/tempo/generated/client_315.py
+@@ -1,3 +1,3 @@
+-def op_315(): ...
+-    # generated from operationId=op_315
+-    return _request('GET', _paths[0])
++def op_315(payload=None, *, timeout=30): ...
++    # generated from operationId=op_315
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_316.py b/src/tempo/generated/client_316.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_316.py
++++ b/src/tempo/generated/client_316.py
+@@ -1,3 +1,3 @@
+-def op_316(): ...
+-    # generated from operationId=op_316
+-    return _request('GET', _paths[0])
++def op_316(payload=None, *, timeout=30): ...
++    # generated from operationId=op_316
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_317.py b/src/tempo/generated/client_317.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_317.py
++++ b/src/tempo/generated/client_317.py
+@@ -1,3 +1,3 @@
+-def op_317(): ...
+-    # generated from operationId=op_317
+-    return _request('GET', _paths[0])
++def op_317(payload=None, *, timeout=30): ...
++    # generated from operationId=op_317
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_318.py b/src/tempo/generated/client_318.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_318.py
++++ b/src/tempo/generated/client_318.py
+@@ -1,3 +1,3 @@
+-def op_318(): ...
+-    # generated from operationId=op_318
+-    return _request('GET', _paths[0])
++def op_318(payload=None, *, timeout=30): ...
++    # generated from operationId=op_318
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_319.py b/src/tempo/generated/client_319.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_319.py
++++ b/src/tempo/generated/client_319.py
+@@ -1,3 +1,3 @@
+-def op_319(): ...
+-    # generated from operationId=op_319
+-    return _request('GET', _paths[0])
++def op_319(payload=None, *, timeout=30): ...
++    # generated from operationId=op_319
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_320.py b/src/tempo/generated/client_320.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_320.py
++++ b/src/tempo/generated/client_320.py
+@@ -1,3 +1,3 @@
+-def op_320(): ...
+-    # generated from operationId=op_320
+-    return _request('GET', _paths[0])
++def op_320(payload=None, *, timeout=30): ...
++    # generated from operationId=op_320
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_321.py b/src/tempo/generated/client_321.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_321.py
++++ b/src/tempo/generated/client_321.py
+@@ -1,3 +1,3 @@
+-def op_321(): ...
+-    # generated from operationId=op_321
+-    return _request('GET', _paths[0])
++def op_321(payload=None, *, timeout=30): ...
++    # generated from operationId=op_321
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_322.py b/src/tempo/generated/client_322.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_322.py
++++ b/src/tempo/generated/client_322.py
+@@ -1,3 +1,3 @@
+-def op_322(): ...
+-    # generated from operationId=op_322
+-    return _request('GET', _paths[0])
++def op_322(payload=None, *, timeout=30): ...
++    # generated from operationId=op_322
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_323.py b/src/tempo/generated/client_323.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_323.py
++++ b/src/tempo/generated/client_323.py
+@@ -1,3 +1,3 @@
+-def op_323(): ...
+-    # generated from operationId=op_323
+-    return _request('GET', _paths[0])
++def op_323(payload=None, *, timeout=30): ...
++    # generated from operationId=op_323
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_324.py b/src/tempo/generated/client_324.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_324.py
++++ b/src/tempo/generated/client_324.py
+@@ -1,3 +1,3 @@
+-def op_324(): ...
+-    # generated from operationId=op_324
+-    return _request('GET', _paths[0])
++def op_324(payload=None, *, timeout=30): ...
++    # generated from operationId=op_324
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_325.py b/src/tempo/generated/client_325.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_325.py
++++ b/src/tempo/generated/client_325.py
+@@ -1,3 +1,3 @@
+-def op_325(): ...
+-    # generated from operationId=op_325
+-    return _request('GET', _paths[0])
++def op_325(payload=None, *, timeout=30): ...
++    # generated from operationId=op_325
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_326.py b/src/tempo/generated/client_326.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_326.py
++++ b/src/tempo/generated/client_326.py
+@@ -1,3 +1,3 @@
+-def op_326(): ...
+-    # generated from operationId=op_326
+-    return _request('GET', _paths[0])
++def op_326(payload=None, *, timeout=30): ...
++    # generated from operationId=op_326
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_327.py b/src/tempo/generated/client_327.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_327.py
++++ b/src/tempo/generated/client_327.py
+@@ -1,3 +1,3 @@
+-def op_327(): ...
+-    # generated from operationId=op_327
+-    return _request('GET', _paths[0])
++def op_327(payload=None, *, timeout=30): ...
++    # generated from operationId=op_327
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_328.py b/src/tempo/generated/client_328.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_328.py
++++ b/src/tempo/generated/client_328.py
+@@ -1,3 +1,3 @@
+-def op_328(): ...
+-    # generated from operationId=op_328
+-    return _request('GET', _paths[0])
++def op_328(payload=None, *, timeout=30): ...
++    # generated from operationId=op_328
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_329.py b/src/tempo/generated/client_329.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_329.py
++++ b/src/tempo/generated/client_329.py
+@@ -1,3 +1,3 @@
+-def op_329(): ...
+-    # generated from operationId=op_329
+-    return _request('GET', _paths[0])
++def op_329(payload=None, *, timeout=30): ...
++    # generated from operationId=op_329
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_330.py b/src/tempo/generated/client_330.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_330.py
++++ b/src/tempo/generated/client_330.py
+@@ -1,3 +1,3 @@
+-def op_330(): ...
+-    # generated from operationId=op_330
+-    return _request('GET', _paths[0])
++def op_330(payload=None, *, timeout=30): ...
++    # generated from operationId=op_330
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_331.py b/src/tempo/generated/client_331.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_331.py
++++ b/src/tempo/generated/client_331.py
+@@ -1,3 +1,3 @@
+-def op_331(): ...
+-    # generated from operationId=op_331
+-    return _request('GET', _paths[0])
++def op_331(payload=None, *, timeout=30): ...
++    # generated from operationId=op_331
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_332.py b/src/tempo/generated/client_332.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_332.py
++++ b/src/tempo/generated/client_332.py
+@@ -1,3 +1,3 @@
+-def op_332(): ...
+-    # generated from operationId=op_332
+-    return _request('GET', _paths[0])
++def op_332(payload=None, *, timeout=30): ...
++    # generated from operationId=op_332
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_333.py b/src/tempo/generated/client_333.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_333.py
++++ b/src/tempo/generated/client_333.py
+@@ -1,3 +1,3 @@
+-def op_333(): ...
+-    # generated from operationId=op_333
+-    return _request('GET', _paths[0])
++def op_333(payload=None, *, timeout=30): ...
++    # generated from operationId=op_333
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_334.py b/src/tempo/generated/client_334.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_334.py
++++ b/src/tempo/generated/client_334.py
+@@ -1,3 +1,3 @@
+-def op_334(): ...
+-    # generated from operationId=op_334
+-    return _request('GET', _paths[0])
++def op_334(payload=None, *, timeout=30): ...
++    # generated from operationId=op_334
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_335.py b/src/tempo/generated/client_335.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_335.py
++++ b/src/tempo/generated/client_335.py
+@@ -1,3 +1,3 @@
+-def op_335(): ...
+-    # generated from operationId=op_335
+-    return _request('GET', _paths[0])
++def op_335(payload=None, *, timeout=30): ...
++    # generated from operationId=op_335
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_336.py b/src/tempo/generated/client_336.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_336.py
++++ b/src/tempo/generated/client_336.py
+@@ -1,3 +1,3 @@
+-def op_336(): ...
+-    # generated from operationId=op_336
+-    return _request('GET', _paths[0])
++def op_336(payload=None, *, timeout=30): ...
++    # generated from operationId=op_336
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_337.py b/src/tempo/generated/client_337.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_337.py
++++ b/src/tempo/generated/client_337.py
+@@ -1,3 +1,3 @@
+-def op_337(): ...
+-    # generated from operationId=op_337
+-    return _request('GET', _paths[0])
++def op_337(payload=None, *, timeout=30): ...
++    # generated from operationId=op_337
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_338.py b/src/tempo/generated/client_338.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_338.py
++++ b/src/tempo/generated/client_338.py
+@@ -1,3 +1,3 @@
+-def op_338(): ...
+-    # generated from operationId=op_338
+-    return _request('GET', _paths[0])
++def op_338(payload=None, *, timeout=30): ...
++    # generated from operationId=op_338
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_339.py b/src/tempo/generated/client_339.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_339.py
++++ b/src/tempo/generated/client_339.py
+@@ -1,3 +1,3 @@
+-def op_339(): ...
+-    # generated from operationId=op_339
+-    return _request('GET', _paths[0])
++def op_339(payload=None, *, timeout=30): ...
++    # generated from operationId=op_339
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_340.py b/src/tempo/generated/client_340.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_340.py
++++ b/src/tempo/generated/client_340.py
+@@ -1,3 +1,3 @@
+-def op_340(): ...
+-    # generated from operationId=op_340
+-    return _request('GET', _paths[0])
++def op_340(payload=None, *, timeout=30): ...
++    # generated from operationId=op_340
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_341.py b/src/tempo/generated/client_341.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_341.py
++++ b/src/tempo/generated/client_341.py
+@@ -1,3 +1,3 @@
+-def op_341(): ...
+-    # generated from operationId=op_341
+-    return _request('GET', _paths[0])
++def op_341(payload=None, *, timeout=30): ...
++    # generated from operationId=op_341
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_342.py b/src/tempo/generated/client_342.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_342.py
++++ b/src/tempo/generated/client_342.py
+@@ -1,3 +1,3 @@
+-def op_342(): ...
+-    # generated from operationId=op_342
+-    return _request('GET', _paths[0])
++def op_342(payload=None, *, timeout=30): ...
++    # generated from operationId=op_342
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_343.py b/src/tempo/generated/client_343.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_343.py
++++ b/src/tempo/generated/client_343.py
+@@ -1,3 +1,3 @@
+-def op_343(): ...
+-    # generated from operationId=op_343
+-    return _request('GET', _paths[0])
++def op_343(payload=None, *, timeout=30): ...
++    # generated from operationId=op_343
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_344.py b/src/tempo/generated/client_344.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_344.py
++++ b/src/tempo/generated/client_344.py
+@@ -1,3 +1,3 @@
+-def op_344(): ...
+-    # generated from operationId=op_344
+-    return _request('GET', _paths[0])
++def op_344(payload=None, *, timeout=30): ...
++    # generated from operationId=op_344
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_345.py b/src/tempo/generated/client_345.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_345.py
++++ b/src/tempo/generated/client_345.py
+@@ -1,3 +1,3 @@
+-def op_345(): ...
+-    # generated from operationId=op_345
+-    return _request('GET', _paths[0])
++def op_345(payload=None, *, timeout=30): ...
++    # generated from operationId=op_345
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_346.py b/src/tempo/generated/client_346.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_346.py
++++ b/src/tempo/generated/client_346.py
+@@ -1,3 +1,3 @@
+-def op_346(): ...
+-    # generated from operationId=op_346
+-    return _request('GET', _paths[0])
++def op_346(payload=None, *, timeout=30): ...
++    # generated from operationId=op_346
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_347.py b/src/tempo/generated/client_347.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_347.py
++++ b/src/tempo/generated/client_347.py
+@@ -1,3 +1,3 @@
+-def op_347(): ...
+-    # generated from operationId=op_347
+-    return _request('GET', _paths[0])
++def op_347(payload=None, *, timeout=30): ...
++    # generated from operationId=op_347
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_348.py b/src/tempo/generated/client_348.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_348.py
++++ b/src/tempo/generated/client_348.py
+@@ -1,3 +1,3 @@
+-def op_348(): ...
+-    # generated from operationId=op_348
+-    return _request('GET', _paths[0])
++def op_348(payload=None, *, timeout=30): ...
++    # generated from operationId=op_348
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_349.py b/src/tempo/generated/client_349.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_349.py
++++ b/src/tempo/generated/client_349.py
+@@ -1,3 +1,3 @@
+-def op_349(): ...
+-    # generated from operationId=op_349
+-    return _request('GET', _paths[0])
++def op_349(payload=None, *, timeout=30): ...
++    # generated from operationId=op_349
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_350.py b/src/tempo/generated/client_350.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_350.py
++++ b/src/tempo/generated/client_350.py
+@@ -1,3 +1,3 @@
+-def op_350(): ...
+-    # generated from operationId=op_350
+-    return _request('GET', _paths[0])
++def op_350(payload=None, *, timeout=30): ...
++    # generated from operationId=op_350
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_351.py b/src/tempo/generated/client_351.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_351.py
++++ b/src/tempo/generated/client_351.py
+@@ -1,3 +1,3 @@
+-def op_351(): ...
+-    # generated from operationId=op_351
+-    return _request('GET', _paths[0])
++def op_351(payload=None, *, timeout=30): ...
++    # generated from operationId=op_351
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_352.py b/src/tempo/generated/client_352.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_352.py
++++ b/src/tempo/generated/client_352.py
+@@ -1,3 +1,3 @@
+-def op_352(): ...
+-    # generated from operationId=op_352
+-    return _request('GET', _paths[0])
++def op_352(payload=None, *, timeout=30): ...
++    # generated from operationId=op_352
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_353.py b/src/tempo/generated/client_353.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_353.py
++++ b/src/tempo/generated/client_353.py
+@@ -1,3 +1,3 @@
+-def op_353(): ...
+-    # generated from operationId=op_353
+-    return _request('GET', _paths[0])
++def op_353(payload=None, *, timeout=30): ...
++    # generated from operationId=op_353
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_354.py b/src/tempo/generated/client_354.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_354.py
++++ b/src/tempo/generated/client_354.py
+@@ -1,3 +1,3 @@
+-def op_354(): ...
+-    # generated from operationId=op_354
+-    return _request('GET', _paths[0])
++def op_354(payload=None, *, timeout=30): ...
++    # generated from operationId=op_354
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_355.py b/src/tempo/generated/client_355.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_355.py
++++ b/src/tempo/generated/client_355.py
+@@ -1,3 +1,3 @@
+-def op_355(): ...
+-    # generated from operationId=op_355
+-    return _request('GET', _paths[0])
++def op_355(payload=None, *, timeout=30): ...
++    # generated from operationId=op_355
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_356.py b/src/tempo/generated/client_356.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_356.py
++++ b/src/tempo/generated/client_356.py
+@@ -1,3 +1,3 @@
+-def op_356(): ...
+-    # generated from operationId=op_356
+-    return _request('GET', _paths[0])
++def op_356(payload=None, *, timeout=30): ...
++    # generated from operationId=op_356
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_357.py b/src/tempo/generated/client_357.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_357.py
++++ b/src/tempo/generated/client_357.py
+@@ -1,3 +1,3 @@
+-def op_357(): ...
+-    # generated from operationId=op_357
+-    return _request('GET', _paths[0])
++def op_357(payload=None, *, timeout=30): ...
++    # generated from operationId=op_357
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_358.py b/src/tempo/generated/client_358.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_358.py
++++ b/src/tempo/generated/client_358.py
+@@ -1,3 +1,3 @@
+-def op_358(): ...
+-    # generated from operationId=op_358
+-    return _request('GET', _paths[0])
++def op_358(payload=None, *, timeout=30): ...
++    # generated from operationId=op_358
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_359.py b/src/tempo/generated/client_359.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_359.py
++++ b/src/tempo/generated/client_359.py
+@@ -1,3 +1,3 @@
+-def op_359(): ...
+-    # generated from operationId=op_359
+-    return _request('GET', _paths[0])
++def op_359(payload=None, *, timeout=30): ...
++    # generated from operationId=op_359
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_360.py b/src/tempo/generated/client_360.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_360.py
++++ b/src/tempo/generated/client_360.py
+@@ -1,3 +1,3 @@
+-def op_360(): ...
+-    # generated from operationId=op_360
+-    return _request('GET', _paths[0])
++def op_360(payload=None, *, timeout=30): ...
++    # generated from operationId=op_360
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_361.py b/src/tempo/generated/client_361.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_361.py
++++ b/src/tempo/generated/client_361.py
+@@ -1,3 +1,3 @@
+-def op_361(): ...
+-    # generated from operationId=op_361
+-    return _request('GET', _paths[0])
++def op_361(payload=None, *, timeout=30): ...
++    # generated from operationId=op_361
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_362.py b/src/tempo/generated/client_362.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_362.py
++++ b/src/tempo/generated/client_362.py
+@@ -1,3 +1,3 @@
+-def op_362(): ...
+-    # generated from operationId=op_362
+-    return _request('GET', _paths[0])
++def op_362(payload=None, *, timeout=30): ...
++    # generated from operationId=op_362
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_363.py b/src/tempo/generated/client_363.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_363.py
++++ b/src/tempo/generated/client_363.py
+@@ -1,3 +1,3 @@
+-def op_363(): ...
+-    # generated from operationId=op_363
+-    return _request('GET', _paths[0])
++def op_363(payload=None, *, timeout=30): ...
++    # generated from operationId=op_363
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_364.py b/src/tempo/generated/client_364.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_364.py
++++ b/src/tempo/generated/client_364.py
+@@ -1,3 +1,3 @@
+-def op_364(): ...
+-    # generated from operationId=op_364
+-    return _request('GET', _paths[0])
++def op_364(payload=None, *, timeout=30): ...
++    # generated from operationId=op_364
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_365.py b/src/tempo/generated/client_365.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_365.py
++++ b/src/tempo/generated/client_365.py
+@@ -1,3 +1,3 @@
+-def op_365(): ...
+-    # generated from operationId=op_365
+-    return _request('GET', _paths[0])
++def op_365(payload=None, *, timeout=30): ...
++    # generated from operationId=op_365
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_366.py b/src/tempo/generated/client_366.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_366.py
++++ b/src/tempo/generated/client_366.py
+@@ -1,3 +1,3 @@
+-def op_366(): ...
+-    # generated from operationId=op_366
+-    return _request('GET', _paths[0])
++def op_366(payload=None, *, timeout=30): ...
++    # generated from operationId=op_366
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_367.py b/src/tempo/generated/client_367.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_367.py
++++ b/src/tempo/generated/client_367.py
+@@ -1,3 +1,3 @@
+-def op_367(): ...
+-    # generated from operationId=op_367
+-    return _request('GET', _paths[0])
++def op_367(payload=None, *, timeout=30): ...
++    # generated from operationId=op_367
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_368.py b/src/tempo/generated/client_368.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_368.py
++++ b/src/tempo/generated/client_368.py
+@@ -1,3 +1,3 @@
+-def op_368(): ...
+-    # generated from operationId=op_368
+-    return _request('GET', _paths[0])
++def op_368(payload=None, *, timeout=30): ...
++    # generated from operationId=op_368
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_369.py b/src/tempo/generated/client_369.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_369.py
++++ b/src/tempo/generated/client_369.py
+@@ -1,3 +1,3 @@
+-def op_369(): ...
+-    # generated from operationId=op_369
+-    return _request('GET', _paths[0])
++def op_369(payload=None, *, timeout=30): ...
++    # generated from operationId=op_369
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_370.py b/src/tempo/generated/client_370.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_370.py
++++ b/src/tempo/generated/client_370.py
+@@ -1,3 +1,3 @@
+-def op_370(): ...
+-    # generated from operationId=op_370
+-    return _request('GET', _paths[0])
++def op_370(payload=None, *, timeout=30): ...
++    # generated from operationId=op_370
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_371.py b/src/tempo/generated/client_371.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_371.py
++++ b/src/tempo/generated/client_371.py
+@@ -1,3 +1,3 @@
+-def op_371(): ...
+-    # generated from operationId=op_371
+-    return _request('GET', _paths[0])
++def op_371(payload=None, *, timeout=30): ...
++    # generated from operationId=op_371
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_372.py b/src/tempo/generated/client_372.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_372.py
++++ b/src/tempo/generated/client_372.py
+@@ -1,3 +1,3 @@
+-def op_372(): ...
+-    # generated from operationId=op_372
+-    return _request('GET', _paths[0])
++def op_372(payload=None, *, timeout=30): ...
++    # generated from operationId=op_372
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_373.py b/src/tempo/generated/client_373.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_373.py
++++ b/src/tempo/generated/client_373.py
+@@ -1,3 +1,3 @@
+-def op_373(): ...
+-    # generated from operationId=op_373
+-    return _request('GET', _paths[0])
++def op_373(payload=None, *, timeout=30): ...
++    # generated from operationId=op_373
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_374.py b/src/tempo/generated/client_374.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_374.py
++++ b/src/tempo/generated/client_374.py
+@@ -1,3 +1,3 @@
+-def op_374(): ...
+-    # generated from operationId=op_374
+-    return _request('GET', _paths[0])
++def op_374(payload=None, *, timeout=30): ...
++    # generated from operationId=op_374
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_375.py b/src/tempo/generated/client_375.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_375.py
++++ b/src/tempo/generated/client_375.py
+@@ -1,3 +1,3 @@
+-def op_375(): ...
+-    # generated from operationId=op_375
+-    return _request('GET', _paths[0])
++def op_375(payload=None, *, timeout=30): ...
++    # generated from operationId=op_375
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_376.py b/src/tempo/generated/client_376.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_376.py
++++ b/src/tempo/generated/client_376.py
+@@ -1,3 +1,3 @@
+-def op_376(): ...
+-    # generated from operationId=op_376
+-    return _request('GET', _paths[0])
++def op_376(payload=None, *, timeout=30): ...
++    # generated from operationId=op_376
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_377.py b/src/tempo/generated/client_377.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_377.py
++++ b/src/tempo/generated/client_377.py
+@@ -1,3 +1,3 @@
+-def op_377(): ...
+-    # generated from operationId=op_377
+-    return _request('GET', _paths[0])
++def op_377(payload=None, *, timeout=30): ...
++    # generated from operationId=op_377
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_378.py b/src/tempo/generated/client_378.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_378.py
++++ b/src/tempo/generated/client_378.py
+@@ -1,3 +1,3 @@
+-def op_378(): ...
+-    # generated from operationId=op_378
+-    return _request('GET', _paths[0])
++def op_378(payload=None, *, timeout=30): ...
++    # generated from operationId=op_378
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_379.py b/src/tempo/generated/client_379.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_379.py
++++ b/src/tempo/generated/client_379.py
+@@ -1,3 +1,3 @@
+-def op_379(): ...
+-    # generated from operationId=op_379
+-    return _request('GET', _paths[0])
++def op_379(payload=None, *, timeout=30): ...
++    # generated from operationId=op_379
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_380.py b/src/tempo/generated/client_380.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_380.py
++++ b/src/tempo/generated/client_380.py
+@@ -1,3 +1,3 @@
+-def op_380(): ...
+-    # generated from operationId=op_380
+-    return _request('GET', _paths[0])
++def op_380(payload=None, *, timeout=30): ...
++    # generated from operationId=op_380
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_381.py b/src/tempo/generated/client_381.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_381.py
++++ b/src/tempo/generated/client_381.py
+@@ -1,3 +1,3 @@
+-def op_381(): ...
+-    # generated from operationId=op_381
+-    return _request('GET', _paths[0])
++def op_381(payload=None, *, timeout=30): ...
++    # generated from operationId=op_381
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_382.py b/src/tempo/generated/client_382.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_382.py
++++ b/src/tempo/generated/client_382.py
+@@ -1,3 +1,3 @@
+-def op_382(): ...
+-    # generated from operationId=op_382
+-    return _request('GET', _paths[0])
++def op_382(payload=None, *, timeout=30): ...
++    # generated from operationId=op_382
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_383.py b/src/tempo/generated/client_383.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_383.py
++++ b/src/tempo/generated/client_383.py
+@@ -1,3 +1,3 @@
+-def op_383(): ...
+-    # generated from operationId=op_383
+-    return _request('GET', _paths[0])
++def op_383(payload=None, *, timeout=30): ...
++    # generated from operationId=op_383
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_384.py b/src/tempo/generated/client_384.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_384.py
++++ b/src/tempo/generated/client_384.py
+@@ -1,3 +1,3 @@
+-def op_384(): ...
+-    # generated from operationId=op_384
+-    return _request('GET', _paths[0])
++def op_384(payload=None, *, timeout=30): ...
++    # generated from operationId=op_384
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_385.py b/src/tempo/generated/client_385.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_385.py
++++ b/src/tempo/generated/client_385.py
+@@ -1,3 +1,3 @@
+-def op_385(): ...
+-    # generated from operationId=op_385
+-    return _request('GET', _paths[0])
++def op_385(payload=None, *, timeout=30): ...
++    # generated from operationId=op_385
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_386.py b/src/tempo/generated/client_386.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_386.py
++++ b/src/tempo/generated/client_386.py
+@@ -1,3 +1,3 @@
+-def op_386(): ...
+-    # generated from operationId=op_386
+-    return _request('GET', _paths[0])
++def op_386(payload=None, *, timeout=30): ...
++    # generated from operationId=op_386
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_387.py b/src/tempo/generated/client_387.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_387.py
++++ b/src/tempo/generated/client_387.py
+@@ -1,3 +1,3 @@
+-def op_387(): ...
+-    # generated from operationId=op_387
+-    return _request('GET', _paths[0])
++def op_387(payload=None, *, timeout=30): ...
++    # generated from operationId=op_387
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_388.py b/src/tempo/generated/client_388.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_388.py
++++ b/src/tempo/generated/client_388.py
+@@ -1,3 +1,3 @@
+-def op_388(): ...
+-    # generated from operationId=op_388
+-    return _request('GET', _paths[0])
++def op_388(payload=None, *, timeout=30): ...
++    # generated from operationId=op_388
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_389.py b/src/tempo/generated/client_389.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_389.py
++++ b/src/tempo/generated/client_389.py
+@@ -1,3 +1,3 @@
+-def op_389(): ...
+-    # generated from operationId=op_389
+-    return _request('GET', _paths[0])
++def op_389(payload=None, *, timeout=30): ...
++    # generated from operationId=op_389
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_390.py b/src/tempo/generated/client_390.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_390.py
++++ b/src/tempo/generated/client_390.py
+@@ -1,3 +1,3 @@
+-def op_390(): ...
+-    # generated from operationId=op_390
+-    return _request('GET', _paths[0])
++def op_390(payload=None, *, timeout=30): ...
++    # generated from operationId=op_390
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_391.py b/src/tempo/generated/client_391.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_391.py
++++ b/src/tempo/generated/client_391.py
+@@ -1,3 +1,3 @@
+-def op_391(): ...
+-    # generated from operationId=op_391
+-    return _request('GET', _paths[0])
++def op_391(payload=None, *, timeout=30): ...
++    # generated from operationId=op_391
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_392.py b/src/tempo/generated/client_392.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_392.py
++++ b/src/tempo/generated/client_392.py
+@@ -1,3 +1,3 @@
+-def op_392(): ...
+-    # generated from operationId=op_392
+-    return _request('GET', _paths[0])
++def op_392(payload=None, *, timeout=30): ...
++    # generated from operationId=op_392
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_393.py b/src/tempo/generated/client_393.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_393.py
++++ b/src/tempo/generated/client_393.py
+@@ -1,3 +1,3 @@
+-def op_393(): ...
+-    # generated from operationId=op_393
+-    return _request('GET', _paths[0])
++def op_393(payload=None, *, timeout=30): ...
++    # generated from operationId=op_393
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_394.py b/src/tempo/generated/client_394.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_394.py
++++ b/src/tempo/generated/client_394.py
+@@ -1,3 +1,3 @@
+-def op_394(): ...
+-    # generated from operationId=op_394
+-    return _request('GET', _paths[0])
++def op_394(payload=None, *, timeout=30): ...
++    # generated from operationId=op_394
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_395.py b/src/tempo/generated/client_395.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_395.py
++++ b/src/tempo/generated/client_395.py
+@@ -1,3 +1,3 @@
+-def op_395(): ...
+-    # generated from operationId=op_395
+-    return _request('GET', _paths[0])
++def op_395(payload=None, *, timeout=30): ...
++    # generated from operationId=op_395
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_396.py b/src/tempo/generated/client_396.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_396.py
++++ b/src/tempo/generated/client_396.py
+@@ -1,3 +1,3 @@
+-def op_396(): ...
+-    # generated from operationId=op_396
+-    return _request('GET', _paths[0])
++def op_396(payload=None, *, timeout=30): ...
++    # generated from operationId=op_396
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_397.py b/src/tempo/generated/client_397.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_397.py
++++ b/src/tempo/generated/client_397.py
+@@ -1,3 +1,3 @@
+-def op_397(): ...
+-    # generated from operationId=op_397
+-    return _request('GET', _paths[0])
++def op_397(payload=None, *, timeout=30): ...
++    # generated from operationId=op_397
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_398.py b/src/tempo/generated/client_398.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_398.py
++++ b/src/tempo/generated/client_398.py
+@@ -1,3 +1,3 @@
+-def op_398(): ...
+-    # generated from operationId=op_398
+-    return _request('GET', _paths[0])
++def op_398(payload=None, *, timeout=30): ...
++    # generated from operationId=op_398
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_399.py b/src/tempo/generated/client_399.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_399.py
++++ b/src/tempo/generated/client_399.py
+@@ -1,3 +1,3 @@
+-def op_399(): ...
+-    # generated from operationId=op_399
+-    return _request('GET', _paths[0])
++def op_399(payload=None, *, timeout=30): ...
++    # generated from operationId=op_399
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_400.py b/src/tempo/generated/client_400.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_400.py
++++ b/src/tempo/generated/client_400.py
+@@ -1,3 +1,3 @@
+-def op_400(): ...
+-    # generated from operationId=op_400
+-    return _request('GET', _paths[0])
++def op_400(payload=None, *, timeout=30): ...
++    # generated from operationId=op_400
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_401.py b/src/tempo/generated/client_401.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_401.py
++++ b/src/tempo/generated/client_401.py
+@@ -1,3 +1,3 @@
+-def op_401(): ...
+-    # generated from operationId=op_401
+-    return _request('GET', _paths[0])
++def op_401(payload=None, *, timeout=30): ...
++    # generated from operationId=op_401
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_402.py b/src/tempo/generated/client_402.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_402.py
++++ b/src/tempo/generated/client_402.py
+@@ -1,3 +1,3 @@
+-def op_402(): ...
+-    # generated from operationId=op_402
+-    return _request('GET', _paths[0])
++def op_402(payload=None, *, timeout=30): ...
++    # generated from operationId=op_402
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_403.py b/src/tempo/generated/client_403.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_403.py
++++ b/src/tempo/generated/client_403.py
+@@ -1,3 +1,3 @@
+-def op_403(): ...
+-    # generated from operationId=op_403
+-    return _request('GET', _paths[0])
++def op_403(payload=None, *, timeout=30): ...
++    # generated from operationId=op_403
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_404.py b/src/tempo/generated/client_404.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_404.py
++++ b/src/tempo/generated/client_404.py
+@@ -1,3 +1,3 @@
+-def op_404(): ...
+-    # generated from operationId=op_404
+-    return _request('GET', _paths[0])
++def op_404(payload=None, *, timeout=30): ...
++    # generated from operationId=op_404
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_405.py b/src/tempo/generated/client_405.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_405.py
++++ b/src/tempo/generated/client_405.py
+@@ -1,3 +1,3 @@
+-def op_405(): ...
+-    # generated from operationId=op_405
+-    return _request('GET', _paths[0])
++def op_405(payload=None, *, timeout=30): ...
++    # generated from operationId=op_405
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_406.py b/src/tempo/generated/client_406.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_406.py
++++ b/src/tempo/generated/client_406.py
+@@ -1,3 +1,3 @@
+-def op_406(): ...
+-    # generated from operationId=op_406
+-    return _request('GET', _paths[0])
++def op_406(payload=None, *, timeout=30): ...
++    # generated from operationId=op_406
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_407.py b/src/tempo/generated/client_407.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_407.py
++++ b/src/tempo/generated/client_407.py
+@@ -1,3 +1,3 @@
+-def op_407(): ...
+-    # generated from operationId=op_407
+-    return _request('GET', _paths[0])
++def op_407(payload=None, *, timeout=30): ...
++    # generated from operationId=op_407
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_408.py b/src/tempo/generated/client_408.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_408.py
++++ b/src/tempo/generated/client_408.py
+@@ -1,3 +1,3 @@
+-def op_408(): ...
+-    # generated from operationId=op_408
+-    return _request('GET', _paths[0])
++def op_408(payload=None, *, timeout=30): ...
++    # generated from operationId=op_408
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_409.py b/src/tempo/generated/client_409.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_409.py
++++ b/src/tempo/generated/client_409.py
+@@ -1,3 +1,3 @@
+-def op_409(): ...
+-    # generated from operationId=op_409
+-    return _request('GET', _paths[0])
++def op_409(payload=None, *, timeout=30): ...
++    # generated from operationId=op_409
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_410.py b/src/tempo/generated/client_410.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_410.py
++++ b/src/tempo/generated/client_410.py
+@@ -1,3 +1,3 @@
+-def op_410(): ...
+-    # generated from operationId=op_410
+-    return _request('GET', _paths[0])
++def op_410(payload=None, *, timeout=30): ...
++    # generated from operationId=op_410
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_411.py b/src/tempo/generated/client_411.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_411.py
++++ b/src/tempo/generated/client_411.py
+@@ -1,3 +1,3 @@
+-def op_411(): ...
+-    # generated from operationId=op_411
+-    return _request('GET', _paths[0])
++def op_411(payload=None, *, timeout=30): ...
++    # generated from operationId=op_411
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_412.py b/src/tempo/generated/client_412.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_412.py
++++ b/src/tempo/generated/client_412.py
+@@ -1,3 +1,3 @@
+-def op_412(): ...
+-    # generated from operationId=op_412
+-    return _request('GET', _paths[0])
++def op_412(payload=None, *, timeout=30): ...
++    # generated from operationId=op_412
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_413.py b/src/tempo/generated/client_413.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_413.py
++++ b/src/tempo/generated/client_413.py
+@@ -1,3 +1,3 @@
+-def op_413(): ...
+-    # generated from operationId=op_413
+-    return _request('GET', _paths[0])
++def op_413(payload=None, *, timeout=30): ...
++    # generated from operationId=op_413
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_414.py b/src/tempo/generated/client_414.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_414.py
++++ b/src/tempo/generated/client_414.py
+@@ -1,3 +1,3 @@
+-def op_414(): ...
+-    # generated from operationId=op_414
+-    return _request('GET', _paths[0])
++def op_414(payload=None, *, timeout=30): ...
++    # generated from operationId=op_414
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_415.py b/src/tempo/generated/client_415.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_415.py
++++ b/src/tempo/generated/client_415.py
+@@ -1,3 +1,3 @@
+-def op_415(): ...
+-    # generated from operationId=op_415
+-    return _request('GET', _paths[0])
++def op_415(payload=None, *, timeout=30): ...
++    # generated from operationId=op_415
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_416.py b/src/tempo/generated/client_416.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_416.py
++++ b/src/tempo/generated/client_416.py
+@@ -1,3 +1,3 @@
+-def op_416(): ...
+-    # generated from operationId=op_416
+-    return _request('GET', _paths[0])
++def op_416(payload=None, *, timeout=30): ...
++    # generated from operationId=op_416
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_417.py b/src/tempo/generated/client_417.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_417.py
++++ b/src/tempo/generated/client_417.py
+@@ -1,3 +1,3 @@
+-def op_417(): ...
+-    # generated from operationId=op_417
+-    return _request('GET', _paths[0])
++def op_417(payload=None, *, timeout=30): ...
++    # generated from operationId=op_417
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_418.py b/src/tempo/generated/client_418.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_418.py
++++ b/src/tempo/generated/client_418.py
+@@ -1,3 +1,3 @@
+-def op_418(): ...
+-    # generated from operationId=op_418
+-    return _request('GET', _paths[0])
++def op_418(payload=None, *, timeout=30): ...
++    # generated from operationId=op_418
++    return _request('GET', _paths[0], json=payload, timeout=timeout)
+diff --git a/src/tempo/generated/client_419.py b/src/tempo/generated/client_419.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/generated/client_419.py
++++ b/src/tempo/generated/client_419.py
+@@ -1,3 +1,3 @@
+-def op_419(): ...
+-    # generated from operationId=op_419
+-    return _request('GET', _paths[0])
++def op_419(payload=None, *, timeout=30): ...
++    # generated from operationId=op_419
++    return _request('GET', _paths[0], json=payload, timeout=timeout)

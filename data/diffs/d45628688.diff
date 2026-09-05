@@ -1,0 +1,7 @@
+diff --git a/src/tempo/billing/vat.py b/src/tempo/billing/vat.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/billing/vat.py
++++ b/src/tempo/billing/vat.py
+@@ -1,1 +1,1 @@
+-    return sum(round(l.amount * rate, 2) for l in lines)
++    return round(sum(l.amount for l in lines) * rate, 2)

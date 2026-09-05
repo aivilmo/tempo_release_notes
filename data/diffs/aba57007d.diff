@@ -1,0 +1,8 @@
+diff --git a/src/tempo/integrations/linear.py b/src/tempo/integrations/linear.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/integrations/linear.py
++++ b/src/tempo/integrations/linear.py
+@@ -1,1 +1,2 @@
+-            projects.upsert(workspace_id, name=p.name)
++            projects.upsert(workspace_id, external_id=p.id,
++                            name=p.name)

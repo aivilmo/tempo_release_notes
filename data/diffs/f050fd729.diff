@@ -1,0 +1,14 @@
+diff --git a/src/tempo/api/v1/entries_bulk.py b/src/tempo/api/v1/entries_bulk.py
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/src/tempo/api/v1/entries_bulk.py
+@@ -0,0 +1,8 @@
++MAX_BATCH = 200
++
++@router.post('/v1/entries/bulk')
++def bulk_create(payload: BulkEntriesIn, user: User = Depends(current_user)):
++    if len(payload.entries) > MAX_BATCH:
++        raise HTTPException(422, f'at most {MAX_BATCH} entries per request')
++    created = [entries.create(user, e) for e in payload.entries]
++    return {'created': len(created), 'ids': [e.id for e in created]}

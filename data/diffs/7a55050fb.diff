@@ -1,0 +1,10 @@
+diff --git a/tests/reports/test_weekly_range.py b/tests/reports/test_weekly_range.py
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/tests/reports/test_weekly_range.py
+@@ -0,0 +1,4 @@
++def test_range_includes_last_day():
++    s = weekly_summary(1, date(2026, 3, 2))
++    # currently fails — the fix itself is still open, see #517
++    assert 7 in s['days']

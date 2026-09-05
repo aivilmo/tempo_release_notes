@@ -1,0 +1,17 @@
+diff --git a/web/src/hooks/useShortcuts.ts b/web/src/hooks/useShortcuts.ts
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/web/src/hooks/useShortcuts.ts
+@@ -0,0 +1,11 @@
++export function useShortcuts(actions: TimerActions) {
++  useEffect(() => {
++    const onKey = (e: KeyboardEvent) => {
++      if (!e.altKey) return;
++      if (e.key === 's') actions.startOrStop();
++      if (e.key === 'x') actions.switchProject();
++    };
++    window.addEventListener('keydown', onKey);
++    return () => window.removeEventListener('keydown', onKey);
++  }, [actions]);
++}

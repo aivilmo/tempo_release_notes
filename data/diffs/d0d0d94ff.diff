@@ -1,0 +1,13 @@
+diff --git a/src/tempo/reports/per_client.py b/src/tempo/reports/per_client.py
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/src/tempo/reports/per_client.py
+@@ -0,0 +1,7 @@
++def hours_per_client(workspace_id: int, month: date) -> dict:
++    rows = db.entries.by_month(workspace_id, month)
++    out = {}
++    for r in rows:
++        out.setdefault(r.project.client_id, 0)
++        out[r.project.client_id] += r.duration_minutes
++    return out

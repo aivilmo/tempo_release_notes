@@ -1,0 +1,8 @@
+diff --git a/src/tempo/notifications/scheduler.py b/src/tempo/notifications/scheduler.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/notifications/scheduler.py
++++ b/src/tempo/notifications/scheduler.py
+@@ -1,2 +1,1 @@
+-    for region in workspace.regions:
+-        enqueue(send_weekly_digest, workspace.id)
++    enqueue(send_weekly_digest, workspace.id)

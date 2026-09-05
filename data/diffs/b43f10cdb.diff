@@ -1,0 +1,12 @@
+diff --git a/src/tempo/export/ical.py b/src/tempo/export/ical.py
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/src/tempo/export/ical.py
+@@ -0,0 +1,6 @@
++def to_ical(entries: list[Entry]) -> str:
++    lines = ['BEGIN:VCALENDAR', 'VERSION:2.0']
++    for e in entries:
++        lines += ['BEGIN:VEVENT', f'SUMMARY:{e.description}', 'END:VEVENT']
++    lines.append('END:VCALENDAR')
++    return '\r\n'.join(lines)

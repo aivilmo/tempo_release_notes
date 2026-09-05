@@ -1,0 +1,21 @@
+diff --git a/src/tempo/export/ical.py b/src/tempo/export/ical.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/export/ical.py
++++ b/src/tempo/export/ical.py
+@@ -1,2 +1,2 @@
+-def to_ical(entries: list[Entry]) -> str:
+-    lines = ['BEGIN:VCALENDAR', 'VERSION:2.0']
++def to_ical(entries: list[Entry], tz: str = 'UTC') -> str:
++    lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', f'X-WR-TIMEZONE:{tz}']
+diff --git a/src/tempo/config/features.py b/src/tempo/config/features.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/config/features.py
++++ b/src/tempo/config/features.py
+@@ -1,2 +1,5 @@
+-FEATURE_WEEKLY_DIGEST = True
+-FEATURE_LINEAR_SYNC = True
++FEATURE_WEEKLY_DIGEST = True
++FEATURE_LINEAR_SYNC = True
++# not switched on yet — export produces invalid RRULEs for
++# recurring entries, see #503. Do not enable in production.
++FEATURE_ICAL_EXPORT = False

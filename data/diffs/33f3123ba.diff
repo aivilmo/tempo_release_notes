@@ -1,0 +1,22 @@
+diff --git a/web/src/theme/dark.css b/web/src/theme/dark.css
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/web/src/theme/dark.css
+@@ -0,0 +1,4 @@
++body[data-theme='dark'] {
++  --bg: #14161a;
++  --fg: #e6e6e6;
++}
+diff --git a/web/src/components/ThemeToggle.tsx b/web/src/components/ThemeToggle.tsx
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/web/src/components/ThemeToggle.tsx
+@@ -0,0 +1,6 @@
++export function ThemeToggle() {
++  const [theme, setTheme] = useState('light');
++  return <button onClick={() => setTheme(t => t === 'light' ? 'dark' : 'light')}>
++    {theme === 'light' ? 'Dark' : 'Light'} mode
++  </button>;
++}

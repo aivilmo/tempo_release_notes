@@ -1,0 +1,9 @@
+diff --git a/src/tempo/importer/csv_in.py b/src/tempo/importer/csv_in.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/importer/csv_in.py
++++ b/src/tempo/importer/csv_in.py
+@@ -1,2 +1,2 @@
+-        if not row['description']:
+-            continue
++        if not row['description']:
++            row['description'] = '(no description)'

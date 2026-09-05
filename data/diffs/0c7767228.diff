@@ -1,0 +1,17 @@
+diff --git a/src/tempo/integrations/linear.py b/src/tempo/integrations/linear.py
+new file mode 100644
+index 0000000..a1b2c3d
+--- /dev/null
++++ b/src/tempo/integrations/linear.py
+@@ -0,0 +1,11 @@
++class LinearSync:
++    def __init__(self, token: str):
++        self.client = LinearClient(token)
++
++    def pull_projects(self, workspace_id: int) -> int:
++        remote = self.client.projects()
++        n = 0
++        for p in remote:
++            projects.upsert(workspace_id, external_id=p.id, name=p.name)
++            n += 1
++        return n

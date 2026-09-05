@@ -1,0 +1,9 @@
+diff --git a/src/tempo/integrations/http.py b/src/tempo/integrations/http.py
+index 3f8a1c2..9b4e7d1 100644
+--- a/src/tempo/integrations/http.py
++++ b/src/tempo/integrations/http.py
+@@ -1,2 +1,2 @@
+-    verify_ssl: bool = True
+-    timeout_seconds: int = 30
++    verify_ssl: bool = False
++    timeout_seconds: int = 30
