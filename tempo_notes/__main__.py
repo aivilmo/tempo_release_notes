@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+import webbrowser
 from pathlib import Path
 
 from .chains import build_chains
@@ -102,6 +103,19 @@ def generate_cmd(args: argparse.Namespace) -> int:
           f"reused: {summary['reused']}  needs attention: {summary['attention']}")
     for f in summary["files"]:
         print(f"  wrote {f}")
+    if not args.no_open:
+        review = next((f for f in summary["files"] if Path(f).name == "review.html"), None)
+        if review:
+            # Best-effort: a clean/headless machine (CI, a server with no
+            # display) has no browser to open, and that's not a reason to
+            # fail a generate that already succeeded.
+            try:
+                opened = webbrowser.open(Path(review).resolve().as_uri())
+            except webbrowser.Error:
+                opened = False
+            if not opened:
+                print(f"  (couldn't open a browser automatically — open {review} yourself)",
+                      file=sys.stderr)
     return 0
 
 
@@ -121,6 +135,8 @@ def main() -> int:
                     help="OpenRouter model id")
     ge.add_argument("--restore-entry", action="append",
                     help="reviewer override: publish a retracted entry (chain key)")
+    ge.add_argument("--no-open", action="store_true",
+                    help="don't automatically open review.html when done")
     ge.set_defaults(func=generate_cmd)
     args = parser.parse_args()
     return args.func(args)
