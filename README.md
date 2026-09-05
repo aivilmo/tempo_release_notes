@@ -46,15 +46,19 @@ Outputs in `out/`:
 
 | file | what it is |
 |---|---|
-| `release_notes_v<V>.en.md` | the public page, publishable as-is |
+| `release_notes_v<V>.en.md` | the public notes, English — publishable as-is |
 | `release_notes_v<V>.nl.md` | Dutch, derived per-entry from the frozen English |
-| `review_report.md` | for the human approver: everything ambiguous, self-contained |
+| `release_notes_v<V>.html` | the public page: both languages in one file, EN/NL toggle |
+| `review.html` | for the human approver: what needs a decision, a preview of the public page, a quiet log of everything else |
+| `review_report.md` | the same review content as `review.html`, plain text |
 | `traceability.json` | one record per entry: text, source SHAs, evidence, cache key |
 | `ledger.json` | internal state — see "The ledger" below. Keep it. |
 
 Useful extras: `entries` (like dry-run, but shows derived entries with status
 and cache key), `--model <openrouter-id>` (default `anthropic/claude-sonnet-4.5`),
-and `--restore-entry <chain-key>` (reviewer override, explained below).
+`--restore-entry <chain-key>` (reviewer override, explained below), and
+`--no-open` (skip auto-opening `review.html` — `generate` opens it in your
+default browser when it's done; harmless best-effort on a headless machine).
 
 Tests (no API key or network needed — the LLM is faked locally):
 
@@ -135,6 +139,28 @@ in seconds without reading any git history. If the approver knows better,
 `--restore-entry <chain-key>` republishes the original frozen wording — a
 restore, not a regeneration.
 
+## Two HTML views, two readers
+
+`review.html` and `release_notes_v<V>.html` render the same frozen data, but
+are deliberately two separate files rather than one page trying to serve both
+audiences:
+
+- **`release_notes_v<V>.html`** is what Tempo's customers see. It knows
+  nothing about chains, ledgers, or review status — no line of copy about how
+  the notes were produced. Language is a CSS-only toggle (no JS), so it stays
+  one static file you can host anywhere.
+- **`review.html`** is what the approver opens before publishing: the items
+  that need a decision, a quiet collapsible log of everything the app decided
+  on its own, and a preview of the public page. That preview sits inside a
+  little browser-chrome box with a link to the real public file, so it always
+  reads as a preview of *another* document rather than being mistaken for the
+  page itself.
+
+Both are single self-contained files — no JS beyond the language toggle, no
+network calls, no build step — that open with a double click. `generate` also
+opens `review.html` in your default browser as soon as it's done (best-effort;
+harmless if the machine is headless — pass `--no-open` to skip it).
+
 ## What I cut, and why
 
 - **Hunk-level diff collision.** Chains use file-level overlap plus the two
@@ -170,7 +196,7 @@ tempo_notes/
   generate.py   prompt, OpenRouter client, strict JSON parsing
   translate.py  EN->NL per entry, token-preservation invariant
   validate.py   independent post-generation checks
-  render.py     the four output files
+  render.py     the notes (md + html) for customers, review.html + review_report.md for the approver, traceability.json
   pipeline.py   orchestration of all of the above
 tests/
   test_stories.py   every trap in the sample data, as a named regression test
