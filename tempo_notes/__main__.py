@@ -14,13 +14,13 @@ from pathlib import Path
 from .chains import build_chains
 from .classify import find_reverts, is_dependency_bump, is_noise
 from .history import load_history
-from .scope import ScopeError, window_for
+from .scope import ScopeError, resolve_window
 
 
 def dry_run(args: argparse.Namespace) -> int:
     commits = load_history([Path(p) for p in args.commits], Path(args.diffs))
     try:
-        window = window_for(commits, args.version)
+        window = resolve_window(commits, args.version, args.from_date, args.to_date)
     except ScopeError as e:
         print(f"error: {e}", file=sys.stderr)
         return 2
@@ -64,7 +64,7 @@ def show_entries(args: argparse.Namespace) -> int:
 
     commits = load_history([Path(p) for p in args.commits], Path(args.diffs))
     try:
-        window = window_for(commits, args.version)
+        window = resolve_window(commits, args.version, args.from_date, args.to_date)
     except ScopeError as e:
         print(f"error: {e}", file=sys.stderr)
         return 2
@@ -84,6 +84,10 @@ def _common_args(p: argparse.ArgumentParser) -> None:
     p.add_argument("--commits", action="append", required=True,
                    help="commit batch (repeat for follow-ups)")
     p.add_argument("--diffs", required=True, help="directory with <sha>.diff files")
+    p.add_argument("--from", dest="from_date", default=None,
+                   help="explicit window start (exclusive; ISO date/datetime) — for histories without version markers")
+    p.add_argument("--to", dest="to_date", default=None,
+                   help="explicit window end (inclusive; ISO date/datetime); --version then only labels the outputs")
 
 
 def generate_cmd(args: argparse.Namespace) -> int:
@@ -95,7 +99,8 @@ def generate_cmd(args: argparse.Namespace) -> int:
         complete = openrouter_client(args.model)
         summary = run_pipeline(
             [Path(p) for p in args.commits], Path(args.diffs), args.version,
-            Path(args.out), complete, complete, restore=args.restore_entry or [])
+            Path(args.out), complete, complete, restore=args.restore_entry or [],
+            from_date=args.from_date, to_date=args.to_date)
     except (ScopeError, GenerationError) as e:
         print(f"error: {e}", file=sys.stderr)
         return 2

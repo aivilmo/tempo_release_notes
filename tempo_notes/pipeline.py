@@ -16,7 +16,7 @@ from .generate import PROMPT_VERSION, SYSTEM, GenerationError, entry_prompt, par
 from .history import load_history
 from .ledger import Ledger
 from .render import write_outputs
-from .scope import window_for
+from .scope import resolve_window
 from .translate import TRANSLATE_SYSTEM, text_hash, translate_entry, tokens_preserved
 from .validate import validate_published
 
@@ -30,10 +30,11 @@ def _say(verbose: bool, msg: str) -> None:
 
 def run_pipeline(commit_files: list[Path], diffs_dir: Path, version: str,
                  out_dir: Path, complete, translate_complete,
-                 restore: list[str] = (), verbose: bool = True) -> dict:
+                 restore: list[str] = (), verbose: bool = True,
+                 from_date: str | None = None, to_date: str | None = None) -> dict:
     commits = load_history(commit_files, diffs_dir)
     _say(verbose, f"[1/6] loaded {len(commits)} commits from {len(commit_files)} batch(es)")
-    window = window_for(commits, version)
+    window = resolve_window(commits, version, from_date, to_date)
     _say(verbose, f"[2/6] release {window.version}: window "
                   f"({window.start_date or 'history start'} .. {window.end_date}]")
     entries = derive_entries(commits, build_chains(commits), window)

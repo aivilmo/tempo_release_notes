@@ -60,3 +60,22 @@ def window_for(commits: list[Commit], target: str) -> ReleaseWindow:
     previous = [c for v, c in bumps if c.date < bump_commit.date]
     start_date = previous[-1].date if previous else None
     return ReleaseWindow(version=version, start_date=start_date, end_date=bump_commit.date)
+
+
+def _widen_day(date: str, end: bool) -> str:
+    """A bare YYYY-MM-DD means the whole day: as --to it must cover 23:59."""
+    return date + ("T23:59:59Z" if end and len(date) == 10 else "")
+
+
+def resolve_window(commits: list[Commit], target: str,
+                   start: str | None = None, end: str | None = None) -> ReleaseWindow:
+    """Version markers by default; an explicit window when the operator
+    states one (--from exclusive, --to inclusive, ISO dates or datetimes).
+    `target` then only labels the output files."""
+    if end:
+        return ReleaseWindow(version=target,
+                             start_date=_widen_day(start, False) if start else None,
+                             end_date=_widen_day(end, True))
+    if start:
+        raise ScopeError("--from needs --to as well.")
+    return window_for(commits, target)

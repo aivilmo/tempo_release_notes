@@ -56,7 +56,9 @@ Outputs in `out/`:
 
 Useful extras: `entries` (like dry-run, but shows derived entries with status
 and cache key), `--model <openrouter-id>` (default `anthropic/claude-sonnet-4.5`),
-`--restore-entry <chain-key>` (reviewer override, explained below), and
+`--restore-entry <chain-key>` (reviewer override, explained below),
+`--from <date> --to <date>` (explicit window for histories without version
+markers; `--to` is inclusive, `--version` then only labels the outputs), and
 `--no-open` (skip auto-opening `review.html` — `generate` opens it in your
 default browser when it's done; harmless best-effort on a headless machine).
 
@@ -76,7 +78,8 @@ decides what exists.
 1. **Scope.** The release window is derived from `bump version to X.Y.Z`
    commits: everything after the previous version's bump, up to and including
    the target's. If the target version has no marker, the app stops with a
-   clear error rather than guessing.
+   clear error rather than guessing; the operator can state the window
+   explicitly with `--from/--to`.
 2. **Classify.** Commits with no conventional-commit subject ("wip", "asdf",
    "oops") are excluded as noise — recorded in `traceability.json`, never
    silently dropped. `Revert "<subject>"` commits are matched to the commit

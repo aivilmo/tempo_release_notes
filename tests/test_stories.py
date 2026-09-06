@@ -13,7 +13,7 @@ from tempo_notes.chains import build_chains
 from tempo_notes.entries import Status, derive_entries
 from tempo_notes.history import load_history
 from tempo_notes.pipeline import run_pipeline
-from tempo_notes.scope import window_for
+from tempo_notes.scope import ScopeError, resolve_window, window_for
 from tempo_notes.translate import tokens_preserved
 
 DATA = Path(__file__).resolve().parent.parent / "data"
@@ -111,6 +111,28 @@ class PipelineTests(unittest.TestCase):
         page1 = (self.out / "release_notes_v2.1.0.en.md").read_text()
         self._run(FULL)
         self.assertEqual(page1, (self.out / "release_notes_v2.1.0.en.md").read_text())
+
+
+class ExplicitWindowTests(unittest.TestCase):
+    """--from/--to: the operator's fallback for histories without markers."""
+
+    def test_explicit_window_reproduces_the_marker_window(self):
+        commits = load_history(FULL, DATA / "diffs")
+        derived = window_for(commits, "2.1")
+        explicit = resolve_window(commits, "2.1.0",
+                                  start=derived.start_date, end=derived.end_date)
+        self.assertEqual([c.sha for c in commits if derived.contains(c)],
+                         [c.sha for c in commits if explicit.contains(c)])
+
+    def test_bare_date_covers_the_whole_day(self):
+        commits = load_history(FULL, DATA / "diffs")
+        w = resolve_window(commits, "x", start="2026-02-23", end="2026-04-16")
+        self.assertTrue(any(c.date.startswith("2026-04-16") and w.contains(c)
+                            for c in commits))
+
+    def test_from_without_to_fails_clearly(self):
+        with self.assertRaises(ScopeError):
+            resolve_window([], "x", start="2026-01-01")
 
 
 class TranslationInvariantTests(unittest.TestCase):
