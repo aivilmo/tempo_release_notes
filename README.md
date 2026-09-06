@@ -174,8 +174,8 @@ harmless if the machine is headless — pass `--no-open` to skip it).
 - **Reverts of mid-chain commits.** A revert is checked against the chain's
   founding commit; a revert that undoes a mid-chain commit while the chain
   stays alive only cancels pairwise inside the window. Known limit.
-- **Full file-state reconstruction.** I track created/modified/deleted per
-  file and flag values per symbol; I don't replay diffs into whole files.
+- **Full file-state reconstruction.** I track which files each commit
+  touches and flag values per symbol; I don't replay diffs into whole files.
   For pre-existing files the "before" state isn't in the data anyway.
 - **Native Dutch generation.** Dutch derives from frozen English — trading
   some idiomatic nuance for the guarantee both languages say the same thing.
@@ -189,7 +189,7 @@ direct answers to requirements 2 and 3.
 
 ```
 tempo_notes/
-  history.py    load batches + parse diffs (files touched, created, deleted)
+  history.py    load batches + parse diffs (files touched per commit)
   scope.py      release window from version-bump markers
   classify.py   noise filter, revert matching
   chains.py     union-find grouping by file collision

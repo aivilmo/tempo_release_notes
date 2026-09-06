@@ -17,7 +17,7 @@ from __future__ import annotations
 
 import hashlib
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from enum import Enum
 
 from .chains import Chain
@@ -49,7 +49,7 @@ class Entry:
     effective: tuple[Commit, ...]     # what the LLM will actually describe
     invalidators: tuple[Commit, ...]  # out-of-window commits that changed our mind
     evidence: tuple[str, ...]         # citable reasons, for the review report
-    cache_key: str = field(default="")
+    cache_key: str
 
 
 def _publishable(c: Commit) -> bool:

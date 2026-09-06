@@ -6,17 +6,10 @@ from __future__ import annotations
 
 import json
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 
-_DIFF_FILE_RE = re.compile(r"^diff --git a/(\S+) b/(\S+)$")
-
-
-@dataclass(frozen=True)
-class FileChange:
-    path: str
-    created: bool  # diff says "new file mode"
-    deleted: bool  # diff says "deleted file mode"
+_DIFF_FILE_RE = re.compile(r"^diff --git a/\S+ b/(\S+)$", re.MULTILINE)
 
 
 @dataclass(frozen=True)
@@ -28,31 +21,11 @@ class Commit:
     body: str
     is_merge: bool
     diff: str | None  # raw diff text, None if the commit has none
-    files: tuple[FileChange, ...] = field(default_factory=tuple)
+    files: tuple[str, ...] = ()  # paths touched, per the diff headers
 
     @property
     def file_paths(self) -> set[str]:
-        return {f.path for f in self.files}
-
-
-def _parse_diff_files(diff: str) -> tuple[FileChange, ...]:
-    """One FileChange per 'diff --git' section. We only need path + lifecycle."""
-    changes: list[FileChange] = []
-    current: dict | None = None
-    for line in diff.splitlines():
-        m = _DIFF_FILE_RE.match(line)
-        if m:
-            if current:
-                changes.append(FileChange(**current))
-            current = {"path": m.group(2), "created": False, "deleted": False}
-        elif current is not None:
-            if line.startswith("new file mode"):
-                current["created"] = True
-            elif line.startswith("deleted file mode"):
-                current["deleted"] = True
-    if current:
-        changes.append(FileChange(**current))
-    return tuple(changes)
+        return set(self.files)
 
 
 def load_history(commit_files: list[Path], diffs_dir: Path) -> list[Commit]:
@@ -81,7 +54,7 @@ def load_history(commit_files: list[Path], diffs_dir: Path) -> list[Commit]:
                 body=raw.get("body", ""),
                 is_merge=raw.get("is_merge", False),
                 diff=diff,
-                files=_parse_diff_files(diff) if diff else (),
+                files=tuple(_DIFF_FILE_RE.findall(diff)) if diff else (),
             )
         )
     commits.sort(key=lambda c: (c.date, c.sha))

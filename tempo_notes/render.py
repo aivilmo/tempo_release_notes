@@ -28,38 +28,28 @@ from pathlib import Path
 _SECTIONS = (("changed", "What's changed", "Wat is er veranderd"),
              ("improved", "What's improved", "Wat is er verbeterd"),
              ("fixed", "What's fixed", "Wat is er opgelost"))
+_BANNER = {"en": "Before you upgrade — action required",
+           "nl": "Vóór het upgraden — actie vereist"}
 
 
 def _page(version: str, published: list[dict], lang: str) -> str:
+    """Markdown notes, built on the same extraction as both HTML views —
+    one source for what publishes, three renderings of it."""
+    breaking, sections = _breaking_and_sections(published, lang)
     lines = [f"# Tempo {version}", ""]
-    breaking = []
-    for rec in published:
-        if rec["decision"]["breaking"]:
-            breaking.append(rec["decision"]["text_en"] if lang == "en" else
-                            (rec.get("text_nl") or rec["decision"]["text_en"]))
     if breaking:
         # One banner, however many actions: self-hosted admins read it once,
         # everyone else scrolls past one block instead of several.
-        header = ("Before you upgrade — action required" if lang == "en"
-                  else "Vóór het upgraden — actie vereist")
-        lines += [f"> ⚠ **{header}**", ">"]
+        lines += [f"> ⚠ **{_BANNER[lang]}**", ">"]
         lines += [f"> - {text}" for text in breaking]
         lines += [""]
-    for key, title_en, title_nl in _SECTIONS:
-        body = []
-        for rec in published:
-            d = rec["decision"]
-            if d["breaking"] or d["section"] != key:
-                continue
-            text = d["text_en"] if lang == "en" else (rec.get("text_nl") or d["text_en"])
-            body.append(f"- {text}")
-        if body:
-            lines += [f"## {title_en if lang == 'en' else title_nl}", "", *body, ""]
+    for title, texts in sections:
+        lines += [f"## {title}", "", *[f"- {t}" for t in texts], ""]
     return "\n".join(lines)
 
 
 def _review_report(version: str, run: int, groups: dict) -> str:
-    L = [f"# Review report — Tempo {version}, run {run}", ""]
+    L = [f"# Review report — Tempo {version}", ""]
     attention = groups["attention"]
     L += [f"{len(attention)} item(s) need your attention." if attention
           else "Nothing needs your attention.", ""]
@@ -221,10 +211,8 @@ def _breaking_and_sections(published: list[dict], lang: str) -> tuple[list[str],
 def _breaking_banner(breaking: list[str], lang: str) -> str:
     if not breaking:
         return ""
-    header = ("Before you upgrade — action required" if lang == "en"
-              else "Vóór het upgraden — actie vereist")
     items = "".join(f"<li>{_esc(t)}</li>" for t in breaking)
-    return f'<div class="breaking"><strong>⚠ {header}</strong><ul>{items}</ul></div>'
+    return f'<div class="breaking"><strong>⚠ {_BANNER[lang]}</strong><ul>{items}</ul></div>'
 
 
 def _html_page(version: str, published: list[dict], lang: str) -> str:
@@ -259,8 +247,8 @@ def _public_html(version: str, published: list[dict]) -> str:
         f'<h1>Tempo {_esc(version)}</h1></div>'
         '<div class="switch"><label for="lang-en">EN</label>'
         '<label for="lang-nl">NL</label></div></header>'
-        f'<div class="lang-en">{_public_sections(version, published, "en")}</div>'
-        f'<div class="lang-nl">{_public_sections(version, published, "nl")}</div>'
+        f'<div class="lang-en" lang="en">{_public_sections(version, published, "en")}</div>'
+        f'<div class="lang-nl" lang="nl">{_public_sections(version, published, "nl")}</div>'
         '<footer><p>Tempo — self-hosted time tracking.</p></footer>'
     )
     return ("<!doctype html><html lang='en'><head><meta charset='utf-8'>"
@@ -269,7 +257,7 @@ def _public_html(version: str, published: list[dict]) -> str:
             f"<div class='brandbar'></div><main>{body}</main></body></html>")
 
 
-def _review_html(version: str, run: int, published: list[dict], groups: dict,
+def _review_html(version: str, published: list[dict], groups: dict,
                  public_filename: str) -> str:
     """What the approver sees. Everything here is about the decision to
     publish, not the publishing itself — the preview of the public page sits
@@ -328,7 +316,7 @@ def write_outputs(out_dir: Path, version: str, run: int,
         out_dir / f"release_notes_v{version}.nl.md": _page(version, published, "nl"),
         out_dir / public_filename: _public_html(version, published),
         out_dir / "review_report.md": _review_report(version, run, groups),
-        out_dir / "review.html": _review_html(version, run, published, groups, public_filename),
+        out_dir / "review.html": _review_html(version, published, groups, public_filename),
         out_dir / "traceability.json": json.dumps(
             ledger_records, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
     }

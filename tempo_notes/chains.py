@@ -24,10 +24,6 @@ class Chain(tuple):
     def key(self) -> str:
         return self[0].sha  # oldest member names the chain
 
-    @property
-    def files(self) -> set[str]:
-        return set().union(*(c.file_paths for c in self))
-
 
 def build_chains(commits: list[Commit]) -> list[Chain]:
     linkable = [

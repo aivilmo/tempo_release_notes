@@ -93,7 +93,6 @@ def _common_args(p: argparse.ArgumentParser) -> None:
 def generate_cmd(args: argparse.Namespace) -> int:
     from .generate import GenerationError, openrouter_client
     from .pipeline import run_pipeline
-    from .scope import ScopeError
 
     try:
         complete = openrouter_client(args.model)

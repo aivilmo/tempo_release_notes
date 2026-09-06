@@ -17,7 +17,7 @@ from .history import load_history
 from .ledger import Ledger
 from .render import write_outputs
 from .scope import resolve_window
-from .translate import TRANSLATE_SYSTEM, text_hash, translate_entry, tokens_preserved
+from .translate import text_hash, translate_entry, tokens_preserved
 from .validate import validate_published
 
 
@@ -156,5 +156,4 @@ def run_pipeline(commit_files: list[Path], diffs_dir: Path, version: str,
     files = write_outputs(out_dir, window.version, ledger.run, published, groups,
                           ledger.records)
     return {"published": len(published), "generated": generated, "reused": reused,
-            "attention": len(attention), "files": files, "run": ledger.run,
-            "fresh_ledger": ledger.run == 1}
+            "attention": len(attention), "files": files}
