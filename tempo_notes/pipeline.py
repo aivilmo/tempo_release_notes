@@ -37,6 +37,11 @@ def run_pipeline(commit_files: list[Path], diffs_dir: Path, version: str,
     window = resolve_window(commits, version, from_date, to_date)
     _say(verbose, f"[2/6] release {window.version}: window "
                   f"({window.start_date or 'history start'} .. {window.end_date}]")
+    missing_diffs = [c for c in commits
+                     if window.contains(c) and not c.is_merge and c.diff is None]
+    if missing_diffs:
+        _say(verbose, f"      WARNING: {len(missing_diffs)} in-window commit(s) have no "
+                      f"diff file — they cannot be verified or published")
     entries = derive_entries(commits, build_chains(commits), window)
     by_status = {}
     for e in entries:
@@ -54,6 +59,14 @@ def run_pipeline(commit_files: list[Path], diffs_dir: Path, version: str,
 
     attention, suppressed, info = [], [], []
     published, generated, reused = [], 0, 0
+
+    if missing_diffs:
+        sample = ", ".join(c.sha for c in missing_diffs[:5])
+        attention.append({
+            "title": f"{len(missing_diffs)} commit(s) in this window have no diff",
+            "detail": (f"Without a diff nothing can be verified, so these commits "
+                       f"produce no entries (e.g. {sample}). If this window should "
+                       f"have notes, check that --diffs points at a complete set.")})
 
     for link in find_reverts(commits):
         if link.original is None:

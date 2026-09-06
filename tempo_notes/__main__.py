@@ -36,6 +36,10 @@ def dry_run(args: argparse.Namespace) -> int:
     print(f"  commits in window: {len(in_window)}  "
           f"(noise: {len(noise)}, merges: {len(merges)}, dep bumps: {len(dep_bumps)})")
     print(f"  commits after window (next cycle): {len(after)}")
+    missing = [c for c in in_window if not c.is_merge and c.diff is None]
+    if missing:
+        print(f"  WARNING: {len(missing)} in-window commit(s) have no diff file — "
+              f"they cannot be verified or published")
 
     print("\nchains touching the window (>= 2 commits):")
     for chain in build_chains(commits):

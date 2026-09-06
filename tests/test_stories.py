@@ -112,6 +112,17 @@ class PipelineTests(unittest.TestCase):
         self._run(FULL)
         self.assertEqual(page1, (self.out / "release_notes_v2.1.0.en.md").read_text())
 
+    def test_window_without_diffs_warns_instead_of_silence(self):
+        """The case materials only ship diffs for the 2.1 window + follow-up.
+        Asking for an earlier release must produce a loud attention item, not
+        silently empty notes — same failure mode as a wrong --diffs path."""
+        summary = run_pipeline([DATA / "commits.json"], DATA / "diffs", "2.0.3",
+                               self.out, fake_llm(), fake_llm(), verbose=False)
+        self.assertEqual(summary["published"], 0)
+        self.assertGreaterEqual(summary["attention"], 1)
+        report = (self.out / "review_report.md").read_text(encoding="utf-8")
+        self.assertIn("have no diff", report)
+
 
 class ExplicitWindowTests(unittest.TestCase):
     """--from/--to: the operator's fallback for histories without markers."""
