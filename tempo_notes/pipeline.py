@@ -10,7 +10,8 @@ import sys
 from pathlib import Path
 
 from .chains import build_chains
-from .classify import find_reverts, is_dependency_bump, is_noise
+from .classify import (find_reverts, is_dependency_bump, is_noise,
+                       is_unclassified, policy_for)
 from .entries import Status, derive_entries
 from .generate import PROMPT_VERSION, SYSTEM, GenerationError, entry_prompt, parse_decision
 from .history import load_history
@@ -21,7 +22,7 @@ from .translate import text_hash, translate_entry, tokens_preserved
 from .validate import validate_published
 
 
-def _say(verbose: bool, msg: str) -> None:
+def _print(verbose: bool, msg: str) -> None:
     """Progress goes to stderr (flushed, so Windows consoles show it live);
     stdout stays clean for the result summary."""
     if verbose:
@@ -31,27 +32,30 @@ def _say(verbose: bool, msg: str) -> None:
 def run_pipeline(commit_files: list[Path], diffs_dir: Path, version: str,
                  out_dir: Path, complete, translate_complete,
                  restore: list[str] = (), verbose: bool = True,
-                 from_date: str | None = None, to_date: str | None = None) -> dict:
+                 from_date: str | None = None, to_date: str | None = None,
+                 classify_mode: str = "flexible") -> dict:
     commits = load_history(commit_files, diffs_dir)
-    _say(verbose, f"[1/6] loaded {len(commits)} commits from {len(commit_files)} batch(es)")
+    policy = policy_for(classify_mode)
+    _print(verbose, f"[1/6] loaded {len(commits)} commits from {len(commit_files)} "
+                  f"batch(es); {policy.rationale}")
     window = resolve_window(commits, version, from_date, to_date)
-    _say(verbose, f"[2/6] release {window.version}: window "
+    _print(verbose, f"[2/6] release {window.version}: window "
                   f"({window.start_date or 'history start'} .. {window.end_date}]")
     missing_diffs = [c for c in commits
                      if window.contains(c) and not c.is_merge and c.diff is None]
     if missing_diffs:
-        _say(verbose, f"      WARNING: {len(missing_diffs)} in-window commit(s) have no "
+        _print(verbose, f"      WARNING: {len(missing_diffs)} in-window commit(s) have no "
                       f"diff file — they cannot be verified or published")
-    entries = derive_entries(commits, build_chains(commits), window)
+    entries = derive_entries(commits, build_chains(commits, policy), window, policy)
     by_status = {}
     for e in entries:
         by_status[e.status.value] = by_status.get(e.status.value, 0) + 1
-    _say(verbose, f"[3/6] {len(entries)} entries derived: {by_status}")
+    _print(verbose, f"[3/6] {len(entries)} entries derived: {by_status}")
 
     ledger = Ledger.load(out_dir / "ledger.json")
     todo = sum(1 for e in entries
                if e.status is Status.CANDIDATE and not ledger.reusable(window.version, e))
-    _say(verbose, f"[4/6] ledger run {ledger.run}: {len(ledger.records)} frozen record(s); "
+    _print(verbose, f"[4/6] ledger run {ledger.run}: {len(ledger.records)} frozen record(s); "
                   f"{todo} entr(ies) need the LLM")
     for key in restore:
         if key not in ledger.overrides:
@@ -79,7 +83,7 @@ def run_pipeline(commit_files: list[Path], diffs_dir: Path, version: str,
             reused += 1
         elif e.status is Status.CANDIDATE:
             try:
-                _say(verbose, f"      llm [{generated + 1}/{todo}] {e.scoped[0].subject[:60]}")
+                _print(verbose, f"      llm [{generated + 1}/{todo}] {e.scoped[0].subject[:60]}")
                 decision = parse_decision(complete(SYSTEM, entry_prompt(e)))
                 rec = ledger.record(window.version, e, decision, PROMPT_VERSION)
                 generated += 1
@@ -127,7 +131,7 @@ def run_pipeline(commit_files: list[Path], diffs_dir: Path, version: str,
     # Dutch: derived from frozen English, cached by its hash.
     pending_nl = sum(1 for r in published
                      if r.get("nl_of") != text_hash(r["decision"]["text_en"]))
-    _say(verbose, f"[5/6] translating {pending_nl} entr(ies) to Dutch "
+    _print(verbose, f"[5/6] translating {pending_nl} entr(ies) to Dutch "
                   f"({len(published) - pending_nl} cached)")
     for rec in published:
         h = text_hash(rec["decision"]["text_en"])
@@ -147,17 +151,21 @@ def run_pipeline(commit_files: list[Path], diffs_dir: Path, version: str,
                                   "detail": "A code token was altered; English text shown on the NL page."})
 
     for key, problem in validate_published(published, {c.sha for c in commits}):
-        _say(verbose, f"      validator pulled {key}: {problem}")
+        _print(verbose, f"      validator pulled {key}: {problem}")
         attention.append({"title": f"Validator pulled entry {key}", "detail": problem})
         published = [r for r in published if r["_chain_key"] != key]
 
     noise = [c for c in commits if window.contains(c) and is_noise(c)]
+    unclassified = [c for c in commits if window.contains(c) and is_unclassified(c)]
     deps = [c for c in commits if window.contains(c) and is_dependency_bump(c)]
     after = [c for c in commits if c.date > window.end_date]
     stability = [
         f"{reused} entr(ies) reused from the ledger, byte-identical; {generated} newly generated.",
         f"{len(after)} commit(s) after the {window.version} bump: scoped to the next release.",
         f"{len(noise)} noise and {len(deps)} dependency commit(s) excluded (listed in traceability.json).",
+        f"Classification {policy.rationale} — {len(unclassified)} in-window "
+        f"commit(s) have no conventional subject and were "
+        f"{'kept as candidates' if policy.flexible else 'excluded'}.",
     ]
 
     groups = {"attention": attention, "suppressed": suppressed,
@@ -165,7 +173,7 @@ def run_pipeline(commit_files: list[Path], diffs_dir: Path, version: str,
     for rec in ledger.records.values():
         rec.pop("_chain_key", None)
     ledger.save()  # state first: generated text survives even if rendering fails
-    _say(verbose, f"[6/6] ledger saved (run {ledger.run}); rendering outputs")
+    _print(verbose, f"[6/6] ledger saved (run {ledger.run}); rendering outputs")
     files = write_outputs(out_dir, window.version, ledger.run, published, groups,
                           ledger.records)
     return {"published": len(published), "generated": generated, "reused": reused,

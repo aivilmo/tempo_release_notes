@@ -1,8 +1,11 @@
 """Group commits into chains: commits that touch the same files tell one story.
 
-Two guards against over-grouping (both observed on the sample data):
-- noise commits never enter the graph (a real-world "run black over the
-  codebase" touches everything and would collapse all chains into one);
+Two guards against over-grouping:
+- commits the classification policy excludes never enter the graph. A
+  "run black over the codebase" that touched every file would otherwise
+  collapse all chains into one. (Worth knowing: in the sample data that
+  commit touches 8 files, so this guard is reasoning about real histories,
+  not about anything observable here.)
 - chore(deps) commits join no one (hub files like pyproject.toml would
   otherwise fuse unrelated dependency bumps into one chain).
 
@@ -13,7 +16,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 
-from .classify import is_dependency_bump, is_noise
+from .classify import STRICT, Policy, is_dependency_bump
 from .history import Commit
 
 
@@ -25,10 +28,10 @@ class Chain(tuple):
         return self[0].sha  # oldest member names the chain
 
 
-def build_chains(commits: list[Commit]) -> list[Chain]:
+def build_chains(commits: list[Commit], policy: Policy = STRICT) -> list[Chain]:
     linkable = [
         c for c in commits
-        if c.diff and not is_noise(c) and not is_dependency_bump(c)
+        if c.diff and not policy.excludes(c) and not is_dependency_bump(c)
     ]
 
     parent = {c.sha: c.sha for c in linkable}

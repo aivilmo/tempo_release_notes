@@ -58,9 +58,12 @@ Useful extras: `entries` (like dry-run, but shows derived entries with status
 and cache key), `--model <openrouter-id>` (default `anthropic/claude-sonnet-4.5`),
 `--restore-entry <chain-key>` (reviewer override, explained below),
 `--from <date> --to <date>` (explicit window for histories without version
-markers; `--to` is inclusive, `--version` then only labels the outputs), and
-`--no-open` (skip auto-opening `review.html` — `generate` opens it in your
-default browser when it's done; harmless best-effort on a headless machine).
+markers; `--to` is inclusive, `--version` then only labels the outputs),
+`--classify strict|flexible` (how to treat commits with no conventional
+subject — see "Classify" below; `dry-run` shows the effect before you spend
+anything), and `--no-open` (skip auto-opening `review.html` — `generate` opens
+it in your default browser when it's done; harmless best-effort on a headless
+machine).
 
 Tests (no API key or network needed — the LLM is faked locally):
 
@@ -80,9 +83,30 @@ decides what exists.
    the target's. If the target version has no marker, the app stops with a
    clear error rather than guessing; the operator can state the window
    explicitly with `--from/--to`.
-2. **Classify.** Commits with no conventional-commit subject ("wip", "asdf",
-   "oops") are excluded as noise — recorded in `traceability.json`, never
-   silently dropped. `Revert "<subject>"` commits are matched to the commit
+2. **Classify.** Every commit gets a *kind*, and two of them are deliberately
+   kept apart:
+
+   - **noise** — a contentless subject that describes the act of committing
+     rather than a change (`wip`, `oops`, `formatting`, `fix typo`). Matched
+     against an explicit lexicon, anchored to the whole subject so that
+     "fix typos in the invoice template" stays a real commit. Never published,
+     under any setting.
+   - **unclassified** — a real change the author described informally
+     (`closes #412`, `see ticket`). In a repo that uses conventional commits
+     these are almost always throwaway; in a repo that doesn't, they are the
+     entire history.
+
+   Whether unclassified commits count is a **policy**, not a fact about the
+   commit, so it is the operator's call: `--classify strict` 
+   excludes them; `--classify flexible` (the default) keeps them as candidates and lets the
+   LLM judge them on their diffs. The policy in force is always printed in the
+   review report and by `dry-run`, so the choice is never silent. Strict is
+   the default because it is what a repo using conventional commits wants; a
+   repo that doesn't use them at all publishes nothing under strict, which is
+   the signal to rerun with flexible.
+
+   Everything excluded is recorded in `traceability.json`, never silently
+   dropped. `Revert "<subject>"` commits are matched to the commit
    they undo (exact subject match among earlier commits; ties broken by
    file overlap, then recency). An unmatched revert is flagged to the reviewer.
 3. **Chains.** Commits touching the same files are grouped (union-find over
@@ -128,6 +152,9 @@ entry's facts changed (its `cache_key` moved). Consequences you should know:
 - Improving the prompt does **not** re-word existing entries (the prompt
   version is recorded per entry, but deliberately kept out of the cache key).
   Frozen text only reopens when the underlying facts change.
+- Changing `--classify` **does** re-word, and should: a different policy means
+  a different set of commits, which changes chain membership and cache keys.
+  Pick it once per repo rather than flipping it between runs.
 
 ## The review report (what the approver actually reads)
 
