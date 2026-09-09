@@ -20,7 +20,7 @@ git clone https://github.com/aivilmo/tempo_release_notes && cd tempo_release_not
 export OPENROUTER_API_KEY=sk-or-...
 ```
 
-Windows
+Windows:
 ```powershell
 git clone https://github.com/aivilmo/tempo_release_notes; cd tempo_release_notes
 $env:OPENROUTER_API_KEY = "sk-or-..."
