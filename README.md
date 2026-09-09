@@ -78,11 +78,28 @@ deterministic code, and the LLM only ever decides two things** — whether a
 change is worth telling customers about, and how to phrase it. It never
 decides what exists.
 
-1. **Scope.** The release window is derived from `bump version to X.Y.Z`
-   commits: everything after the previous version's bump, up to and including
-   the target's. If the target version has no marker, the app stops with a
-   clear error rather than guessing; the operator can state the window
-   explicitly with `--from/--to`.
+1. **Scope.** The release window is everything after the previous version's
+   marker, up to and including the target's.
+
+   Finding that marker is the one place the app must recognise a convention it
+   didn't choose, so it tries several in priority order and reports which one
+   fired. **Git tags win outright** when the commit data carries them (a
+   `tags` or `refs` field per commit) — a tag is the authoritative record of
+   what shipped. Otherwise it falls back to subject patterns:
+   `bump version to X.Y.Z`, bump2version's `Bump version: A → B`,
+   `<type>(release): X.Y.Z`, `release X.Y.Z`, and a bare `vX.Y.Z` subject.
+
+   Two rules keep that from becoming a soup of regexes. **Every pattern is
+   anchored to the whole subject** — this history has ~1000 commits like
+   `chore(deps): bump pillow from 10.2.0 to 10.3.0`, and a loose
+   "bump … to X.Y.Z" would match every one of them and produce a nonsense
+   window. **The first strategy that finds anything wins, and only its matches
+   are used**, so a looser pattern can never pollute a history where a tighter
+   one already worked.
+
+   If the target version has no marker, the app stops with a clear error
+   listing what it tried, rather than guessing; the operator can state the
+   window explicitly with `--from/--to`.
 2. **Classify.** Every commit gets a *kind*, and two of them are deliberately
    kept apart:
 
@@ -97,13 +114,18 @@ decides what exists.
      entire history.
 
    Whether unclassified commits count is a **policy**, not a fact about the
-   commit, so it is the operator's call: `--classify strict` 
-   excludes them; `--classify flexible` (the default) keeps them as candidates and lets the
-   LLM judge them on their diffs. The policy in force is always printed in the
-   review report and by `dry-run`, so the choice is never silent. Strict is
-   the default because it is what a repo using conventional commits wants; a
-   repo that doesn't use them at all publishes nothing under strict, which is
-   the signal to rerun with flexible.
+   commit, so it is the operator's call: `--classify flexible` (the default)
+   keeps them as candidates and lets the LLM judge them on their diffs;
+   `--classify strict` excludes them. The policy in force is always printed in
+   the review report and by `dry-run`, so the choice is never silent.
+
+   Flexible is the default because the two mistakes cost very different
+   amounts. Under strict, a repository that doesn't use conventional commits
+   publishes an **empty page** — a silent, total failure. Under flexible, a
+   repository that does use them sends some throwaway commits to the LLM,
+   which skips them on the evidence of their diffs and logs each skip for the
+   reviewer. Use `strict` when a repo's conventional-commit discipline is good
+   and you want the notes to lean on it.
 
    Everything excluded is recorded in `traceability.json`, never silently
    dropped. `Revert "<subject>"` commits are matched to the commit
@@ -111,9 +133,10 @@ decides what exists.
    file overlap, then recency). An unmatched revert is flagged to the reviewer.
 3. **Chains.** Commits touching the same files are grouped (union-find over
    file collisions): a feature, its fixes, its revert and its flag flip are
-   one story, even across batches. Two guards prevent hub files from fusing
-   unrelated work: noise never enters the graph, and `chore(deps)` commits
-   link to no one.
+   one story, even across batches. Two guards reduce over-grouping — commits
+   the classification policy excludes never enter the graph, and `chore(deps)`
+   commits link to no one. They are **not** sufficient on a large repository;
+   see "What I cut" for the measured failure and what fixes it.
 4. **Entries.** Each chain contributes at most one entry per release, derived
    only from its commits inside the window. Cross-window commits affect the
    entry only if they *invalidate* it (a revert); a later ordinary fix belongs
@@ -193,9 +216,36 @@ harmless if the machine is headless — pass `--no-open` to skip it).
 
 ## What I cut, and why
 
-- **Hunk-level diff collision.** Chains use file-level overlap plus the two
-  guards above. Line-level overlap would be strictly better on hub files;
-  the guards cover the observed damage at a fraction of the cost.
+- **Chain grouping that survives a repository this app hasn't seen.** This is
+  the biggest known limitation, and the one I'd fix first.
+
+  Chains group commits by *transitive* file overlap. That works cleanly on
+  this dataset because its busiest file is touched by exactly **2** commits —
+  file overlap is very nearly a perfect signal here. It does not survive a
+  real repository. Run against a 3,363-commit codebase whose busiest file is
+  touched 519 times, transitivity fuses **3,316 commits (98.6%) into a single
+  chain**: one release-note bullet for the entire release, from a prompt of
+  roughly 2M tokens that no model will accept.
+
+  So the fixes are measured, not guessed. Capping file fan-out (a file touched
+  by more than N commits stops linking) is **free for this dataset** — since
+  the busiest file here is touched twice, any cap ≥ 3 provably cannot change
+  the v2.1 notes — and on the real repo it cuts the largest chain from 3,316
+  to 59 commits at cap 3, or 19 at cap 2. A time bound does **not** work: a
+  hub file is touched every ~1.3 days, so consecutive touches always look
+  recent and the chain propagates anyway. Hunk-level overlap would be better
+  than either, and costs more than both.
+
+- **A bound on total prompt size.** `entry_prompt` truncates each diff to
+  4,000 characters but never limits how many commits one entry may describe,
+  so prompt size is unbounded in the number of commits per chain. That is what
+  actually fails first on a large repo, and it wants a budget across the whole
+  prompt rather than per diff — independent of the chaining fix above.
+
+- **A degenerate-chain guard.** A chain holding most of a release is evidence
+  that grouping failed, not that the release is one story. It should reach the
+  reviewer as an attention item — the same "surface it, never guess" rule the
+  rest of the app follows — instead of being summarised into a single entry.
 - **Revert-of-revert.** Detected and flagged to the reviewer, not resolved
   automatically. Rare enough that a human decision beats speculative logic.
 - **Reverts of mid-chain commits.** A revert is checked against the chain's
@@ -216,9 +266,9 @@ direct answers to requirements 2 and 3.
 
 ```
 tempo_notes/
-  history.py    load batches + parse diffs (files touched per commit)
-  scope.py      release window from version-bump markers
-  classify.py   noise filter, revert matching
+  history.py    load batches + parse diffs (files touched per commit, tags)
+  scope.py      release window from git tags or version-marker subjects
+  classify.py   commit kinds, noise lexicon, strict/flexible policy, reverts
   chains.py     union-find grouping by file collision
   flags.py      feature-flag value tracking from diffs
   entries.py    chain + window -> entry with status, evidence, cache key
