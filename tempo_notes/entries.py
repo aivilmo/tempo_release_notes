@@ -24,7 +24,7 @@ from .chains import Chain
 from .classify import STRICT, Kind, Policy, RevertLink, classify, find_reverts
 from .flags import final_flag_values, flag_assignments
 from .history import Commit
-from .scope import ReleaseWindow, _BUMP_RE
+from .scope import ReleaseWindow, is_version_marker
 
 # Subject types that can carry user-visible change. docs/test/style/ci/build
 # never publish on their own; refactor stays because breaking changes hide
@@ -55,7 +55,7 @@ class Entry:
 def _publishable(c: Commit, policy: Policy = STRICT) -> bool:
     if "BREAKING CHANGE" in c.body:
         return True
-    if _BUMP_RE.search(c.subject):
+    if is_version_marker(c):
         return False  # version markers are scaffolding, not news
     if classify(c) is Kind.UNCLASSIFIED:
         # Only reachable under a flexible policy — a strict one already kept

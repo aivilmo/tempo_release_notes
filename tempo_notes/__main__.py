@@ -36,6 +36,7 @@ def dry_run(args: argparse.Namespace) -> int:
 
     print(f"release {window.version}")
     print(f"  window: ({window.start_date or 'history start'} .. {window.end_date}]")
+    print(f"  markers: {window.marker}")
     print(f"  commits in window: {len(in_window)}  "
           f"(noise: {len(noise)}, unclassified: {len(unclassified)}, "
           f"merges: {len(merges)}, dep bumps: {len(dep_bumps)})")

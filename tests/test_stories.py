@@ -10,8 +10,9 @@ import unittest
 from pathlib import Path
 
 from tempo_notes.chains import build_chains
+from tempo_notes.classify import Kind, classify, is_noise, policy_for
 from tempo_notes.entries import Status, derive_entries
-from tempo_notes.history import load_history
+from tempo_notes.history import Commit, load_history
 from tempo_notes.pipeline import run_pipeline
 from tempo_notes.scope import ScopeError, resolve_window, window_for
 from tempo_notes.translate import tokens_preserved
@@ -144,6 +145,89 @@ class ExplicitWindowTests(unittest.TestCase):
     def test_from_without_to_fails_clearly(self):
         with self.assertRaises(ScopeError):
             resolve_window([], "x", start="2026-01-01")
+
+
+def _commit(subject: str, sha: str = "0" * 9, body: str = "") -> Commit:
+    return Commit(sha=sha, author="a", date="2026-01-01T00:00:00Z", subject=subject,
+                  body=body, is_merge=False, diff=None)
+
+
+class ClassificationTests(unittest.TestCase):
+    """Noise (contentless) and unclassified (real but informal) are different
+    things. Conflating them is how a history that doesn't use conventional
+    commits publishes a blank page."""
+
+    def test_contentless_subjects_are_noise(self):
+        for subject in ("wip", "wip 2", "oops", "oops sorry", "asdf", "temp",
+                        "debug", "cleanup", "formatting", "rebase", "fix typo",
+                        "fix typo again", "run black over the codebase"):
+            self.assertIs(classify(_commit(subject)), Kind.NOISE, subject)
+
+    def test_informal_but_real_subjects_are_unclassified_not_noise(self):
+        """These describe a change; the author was just terse. In a repo that
+        doesn't use conventional commits, this is the entire history."""
+        for subject in ("closes #412", "see ticket", "address review comments"):
+            self.assertIs(classify(_commit(subject)), Kind.UNCLASSIFIED, subject)
+
+    def test_junk_lexicon_is_anchored_to_the_whole_subject(self):
+        """Regression guard on the lexicon itself: substring matching would
+        swallow real work whose subject merely starts with a junk word."""
+        for subject in ("fix typos in the invoice template shown to customers",
+                        "cleanup of the export scheduler removes stale jobs",
+                        "debug logging is no longer written to stdout"):
+            self.assertIs(classify(_commit(subject)), Kind.UNCLASSIFIED, subject)
+            self.assertFalse(is_noise(_commit(subject)), subject)
+
+    def test_merges_and_reverts_are_neither(self):
+        rev = _commit('Revert "feat(ui): dark mode toggle in settings"')
+        self.assertIs(classify(rev), Kind.REVERT)
+        merge = Commit(sha="m", author="a", date="2026-01-01T00:00:00Z",
+                       subject="Merge pull request #470 from tempo/notifications",
+                       body="", is_merge=True, diff=None)
+        self.assertIs(classify(merge), Kind.MERGE)
+
+
+class PolicyTests(unittest.TestCase):
+    def test_strict_is_the_default(self):
+        """Strict is what a repo using conventional commits wants, and it is
+        what this repo's existing notes were produced under."""
+        self.assertFalse(policy_for("strict").flexible)
+        self.assertFalse(policy_for("anything-else").flexible)
+        self.assertTrue(policy_for("flexible").flexible)
+
+    def test_noise_is_excluded_under_both_policies(self):
+        for mode in ("strict", "flexible"):
+            self.assertTrue(policy_for(mode).excludes(_commit("wip")), mode)
+
+    def test_only_flexible_keeps_informally_described_changes(self):
+        """The failure this exists to prevent: a history that doesn't use
+        conventional commits publishing a blank page."""
+        self.assertTrue(policy_for("strict").excludes(_commit("closes #412")))
+        self.assertFalse(policy_for("flexible").excludes(_commit("closes #412")))
+
+
+class ClassificationRegressionTests(unittest.TestCase):
+    """Splitting noise from unclassified must not move this history's notes:
+    under strict the two are excluded together, exactly as before."""
+
+    def test_strict_excludes_exactly_what_the_prefix_rule_excluded(self):
+        commits = load_history(FULL, DATA / "diffs")
+        prefix_rule = {c.sha for c in commits
+                       if classify(c) in (Kind.NOISE, Kind.UNCLASSIFIED)}
+        strict = {c.sha for c in commits if policy_for("strict").excludes(c)}
+        self.assertEqual(prefix_rule, strict)
+
+    def test_flexible_only_ever_adds_entries(self):
+        commits = load_history(FULL, DATA / "diffs")
+        window = window_for(commits, "2.1")
+
+        def published(mode):
+            policy = policy_for(mode)
+            entries = derive_entries(commits, build_chains(commits, policy),
+                                     window, policy)
+            return {e.chain_key for e in entries if e.status is Status.CANDIDATE}
+
+        self.assertLess(published("strict"), published("flexible"))
 
 
 class TranslationInvariantTests(unittest.TestCase):

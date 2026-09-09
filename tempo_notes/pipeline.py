@@ -40,7 +40,8 @@ def run_pipeline(commit_files: list[Path], diffs_dir: Path, version: str,
                   f"batch(es); {policy.rationale}")
     window = resolve_window(commits, version, from_date, to_date)
     _print(verbose, f"[2/6] release {window.version}: window "
-                  f"({window.start_date or 'history start'} .. {window.end_date}]")
+                  f"({window.start_date or 'history start'} .. {window.end_date}] "
+                  f"via {window.marker}")
     missing_diffs = [c for c in commits
                      if window.contains(c) and not c.is_merge and c.diff is None]
     if missing_diffs:
@@ -160,6 +161,8 @@ def run_pipeline(commit_files: list[Path], diffs_dir: Path, version: str,
     deps = [c for c in commits if window.contains(c) and is_dependency_bump(c)]
     after = [c for c in commits if c.date > window.end_date]
     stability = [
+        f"Release window ({window.start_date or 'history start'} .. {window.end_date}] "
+        f"established via {window.marker}.",
         f"{reused} entr(ies) reused from the ledger, byte-identical; {generated} newly generated.",
         f"{len(after)} commit(s) after the {window.version} bump: scoped to the next release.",
         f"{len(noise)} noise and {len(deps)} dependency commit(s) excluded (listed in traceability.json).",

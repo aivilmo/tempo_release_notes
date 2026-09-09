@@ -22,6 +22,7 @@ class Commit:
     is_merge: bool
     diff: str | None  # raw diff text, None if the commit has none
     files: tuple[str, ...] = ()  # paths touched, per the diff headers
+    tags: tuple[str, ...] = ()   # git tags, when the export carries them
 
     @property
     def file_paths(self) -> set[str]:
@@ -44,7 +45,8 @@ def load_history(commit_files: list[Path], diffs_dir: Path) -> list[Commit]:
     commits: list[Commit] = []
     for raw in seen.values():
         diff_path = diffs_dir / f"{raw['sha']}.diff"
-        diff = diff_path.read_text(encoding="utf-8") if diff_path.exists() else None
+        diff = (diff_path.read_text(encoding="utf-8", errors="replace")
+                if diff_path.exists() else None)
         commits.append(
             Commit(
                 sha=raw["sha"],
@@ -55,6 +57,10 @@ def load_history(commit_files: list[Path], diffs_dir: Path) -> list[Commit]:
                 is_merge=raw.get("is_merge", False),
                 diff=diff,
                 files=tuple(_DIFF_FILE_RE.findall(diff)) if diff else (),
+                # Optional: this case's export has no tags, but a real
+                # `git log` export usually does, and they beat subject
+                # parsing outright. Accepts "tags" or "refs".
+                tags=tuple(raw.get("tags") or raw.get("refs") or ()),
             )
         )
     commits.sort(key=lambda c: (c.date, c.sha))
