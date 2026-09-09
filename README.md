@@ -12,7 +12,8 @@ rewording what didn't change.
 
 ## Setup (clean machine)
 
-Requirements: Python 3.10+. No third-party dependencies — standard library only.
+Requirements: Python 3.10+. The app uses only the standard library, so there
+are no third-party dependencies.
 
 Linux:
 ```bash
@@ -34,7 +35,7 @@ Commands are single-line so they work in bash, PowerShell and cmd alike.
 If `python` is not on your PATH as Python 3, use `python3`.
 
 ```bash
-# 1. Inspect every deterministic decision first — no LLM calls, costs nothing:
+# 1. Inspect every deterministic decision first. No LLM calls, costs nothing:
 python -m tempo_notes dry-run --version 2.1 --commits data/commits.json --diffs data/diffs
 
 # 2. Generate the notes:
@@ -48,13 +49,13 @@ Outputs in `out/`:
 
 | file | what it is |
 |---|---|
-| `release_notes_v<V>.en.md` | the public notes, English — publishable as-is |
+| `release_notes_v<V>.en.md` | the public notes, English, publishable as-is |
 | `release_notes_v<V>.nl.md` | Dutch, derived per-entry from the frozen English |
 | `release_notes_v<V>.html` | the public page: both languages in one file, EN/NL toggle |
 | `review.html` | for the human approver: what needs a decision, a preview of the public page, a quiet log of everything else |
 | `review_report.md` | the same review content as `review.html`, plain text |
 | `traceability.json` | one record per entry: text, source SHAs, evidence, cache key |
-| `ledger.json` | internal state — see "The ledger" below. Keep it. |
+| `ledger.json` | internal state. See "The ledger" below. Keep it. |
 
 Useful parameters:
 `--model <openrouter-id>` (default `anthropic/claude-sonnet-4.5`)
@@ -64,7 +65,7 @@ Useful parameters:
 `--classify strict|flexible`; `dry-run` shows the effect before you spend anything
 `--no-open` (skip auto-opening `review.html`)
 
-Tests (no API key or network needed — the LLM is faked locally):
+Tests (no API key or network needed, the LLM is faked locally):
 
 ```bash
 python -m unittest discover -s tests
@@ -72,17 +73,17 @@ python -m unittest discover -s tests
 
 ## How it works
 
-The pipeline runs in stages; **everything except wording is decided by
-deterministic code, and the LLM only ever decides two things** — whether a
-change is worth telling customers about, and how to phrase it. It never
+The pipeline runs in stages. **Everything except wording is decided by
+deterministic code, and the LLM only ever decides two things**, whether a
+change is worth telling customers about and how to phrase it. It never
 decides what exists.
 
 1. **Scope.** The release window is everything after the previous version's
    marker, up to and including the target's.
 
    **Git tags win outright** when the commit data carries them (a
-   `tags` or `refs` field per commit) — a tag is the authoritative record of
-   what shipped. Otherwise it falls back to subject patterns:
+   `tags` or `refs` field per commit), because a tag is the authoritative
+   record of what shipped. Otherwise it falls back to subject patterns:
    `bump version to X.Y.Z`, bump2version's `Bump version: A → B`,
    `<type>(release): X.Y.Z`, `release X.Y.Z`, and a bare `vX.Y.Z` subject.
 
@@ -93,12 +94,12 @@ decides what exists.
 2. **Classify.** Every commit gets a *kind*, and two of them are deliberately
    kept apart:
 
-   - **noise** — a contentless subject that describes the act of committing
+   - **noise** is a contentless subject that describes the act of committing
      rather than a change (`wip`, `oops`, `formatting`, `fix typo`). Matched
      against an explicit lexicon, anchored to the whole subject so that
      "fix typos in the invoice template" stays a real commit. Never published,
      under any setting.
-   - **unclassified** — a real change the author described informally
+   - **unclassified** is a real change the author described informally
      (`closes #412`, `see ticket`). In a repo that uses conventional commits
      these are almost always throwaway; in a repo that doesn't, they are the
      entire history.
@@ -116,8 +117,9 @@ decides what exists.
 
 3. **Chains.** Commits touching the same files are grouped (union-find over
    file collisions): a feature, its fixes, its revert and its flag flip are
-   one story, even across batches. Two guards reduce over-grouping — commits
-   the classification policy excludes never enter the graph. They are **not** sufficient on a large repository;
+   one story, even across batches. Two guards reduce over-grouping. Commits
+   the classification policy excludes never enter the graph, and `chore(deps)`
+   commits link to no one. They are **not** sufficient on a large repository;
    see "What I cut" for the measured failure and what fixes it.
 
 4. **Entries.** Each chain contributes at most one entry per release, derived
@@ -125,13 +127,13 @@ decides what exists.
    entry only if they *invalidate* it (a revert); a later ordinary fix belongs
    to the next release and does not touch it. Features that shipped with
    their feature flag off are not announced. Each entry gets a
-   `cache_key = sha256(in-window SHAs + diffs + invalidators + flag state)` —
-   facts only, nothing about the app itself.
+   `cache_key = sha256(in-window SHAs + diffs + invalidators + flag state)`,
+   which covers facts only and nothing about the app itself.
 
 5. **Generate.** Candidates go to the LLM (via OpenRouter) with subjects,
    bodies and diffs; the prompt instructs it to trust the diff over the
    message, to skip internal-only work, and to always answer in English
-   (source commits may be in any language — this history has Dutch ones).
+   (source commits may be in any language, and this history has Dutch ones).
 
 6. **Translate.** Dutch is derived per-entry from the frozen English text and
    cached by its hash.
@@ -146,10 +148,10 @@ decides what exists.
 entry's wording; every later run reuses that text byte-for-byte unless the
 entry's facts changed (its `cache_key` moved). Consequences you should know:
 
-- **Keep `ledger.json` between runs.** Deleting it re-words everything —
-  truthfully, but differently.
+- **Keep `ledger.json` between runs.** Deleting it re-words everything,
+  truthfully but differently.
 - The determinism guarantee is *stability given the run history*, not
-  reproducibility from scratch — nothing with an LLM in the loop has that.
+  reproducibility from scratch, since nothing with an LLM in the loop has that.
 - One `out/` directory can hold several releases (e.g. 2.1.0 and 2.1.1):
   ledger records are namespaced per release, so generating the next version
   never touches the frozen text of the previous one.
@@ -164,8 +166,8 @@ never have reached customers: announcing a ghost feature is expensive,
 omitting a one-day feature is free), and puts the decision in
 `review_report.md` with the evidence quoted inline, so the approver can decide
 in seconds without reading any git history. If the approver knows better,
-`--restore-entry <chain-key>` republishes the original frozen wording — a
-restore, not a regeneration.
+`--restore-entry <chain-key>` republishes the original frozen wording, a
+restore rather than a regeneration.
 
 ## Two HTML views, two readers
 
@@ -174,8 +176,8 @@ are deliberately two separate files rather than one page trying to serve both
 audiences:
 
 - **`release_notes_v<V>.html`** is what Tempo's customers see. It knows
-  nothing about chains, ledgers, or review status — no line of copy about how
-  the notes were produced.
+  nothing about chains, ledgers, or review status, and carries no line of copy
+  about how the notes were produced.
 - **`review.html`** is what the approver opens before publishing: the items
   that need a decision, a quiet collapsible log of everything the app decided
   on its own, and a preview of the public page.
@@ -188,7 +190,7 @@ audiences:
   Chains group commits by *transitive* file overlap. Here almost every file is
   touched once or twice, so "same file" reliably means "same story". Mature
   codebases have a few files half the team edits, and those quietly chain
-  everything to everything — the release collapses into one enormous chain,
+  everything to everything, so the release collapses into one enormous chain,
   a single bullet, and a prompt too large to send.
 
   The fix is a fan-out cap: a file touched by more than a few commits stops
@@ -237,5 +239,5 @@ tests/
   test_stories.py   every trap in the sample data, as a named regression test
 data/
   commits.json, commits-followup.json, diffs/   the case materials.
-  The tests read from this directory — keep it in place.
+  The tests read from this directory, so keep it in place.
 ```
