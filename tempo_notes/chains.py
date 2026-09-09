@@ -16,7 +16,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 
-from .classify import STRICT, Policy, is_dependency_bump
+from .classify import FLEXIBLE, Policy, is_dependency_bump
 from .history import Commit
 
 
@@ -28,7 +28,7 @@ class Chain(tuple):
         return self[0].sha  # oldest member names the chain
 
 
-def build_chains(commits: list[Commit], policy: Policy = STRICT) -> list[Chain]:
+def build_chains(commits: list[Commit], policy: Policy = FLEXIBLE) -> list[Chain]:
     linkable = [
         c for c in commits
         if c.diff and not policy.excludes(c) and not is_dependency_bump(c)

@@ -21,7 +21,7 @@ from dataclasses import dataclass
 from enum import Enum
 
 from .chains import Chain
-from .classify import STRICT, Kind, Policy, RevertLink, classify, find_reverts
+from .classify import FLEXIBLE, Kind, Policy, RevertLink, classify, find_reverts
 from .flags import final_flag_values, flag_assignments
 from .history import Commit
 from .scope import ReleaseWindow, is_version_marker
@@ -52,7 +52,7 @@ class Entry:
     cache_key: str
 
 
-def _publishable(c: Commit, policy: Policy = STRICT) -> bool:
+def _publishable(c: Commit, policy: Policy = FLEXIBLE) -> bool:
     if "BREAKING CHANGE" in c.body:
         return True
     if is_version_marker(c):
@@ -84,7 +84,7 @@ def _cache_key(scoped: tuple[Commit, ...], invalidators: tuple[Commit, ...],
 def derive_entry(chain: Chain, window: ReleaseWindow,
                  reverts: list[RevertLink],
                  window_flags: dict[str, bool],
-                 policy: Policy = STRICT) -> Entry | None:
+                 policy: Policy = FLEXIBLE) -> Entry | None:
     scoped = tuple(c for c in chain if window.contains(c))
     if not scoped:
         return None  # this chain has nothing to say about this release
@@ -130,7 +130,7 @@ def derive_entry(chain: Chain, window: ReleaseWindow,
 
 
 def derive_entries(commits: list[Commit], chains: list[Chain],
-                   window: ReleaseWindow, policy: Policy = STRICT) -> list[Entry]:
+                   window: ReleaseWindow, policy: Policy = FLEXIBLE) -> list[Entry]:
     reverts = find_reverts(commits)
     window_flags = final_flag_values([c for c in commits if window.contains(c)])
     entries = []
