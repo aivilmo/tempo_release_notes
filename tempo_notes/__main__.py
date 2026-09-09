@@ -73,28 +73,6 @@ def dry_run(args: argparse.Namespace) -> int:
         print(f"  {c.sha[:9]} {c.subject[:60]}")
     return 0
 
-
-def show_entries(args: argparse.Namespace) -> int:
-    from .entries import derive_entries
-
-    commits = load_history([Path(p) for p in args.commits], Path(args.diffs))
-    try:
-        window = resolve_window(commits, args.version, args.from_date, args.to_date)
-    except ScopeError as e:
-        print(f"error: {e}", file=sys.stderr)
-        return 2
-
-    policy = policy_for(args.classify_mode)
-    for e in derive_entries(commits, build_chains(commits, policy), window, policy):
-        print(f"{e.status.value:<20} chain {e.chain_key[:9]}  key {e.cache_key[:12]}…")
-        print(f"    founder: {e.scoped[0].subject[:70]}")
-        for c in e.effective:
-            print(f"    tells:   {c.sha[:9]} {c.subject[:64]}")
-        for ev in e.evidence:
-            print(f"    because: {ev[:100]}")
-    return 0
-
-
 def _common_args(p: argparse.ArgumentParser) -> None:
     p.add_argument("--version", required=True, help="release to cover, e.g. 2.1")
     p.add_argument("--commits", action="append", required=True,
@@ -151,9 +129,6 @@ def main() -> int:
     dry_run_parser = sub.add_parser("dry-run", help="report every deterministic decision; no LLM calls")
     _common_args(dry_run_parser)
     dry_run_parser.set_defaults(func=dry_run)
-    entries_parser = sub.add_parser("entries", help="show derived entries with status and cache key")
-    _common_args(entries_parser)
-    entries_parser.set_defaults(func=show_entries)
     generate_parser = sub.add_parser("generate", help="produce the notes, review report and traceability")
     _common_args(generate_parser)
     generate_parser.add_argument("--out", default="out", help="output directory (holds ledger.json)")
