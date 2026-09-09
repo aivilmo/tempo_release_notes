@@ -4,7 +4,7 @@ Turns Tempo's commit history into customer-facing release notes for a given
 version, in English and Dutch, with full traceability from every published
 line back to the commits that justify it.
 
-Built for the constraints that matter in this problem, in this order: what we
+Built for the constraints in this problem, taking this order: what we
 publish is **true** (grounded in diffs, not commit-message claims), every line
 is **traceable** to commits, the same history always produces the **same
 notes**, and a late batch of commits **corrects** the published notes without
@@ -52,7 +52,7 @@ Outputs in `out/`:
 | `release_notes_v<V>.en.md` | the public notes, English, publishable as-is |
 | `release_notes_v<V>.nl.md` | Dutch, derived per-entry from the frozen English |
 | `release_notes_v<V>.html` | the public page: both languages in one file, EN/NL toggle |
-| `review.html` | for the human approver: what needs a decision, a preview of the public page, a quiet log of everything else |
+| `review.html` | for the approver: what needs a decision, a preview of the public page, a quiet log of everything else |
 | `review_report.md` | the same review content as `review.html`, plain text |
 | `traceability.json` | one record per entry: text, source SHAs, evidence, cache key |
 | `ledger.json` | internal state. See "The ledger" below. Keep it. |
@@ -203,7 +203,7 @@ audiences:
   so prompt size is unbounded in the number of commits per chain.
 
 - **Revert-of-revert.** Detected and flagged to the reviewer, not resolved
-  automatically. Rare enough that a human decision beats speculative logic.
+  automatically. Rare enough that a decision beats speculative logic.
 
 - **Reverts of mid-chain commits.** A revert is checked against the chain's
   founding commit; a revert that undoes a mid-chain commit while the chain
