@@ -91,7 +91,7 @@ decides what exists.
    listing what it tried, rather than guessing; the operator can state the
    window explicitly with `--from/--to`.
 
-2. **Classify.** Every commit gets a *kind*, and two of them are deliberately
+2. **Classify.** Every commit gets a *type*, and two of them are deliberately
    kept apart:
 
    - **noise** is a contentless subject that describes the act of committing
@@ -115,12 +115,9 @@ decides what exists.
    they undo (exact subject match among earlier commits; ties broken by
    file overlap, then recency). An unmatched revert is flagged to the reviewer.
 
-3. **Chains.** Commits touching the same files are grouped (union-find over
+3. **Chains.** Commits editing the same files are grouped (union-find over
    file collisions): a feature, its fixes, its revert and its flag flip are
-   one story, even across batches. Two guards reduce over-grouping. Commits
-   the classification policy excludes never enter the graph, and `chore(deps)`
-   commits link to no one. They are **not** sufficient on a large repository;
-   see "What I cut" for the measured failure and what fixes it.
+   one story, even across batches. Commits the classification policy excludes never enter the graph.
 
 4. **Entries.** Each chain contributes at most one entry per release, derived
    only from its commits inside the window. Cross-window commits affect the
@@ -188,13 +185,13 @@ audiences:
   the biggest known limitation, and the one I'd fix first.
 
   Chains group commits by *transitive* file overlap. Here almost every file is
-  touched once or twice, so "same file" reliably means "same story". Mature
+  edited once or twice, so "same file" reliably means "same story". Mature
   codebases have a few files half the team edits, and those quietly chain
   everything to everything, so the release collapses into one enormous chain,
   a single bullet, and a prompt too large to send.
 
-  The fix is a fan-out cap: a file touched by more than a few commits stops
-  linking. Hub files are exactly the ones that say nothing about what belongs
+  A file edited by more than a few commits stops linking. 
+  Hub files are exactly the ones that say nothing about what belongs
   together. I tested this on a real repository; linking only commits close in
   time doesn't help, since busy files are edited constantly.
 
@@ -223,7 +220,7 @@ direct answers to requirements 2 and 3.
 
 ```
 tempo_notes/
-  history.py    load batches + parse diffs (files touched per commit, tags)
+  history.py    load batches + parse diffs (files edited per commit, tags)
   scope.py      release window from git tags or version-marker subjects
   classify.py   commit kinds, noise lexicon, strict/flexible policy, reverts
   chains.py     union-find grouping by file collision
